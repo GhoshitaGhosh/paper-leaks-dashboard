@@ -293,9 +293,110 @@
             Certain states (UP: 0.542 leaks/yr, MP: 0.451/yr, Rajasthan: 0.451/yr) have higher baseline leak proclivities due to candidate density and coaching hubs. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. An $O/E$ ratio of 1.00 represents exact parity with state baseline expectations.
           </div>
           <div class="formula-box">
-            Expected E = ∑ (State_Baseline_Risk_s × Years_Governed_s)
+            Expected E_party = ∑ (State_Baseline_Risk_s × Years_Governed_s)
           </div>
         </div>
+      </div>
+
+      <!-- State Baseline Risk Proclivity & Expected Leak Table -->
+      <div class="state-risk-box">
+        <div style="font-size: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif;">
+          State-Wise Baseline Risk Proclivity ($R_s$) & Expected Leak Model
+        </div>
+        <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
+          Each state's baseline risk rate ($R_s$) is calculated as: <code>Rs = Total Confirmed State Leaks / 22.16 Years</code>. A party's Expected Leaks ($E$) is the sum of its governing years in each state multiplied by that state's baseline risk rate.
+        </p>
+
+        <table class="state-risk-table">
+          <thead>
+            <tr>
+              <th>State Name</th>
+              <th>Confirmed Leaks (2004–2026)</th>
+              <th>State Baseline Risk Rate ($R_s$)</th>
+              <th>Risk Tier</th>
+              <th>Primary Executive Ruling Parties</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Uttar Pradesh</strong></td>
+              <td>12 Incidents</td>
+              <td><code>0.542 leaks/year</code></td>
+              <td><span class="tier-badge high">High Risk Hub</span></td>
+              <td>SP (2004–07, 2012–17), BSP (2007–12), BJP (2017–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Madhya Pradesh</strong></td>
+              <td>10 Incidents</td>
+              <td><code>0.451 leaks/year</code></td>
+              <td><span class="tier-badge high">High Risk Hub</span></td>
+              <td>BJP (2004–18, 2020–26), INC (2018–20)</td>
+            </tr>
+            <tr>
+              <td><strong>Rajasthan</strong></td>
+              <td>10 Incidents</td>
+              <td><code>0.451 leaks/year</code></td>
+              <td><span class="tier-badge high">High Risk Hub</span></td>
+              <td>INC (2008–13, 2018–23), BJP (2004–08, 2013–18, 2023–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Bihar</strong></td>
+              <td>7 Incidents</td>
+              <td><code>0.316 leaks/year</code></td>
+              <td><span class="tier-badge high">High Risk Hub</span></td>
+              <td>JD(U) / NDA (2005–26), RJD (2004–05)</td>
+            </tr>
+            <tr>
+              <td><strong>Telangana</strong></td>
+              <td>5 Incidents</td>
+              <td><code>0.226 leaks/year</code></td>
+              <td><span class="tier-badge medium">Medium Risk</span></td>
+              <td>BRS (2014–23), INC (2023–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Maharashtra</strong></td>
+              <td>4 Incidents</td>
+              <td><code>0.181 leaks/year</code></td>
+              <td><span class="tier-badge medium">Medium Risk</span></td>
+              <td>INC / NCP (2004–14), BJP / Shiv Sena (2014–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Gujarat</strong></td>
+              <td>4 Incidents</td>
+              <td><code>0.181 leaks/year</code></td>
+              <td><span class="tier-badge medium">Medium Risk</span></td>
+              <td>BJP (2004–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Haryana</strong></td>
+              <td>4 Incidents</td>
+              <td><code>0.181 leaks/year</code></td>
+              <td><span class="tier-badge medium">Medium Risk</span></td>
+              <td>INC (2005–14), BJP (2014–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Uttarakhand</strong></td>
+              <td>4 Incidents</td>
+              <td><code>0.181 leaks/year</code></td>
+              <td><span class="tier-badge medium">Medium Risk</span></td>
+              <td>BJP (2007–12, 2017–26), INC (2004–07, 2012–17)</td>
+            </tr>
+            <tr>
+              <td><strong>West Bengal</strong></td>
+              <td>3 Incidents</td>
+              <td><code>0.135 leaks/year</code></td>
+              <td><span class="tier-badge low">Lower Risk</span></td>
+              <td>Left Front (2004–11), AITC (2011–26)</td>
+            </tr>
+            <tr>
+              <td><strong>Punjab</strong></td>
+              <td>3 Incidents</td>
+              <td><code>0.135 leaks/year</code></td>
+              <td><span class="tier-badge low">Lower Risk</span></td>
+              <td>INC (2004–07, 2017–22), SAD/BJP (2007–17), AAP (2022–26)</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </section>
