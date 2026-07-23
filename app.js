@@ -167,16 +167,16 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
     } else {
       document.getElementById('kpi-annual-rate').innerText = '7.07';
-      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Incidents / Yr (7.07 vs 2.40 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Leaks / Yr (vs 2.40 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '1.23';
-      document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Raw Incidents / Yr';
+      document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Leaks / Yr (vs 0.70 UPA)';
 
       document.getElementById('kpi-oe-ratio').innerText = '2.15 vs 0.61';
-      document.getElementById('kpi-oe-sub').innerText = 'Unadjusted Raw Distortion (Truncation Skew)';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (2.15) vs INC (0.61) Raw Distortion';
 
       document.getElementById('kpi-unconfirmed').innerText = '0%';
-      document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Noise Included';
+      document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Raw Noise Included (vs 24.4% Filtered)';
     }
   }
 
