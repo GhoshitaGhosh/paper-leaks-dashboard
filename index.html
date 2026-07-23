@@ -29,35 +29,35 @@
 
   <!-- Hero Section -->
   <section class="hero container">
-    <div class="hero-tag">A Statistical Journey: 2004 – 2026</div>
+    <div class="hero-tag">A Progressive Empirical Guide: 2004 – 2026</div>
     <h1 class="hero-title">Paper Leaks in India:<br>Deconstructing Reporting Drift & Federal Risk</h1>
     <p class="hero-sub">
-      A comprehensive empirical audit of 126 public exam leaks evaluating the UPA (2004–2014) and NDA (2014–2026) regimes. 
+      A structured, multi-layered statistical audit of 126 public exam leaks comparing the UPA (2004–2014) and NDA (2014–2026) regimes. 
       Disaggregated by individual political parties, controlling for executive state-years and state risk proclivities.
     </p>
 
     <!-- KPI Cards Grid with Visual Indicator Badges -->
     <div class="kpi-grid">
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric</span>
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Annualized Leak Rate</div>
         <div id="kpi-annual-rate" class="kpi-value">5.35</div>
         <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric</span>
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Central Govt Leak Rate</div>
         <div id="kpi-central-rate" class="kpi-value">0.90</div>
         <div id="kpi-central-sub" class="kpi-sub">Central Leaks / Yr (vs 1.10 UPA)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric</span>
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">State Fixed-Effects Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) O/E Parity</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) Controlled Parity</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric</span>
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Filtered Claim Noise</div>
         <div id="kpi-unconfirmed" class="kpi-value">24.4%</div>
         <div id="kpi-unconfirmed-sub" class="kpi-sub warning">Filtered Out Post-2014 Claims Noise</div>
@@ -65,8 +65,13 @@
     </div>
   </section>
 
-  <!-- Section 1: The 3 Raw Flaws & 4 Econometric Controls -->
+  <!-- Layer 1: The 3 Raw Flaws & 4 Econometric Controls -->
   <section class="container" style="margin-bottom: 60px;">
+    <div class="section-header">
+      <h2 class="section-title">Layer 1: Dataset Audit & Statistical Corrections</h2>
+      <p class="section-desc">Understanding why raw web scraper datasets are distorted and how econometric controls restore baseline fairness.</p>
+    </div>
+
     <div class="grid-2">
       <!-- Flaws Card -->
       <div class="card">
@@ -74,6 +79,7 @@
           <span>Statistical Flaws in Raw Dataset</span>
           <span style="font-size: 12px; color: var(--accent-rose); font-weight: 600;">Uncontrolled Baseline</span>
         </div>
+        <div class="card-subtext">Three core structural distortions that create artificial post-2014 skews in raw scraped web data.</div>
         <div class="flaw-list">
           <div class="flaw-item">
             <div class="flaw-icon">1</div>
@@ -105,6 +111,7 @@
           <span>Econometric Controls Implemented</span>
           <span style="font-size: 12px; color: var(--accent-emerald); font-weight: 600;">Regime Parity Baseline</span>
         </div>
+        <div class="card-subtext">Four empirical controls applied to eliminate sampling bias, exposure bias, and geographic risk skew.</div>
         <div class="control-list">
           <div class="control-item">
             <div class="control-icon">✓</div>
@@ -139,11 +146,11 @@
     </div>
   </section>
 
-  <!-- Section 2: Visual Analytics & 3-Stage Reader Progression -->
+  <!-- Layer 2: Visual Analytics & 3-Stage Reader Progression -->
   <section class="container" style="margin-bottom: 60px;">
     <div class="section-header">
-      <h2 class="section-title">Visual Analytics & Individual Party Breakdown</h2>
-      <p class="section-desc">Disaggregated by individual political parties with a structured 3-level reader progression from raw counts to fully controlled risk models.</p>
+      <h2 class="section-title">Layer 2: Visual Analytics & Party Disaggregation</h2>
+      <p class="section-desc">Progressing from raw counts to tenure normalization and state fixed-effects risk models.</p>
     </div>
 
     <!-- 3-Stage Reader Progression Explanation Banner -->
@@ -181,7 +188,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-era" class="card-title">Annualized Confirmed Leak Frequency (UPA vs NDA)</div>
-        <div class="card-subtext">Overall national annualized leak rate comparison across political eras.</div>
+        <div class="card-subtext">Overall national annualized leak rate comparison across political eras (5.35 vs 4.00 leaks/yr).</div>
         <div class="chart-container">
           <canvas id="chart-era"></canvas>
         </div>
@@ -209,7 +216,7 @@
       <div class="card">
         <span class="indicator-tag constant">📌 Constant Baseline (Historical Distribution)</span>
         <div class="card-title">Exam Category Shift Across Eras</div>
-        <div class="card-subtext">Structural transition from Entrance Exams to Subordinate Job Recruitments.</div>
+        <div class="card-subtext">Structural transition from Entrance Exams (Higher Ed) to Subordinate Job Recruitment drives.</div>
         <div class="chart-container">
           <canvas id="chart-category"></canvas>
         </div>
@@ -220,17 +227,17 @@
     <div class="card" style="margin-top: 24px;">
       <span class="indicator-tag constant">📌 Constant Baseline (Historical Modus Operandi)</span>
       <div class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
-      <div class="card-subtext">Modus operandi evolution from Printing Press breaches to Instant Digital WhatsApp leaks.</div>
+      <div class="card-subtext">Modus operandi evolution from Printing Press breaches to Instant Digital WhatsApp pre-circulations.</div>
       <div class="chart-container" style="height: 350px;">
         <canvas id="chart-mechanism"></canvas>
       </div>
     </div>
   </section>
 
-  <!-- Section 3: Verbose Statistical Methodology Infobox -->
+  <!-- Layer 3: Verbose Statistical Methodology Infobox -->
   <section class="container" style="margin-bottom: 40px;">
     <div class="methodology-box">
-      <div class="section-title" style="font-size: 24px;">Methodology & Statistical Cleaning Guide</div>
+      <div class="section-title" style="font-size: 24px;">Layer 3: Methodology & Statistical Cleaning Guide</div>
       <p class="section-desc" style="margin-bottom: 24px;">A step-by-step accounting of the mathematical definitions, rate adjustments, and risk controls applied in this study.</p>
 
       <div class="methodology-grid">
@@ -293,10 +300,10 @@
     </div>
   </section>
 
-  <!-- Section 4: Compiled Statistical Takeaways & Accuracy Comparison Infobox -->
+  <!-- Layer 4: Compiled Statistical Takeaways & Accuracy Comparison Infobox -->
   <section class="container" style="margin-bottom: 60px;">
     <div class="takeaways-box">
-      <div class="section-title" style="font-size: 24px; color: var(--accent-emerald);">Compiled Statistical Takeaways & Accuracy Comparison</div>
+      <div class="section-title" style="font-size: 24px; color: var(--accent-emerald);">Layer 4: Compiled Statistical Takeaways & Accuracy Comparison</div>
       <p class="section-desc" style="margin-bottom: 24px;">Comparing the conclusions drawn from the raw Kaggle dataset vs. the controlled econometric dataset, and why the controlled takeaways are methodologically more accurate.</p>
 
       <!-- Takeaway 1 -->
@@ -373,10 +380,10 @@
     </div>
   </section>
 
-  <!-- Section 5: Interactive Data Explorer -->
+  <!-- Layer 5: Interactive Data Explorer -->
   <section class="container" style="margin-bottom: 80px;">
     <div class="section-header">
-      <h2 class="section-title">126-Incident Interactive Data Explorer</h2>
+      <h2 class="section-title">Layer 5: 126-Incident Primary Data Explorer</h2>
       <p class="section-desc">Search, filter, and inspect every documented incident with direct court/news sources, arrest tallies, and notes.</p>
     </div>
 
@@ -420,7 +427,7 @@
             <th>Era</th>
             <th>Exam Name</th>
             <th>State / Location</th>
-            <th>Ruling Party</th>
+            <th>State Executive Party</th>
             <th>Category</th>
             <th>Status</th>
           </tr>
