@@ -30,7 +30,7 @@ Our project audits Nadkarni's baseline by:
 
 ---
 
-## 5-Layer Readability Architecture
+## 6-Layer Readability Architecture
 
 - **Layer 1: Dataset Audit & Kaggle Provenance**: Deconstructs the 3 raw dataset flaws, cites Sujay Nadkarni's Kaggle baseline, and details the 4 econometric controls implemented.
 - **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **3-Level Reader Progression Framework** and 6 interactive charts (including State-Level Party Performance $O/E$ Disaggregation).
@@ -40,6 +40,7 @@ Our project audits Nadkarni's baseline by:
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
 - **Layer 4: 8 Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) and an infobox detailing 5 structural limitations of media-scraped datasets.
 - **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with incident modal popup inspector and primary news/court links.
+- **Layer 6: Speculative Econometric Projection Model (Underreporting Imputation Sandbox)**: Isolated speculative sandbox applying Poisson Media-Truncation Decay and Lincoln-Petersen Capture-Recapture DSE to model pre-2012 regional print underreporting without altering empirical facts in Layers 1–5.
 
 ---
 
