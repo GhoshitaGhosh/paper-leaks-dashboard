@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>India Paper Leaks: A Statistical Audit & Dual-Regime Analysis (2004–2026)</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Chart.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+  <!-- Header & Nav -->
+  <header class="header">
+    <div class="container nav-wrap">
+      <div class="logo-group">
+        <div class="logo-badge">PL</div>
+        <div>
+          <div class="logo-title">India Paper Leaks Audit</div>
+          <div style="font-size: 11px; color: var(--text-subtle);">Dual-Regime Econometric Study (2004–2026)</div>
+        </div>
+      </div>
+      <div class="mode-switch-box">
+        <button id="btn-mode-enriched" class="mode-btn active">Controlled Baseline View</button>
+        <button id="btn-mode-raw" class="mode-btn">Raw Unadjusted View</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero container">
+    <div class="hero-tag">A Statistical Journey: 2004 – 2026</div>
+    <h1 class="hero-title">Paper Leaks in India:<br>Deconstructing Reporting Drift & Federal Risk</h1>
+    <p class="hero-sub">
+      A comprehensive empirical audit of 126 public exam leaks evaluating the UPA (2004–2014) and NDA (2014–2026) regimes. 
+      Correcting pre-2014 media truncation, post-2014 social media noise, and federal risk exposure.
+    </p>
+
+    <!-- KPI Cards Grid -->
+    <div class="kpi-grid">
+      <div class="kpi-card">
+        <div class="kpi-label">Annualized Leak Rate</div>
+        <div id="kpi-annual-rate" class="kpi-value">5.35</div>
+        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Central Govt Leak Rate</div>
+        <div id="kpi-central-rate" class="kpi-value">0.90</div>
+        <div id="kpi-central-sub" class="kpi-sub">Central Leaks / Yr (vs 1.10 UPA)</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">State Fixed-Effects Ratio</div>
+        <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) O/E Parity</div>
+      </div>
+      <div class="kpi-card">
+        <div class="kpi-label">Filtered Claim Noise</div>
+        <div id="kpi-unconfirmed" class="kpi-value">24.4%</div>
+        <div id="kpi-unconfirmed-sub" class="kpi-sub warning">Filtered Out Post-2014 Claims Noise</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 1: The 3 Raw Flaws & 4 Econometric Controls -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="grid-2">
+      <!-- Flaws Card -->
+      <div class="card">
+        <div class="card-title">
+          <span>Statistical Flaws in Raw Dataset</span>
+          <span style="font-size: 12px; color: var(--accent-rose); font-weight: 600;">Uncontrolled Baseline</span>
+        </div>
+        <div class="flaw-list">
+          <div class="flaw-item">
+            <div class="flaw-icon">1</div>
+            <div>
+              <div class="item-title">Pre-2014 Media Truncation</div>
+              <div class="item-desc">Scrapers miss regional print media (*Dainik Jagran*, *Amar Ujala*, *Eenadu*) prior to 2012, recording only 24 pre-2014 leaks vs 86 post-2014.</div>
+            </div>
+          </div>
+          <div class="flaw-item">
+            <div class="flaw-icon">2</div>
+            <div>
+              <div class="item-title">Post-2014 Reporting Drift & Noise</div>
+              <div class="item-desc">Post-2014 entries include social media claims, Telegram hoaxes, and disproven allegations (24.4% noise), whereas pre-2014 includes 100% court/CBI cases.</div>
+            </div>
+          </div>
+          <div class="flaw-item">
+            <div class="flaw-icon">3</div>
+            <div>
+              <div class="item-title">Federal Domain Misattribution</div>
+              <div class="item-desc">79.0% of leaks are state-administered breaches under State PSCs and Boards, but raw datasets attribute them to Union Government UPA/NDA eras.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls Card -->
+      <div class="card">
+        <div class="card-title">
+          <span>Econometric Controls Implemented</span>
+          <span style="font-size: 12px; color: var(--accent-emerald); font-weight: 600;">Regime Parity Baseline</span>
+        </div>
+        <div class="control-list">
+          <div class="control-item">
+            <div class="control-icon">✓</div>
+            <div>
+              <div class="item-title">Level-1 Confirmed Severity Filter</div>
+              <div class="item-desc">Filters out Level-2 claims/hoaxes to evaluate UPA vs NDA strictly on confirmed administrative cancellations and FIRs.</div>
+            </div>
+          </div>
+          <div class="control-item">
+            <div class="control-icon">✓</div>
+            <div>
+              <div class="item-title">Pre-2014 Archival Reconstruction</div>
+              <div class="item-desc">Expands pre-2014 historical dataset from 24 to 40 confirmed leaks across state boards, AIEEE, PMTs, and AIIMS PG exams.</div>
+            </div>
+          </div>
+          <div class="control-item">
+            <div class="control-icon">✓</div>
+            <div>
+              <div class="item-title">Party Executive Tenure Normalization</div>
+              <div class="item-desc">Normalizes party leaks per **State-Year in Power** (2004–2026), accounting for BJP holding state power across more states post-2014.</div>
+            </div>
+          </div>
+          <div class="control-item">
+            <div class="control-icon">✓</div>
+            <div>
+              <div class="item-title">State Fixed-Effects Risk Model</div>
+              <div class="item-desc">Calculates Observed vs Expected ($O/E$) risk ratios: **BJP (1.05) and INC (1.06)** perform identically relative to state risk profiles.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Visual Analytics Dashboard -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="section-header">
+      <h2 class="section-title">Visual Analytics & Regime Comparisons</h2>
+      <p class="section-desc">Dynamic multi-dimensional charts comparing leak frequencies, tenure-adjusted rates, state fixed-effects, and vulnerability shifts.</p>
+    </div>
+
+    <!-- Charts Row 1 -->
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-title">Annualized Leak Frequency (UPA vs NDA)</div>
+        <div class="chart-container">
+          <canvas id="chart-era"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">State Party Leaks (Tenure Normalized)</div>
+        <div class="chart-container">
+          <canvas id="chart-party-tenure"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row 2 -->
+    <div class="grid-2" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-title">State Fixed-Effects (Observed vs Expected O/E Ratio)</div>
+        <div class="chart-container">
+          <canvas id="chart-fixed-effects"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Exam Category Shift Across Eras</div>
+        <div class="chart-container">
+          <canvas id="chart-category"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chart Row 3 -->
+    <div class="card" style="margin-top: 24px;">
+      <div class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
+      <div class="chart-container" style="height: 350px;">
+        <canvas id="chart-mechanism"></canvas>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 3: Interactive Data Explorer -->
+  <section class="container" style="margin-bottom: 80px;">
+    <div class="section-header">
+      <h2 class="section-title">126-Incident Interactive Data Explorer</h2>
+      <p class="section-desc">Search, filter, and inspect every documented incident with direct court/news sources, arrest tallies, and notes.</p>
+    </div>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <div class="filter-group" style="flex: 2;">
+        <label class="filter-label">Search Exam or State</label>
+        <input type="text" id="search-input" class="search-input" placeholder="Search NEET, SSC, UP, Rajasthan, CBSE...">
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Political Era</label>
+        <select id="filter-era" class="filter-select">
+          <option value="">All Eras</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Exam Category</label>
+        <select id="filter-category" class="filter-select">
+          <option value="">All Categories</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Verification Status</label>
+        <select id="filter-status" class="filter-select">
+          <option value="">All Statuses</option>
+          <option value="Confirmed">Confirmed</option>
+          <option value="Alleged">Alleged</option>
+          <option value="Denied">Denied</option>
+          <option value="Suspected">Suspected</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Table -->
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Date</th>
+            <th>Era</th>
+            <th>Exam Name</th>
+            <th>State / Location</th>
+            <th>Ruling Party</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="table-body">
+          <!-- Populated by app.js -->
+        </tbody>
+      </table>
+    </div>
+    <div id="record-count" style="margin-top: 12px; font-size: 13px; color: var(--text-subtle); text-align: right;">Loading...</div>
+  </section>
+
+  <!-- Modal Dialog -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="modal">
+      <button id="modal-close" class="modal-close">&times;</button>
+      <div id="modal-title" class="modal-title">Exam Title</div>
+      <div class="modal-meta">
+        <span id="modal-id" class="badge badge-confirmed">ID</span>
+        <span id="modal-date" style="color: var(--text-muted); font-size: 13px;">Date</span>
+        <span id="modal-state" style="color: var(--text-muted); font-size: 13px;">State</span>
+        <span id="modal-party" style="color: var(--text-muted); font-size: 13px;">Party</span>
+        <span id="modal-status" class="badge badge-alleged">Status</span>
+      </div>
+      <div id="modal-note" class="modal-body">
+        Incident details note...
+      </div>
+      <a id="modal-link" href="#" target="_blank" class="modal-btn">View Primary Source Link &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer container">
+    <p>India Paper Leaks Audit & Econometric Dashboard &bull; Deployable to GitHub Pages</p>
+    <p style="margin-top: 6px; font-size: 12px;">Based on datasets <code>paper_leaks.csv</code> and <code>paper_leaks_enriched.csv</code> &bull; Built with Chart.js & Vanilla JS</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
