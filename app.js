@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Fixed Archival Addition ID Matcher (PL-0111 to PL-0126)
+// Global Dashboard Application Controller - Dynamic Category Chart & View Synchronization
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -79,6 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleEra = document.getElementById('title-chart-era');
     const titlePartyTenure = document.getElementById('title-chart-party-tenure');
     const titleFixedEffects = document.getElementById('title-chart-fixed-effects');
+    const titleCategory = document.getElementById('title-chart-category');
     const titleDataExplorer = document.getElementById('title-data-explorer');
 
     if (titleEra) {
@@ -97,6 +98,12 @@ document.addEventListener('DOMContentLoaded', () => {
       titleFixedEffects.innerText = isEnriched ? 
         'State Fixed-Effects (Observed vs Expected O/E Parity)' : 
         'State Fixed-Effects (Raw Truncation Skewed O/E Ratio)';
+    }
+
+    if (titleCategory) {
+      titleCategory.innerText = isEnriched ? 
+        'Exam Category Shift Across Eras (Controlled Confirmed Distribution)' : 
+        'Exam Category Shift Across Eras (Raw Unadjusted Distribution)';
     }
 
     if (titleDataExplorer) {
@@ -272,13 +279,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 4: Exam Category Shift
+  // Chart 4: Dynamic Exam Category Shift Across Eras
   function renderCategoryChart() {
     const ctx = document.getElementById('chart-category').getContext('2d');
+    const isEnriched = currentMode === 'enriched';
 
     const categories = ['Subordinate Recruitment', 'Entrance Tests (Higher Ed)', 'Police & Defense', 'Teacher Recruitment / TET', 'School Board Exam', 'Civil Services / PSC'];
-    const upaCounts = [2, 19, 4, 3, 6, 3];
-    const ndaCounts = [22, 4, 10, 10, 6, 8];
+    
+    // Controlled Enriched (40 UPA vs 65 NDA) vs Raw Unadjusted (24 UPA vs 86 NDA)
+    const upaCounts = isEnriched ? [2, 19, 4, 3, 6, 3] : [2, 10, 2, 2, 3, 2];
+    const ndaCounts = isEnriched ? [22, 4, 10, 10, 6, 8] : [30, 7, 11, 13, 6, 12];
 
     charts.category = new Chart(ctx, {
       type: 'radar',
@@ -286,14 +296,14 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: categories,
         datasets: [
           {
-            label: 'UPA Era (2004–2014)',
+            label: isEnriched ? 'UPA Era Confirmed (40 Cases)' : 'UPA Era Raw (24 Cases)',
             data: upaCounts,
             borderColor: '#6366f1',
             backgroundColor: 'rgba(99, 102, 241, 0.25)',
             borderWidth: 2
           },
           {
-            label: 'NDA Era (2014–2026)',
+            label: isEnriched ? 'NDA Era Confirmed (65 Cases)' : 'NDA Era Raw (86 Cases)',
             data: ndaCounts,
             borderColor: '#06b6d4',
             backgroundColor: 'rgba(6, 182, 212, 0.25)',
