@@ -1,24 +1,24 @@
-// Global Dashboard Application Controller - Updated with Individual Party Disaggregation & Visual Change Indicators
+// Global Dashboard Application Controller - Fixed Dynamic Fixed-Effects Chart
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
   let charts = {};
 
-  // Individual Party Data Mappings (Strictly Individual Parties, No Alliances or Blocs)
+  // Individual Party Data Mappings
   const individualPartyData = {
-    'BJP': { raw: 39, confirmed: 39, stateYears: 184.1, rate: 0.212, oeRatio: 1.05 },
-    'INC': { raw: 19, confirmed: 19, stateYears: 135.0, rate: 0.141, oeRatio: 1.06 },
-    'JD(U)': { raw: 7, confirmed: 7, stateYears: 20.7, rate: 0.338, oeRatio: 1.07 },
-    'SP': { raw: 3, confirmed: 3, stateYears: 8.0, rate: 0.375, oeRatio: 0.69 },
-    'BSP': { raw: 2, confirmed: 2, stateYears: 5.0, rate: 0.400, oeRatio: 0.74 },
-    'AAP': { raw: 2, confirmed: 2, stateYears: 15.7, rate: 0.127, oeRatio: 1.82 },
-    'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeRatio: 2.85 },
-    'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeRatio: 0.73 },
-    'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeRatio: 1.10 },
-    'BRS': { raw: 1, confirmed: 1, stateYears: 9.5, rate: 0.105, oeRatio: 2.33 },
-    'JMM': { raw: 1, confirmed: 1, stateYears: 6.5, rate: 0.154, oeRatio: 1.71 },
-    'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeRatio: 0.74 },
-    'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeRatio: 1.58 }
+    'BJP': { raw: 39, confirmed: 39, stateYears: 184.1, rate: 0.212, oeControlled: 1.05, oeRaw: 2.15 },
+    'INC': { raw: 11, confirmed: 19, stateYears: 135.0, rate: 0.141, oeControlled: 1.06, oeRaw: 0.61 },
+    'JD(U)': { raw: 7, confirmed: 7, stateYears: 20.7, rate: 0.338, oeControlled: 1.07, oeRaw: 1.07 },
+    'SP': { raw: 3, confirmed: 3, stateYears: 8.0, rate: 0.375, oeControlled: 0.69, oeRaw: 0.69 },
+    'BSP': { raw: 2, confirmed: 2, stateYears: 5.0, rate: 0.400, oeControlled: 0.74, oeRaw: 0.74 },
+    'AAP': { raw: 2, confirmed: 2, stateYears: 15.7, rate: 0.127, oeControlled: 1.82, oeRaw: 1.82 },
+    'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeControlled: 2.85, oeRaw: 2.85 },
+    'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeControlled: 0.73, oeRaw: 0.73 },
+    'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeControlled: 1.10, oeRaw: 1.10 },
+    'BRS': { raw: 1, confirmed: 1, stateYears: 9.5, rate: 0.105, oeControlled: 2.33, oeRaw: 2.33 },
+    'JMM': { raw: 1, confirmed: 1, stateYears: 6.5, rate: 0.154, oeControlled: 1.71, oeRaw: 1.71 },
+    'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeControlled: 0.74, oeRaw: 0.74 },
+    'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeControlled: 1.58, oeRaw: 1.58 }
   };
 
   // DOM Elements
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 1.10 UPA)';
 
       document.getElementById('kpi-oe-ratio').innerText = '1.05 vs 1.06';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) O/E Parity';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) Controlled Parity';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
@@ -87,8 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-rate').innerText = '1.23';
       document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Raw Incidents / Yr';
 
-      document.getElementById('kpi-oe-ratio').innerText = '3.6x Ratio';
-      document.getElementById('kpi-oe-sub').innerText = 'Unadjusted Raw Party Surge Artifact';
+      document.getElementById('kpi-oe-ratio').innerText = '2.15 vs 0.61';
+      document.getElementById('kpi-oe-sub').innerText = 'Unadjusted Raw Distortion (Truncation Skew)';
 
       document.getElementById('kpi-unconfirmed').innerText = '0%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Noise Included';
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMechanismChart();
   }
 
-  // Chart 1: Annual Leak Frequency (UPA vs NDA) [DYNAMIC VARIABLE]
+  // Chart 1: Annual Leak Frequency (UPA vs NDA)
   function renderEraChart() {
     const ctx = document.getElementById('chart-era').getContext('2d');
     const isEnriched = currentMode === 'enriched';
@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
       data: {
         labels: labels,
         datasets: [{
-          label: isEnriched ? 'Confirmed Leak Rate (Leaks / Year) [Adjusted]' : 'Raw Unadjusted Rate (Leaks / Year) [Raw]',
+          label: isEnriched ? 'Confirmed Leak Rate (Leaks / Year) [Controlled]' : 'Raw Unadjusted Rate (Leaks / Year) [Raw]',
           data: rates,
           backgroundColor: isEnriched ? ['rgba(99, 102, 241, 0.75)', 'rgba(6, 182, 212, 0.75)'] : ['rgba(245, 158, 11, 0.75)', 'rgba(244, 63, 94, 0.75)'],
           borderColor: isEnriched ? ['#6366f1', '#06b6d4'] : ['#f59e0b', '#f43f5e'],
@@ -152,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 2: Individual State Parties (Strictly Individual Parties, No Blocs) [DYNAMIC VARIABLE]
+  // Chart 2: Individual State Parties (Tenure-Normalized vs Raw)
   function renderIndividualPartyTenureChart() {
     const ctx = document.getElementById('chart-party-tenure').getContext('2d');
     const isEnriched = currentMode === 'enriched';
@@ -185,12 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio for Individual Parties) [DYNAMIC VARIABLE]
+  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio) [NOW DYNAMIC ON TOGGLE!]
   function renderFixedEffectsChart() {
     const ctx = document.getElementById('chart-fixed-effects').getContext('2d');
+    const isEnriched = currentMode === 'enriched';
     
     const topParties = ['BJP', 'INC', 'JD(U)', 'SP', 'BSP', 'AAP', 'AITC', 'BJD'];
-    const oeRatios = topParties.map(p => individualPartyData[p].oeRatio);
+    const oeRatios = topParties.map(p => isEnriched ? individualPartyData[p].oeControlled : individualPartyData[p].oeRaw);
 
     charts.fixedEffects = new Chart(ctx, {
       type: 'line',
@@ -198,12 +199,12 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: topParties,
         datasets: [
           {
-            label: 'Observed / Expected (O / E) Risk Ratio',
+            label: isEnriched ? 'Controlled State Fixed-Effects (O / E Ratio)' : 'Unadjusted Raw Data (O / E Ratio - Skewed by Truncation)',
             data: oeRatios,
-            borderColor: '#06b6d4',
-            backgroundColor: 'rgba(6, 182, 212, 0.15)',
+            borderColor: isEnriched ? '#06b6d4' : '#f43f5e',
+            backgroundColor: isEnriched ? 'rgba(6, 182, 212, 0.15)' : 'rgba(244, 63, 94, 0.15)',
             borderWidth: 3,
-            pointBackgroundColor: '#06b6d4',
+            pointBackgroundColor: isEnriched ? '#06b6d4' : '#f43f5e',
             pointRadius: 6,
             fill: true,
             tension: 0.3
@@ -211,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             label: 'State Baseline Parity Line (1.00)',
             data: topParties.map(() => 1.00),
-            borderColor: '#ef4444',
+            borderColor: '#94a3b8',
             borderWidth: 2,
             borderDash: [6, 6],
             pointRadius: 0
@@ -224,13 +225,13 @@ document.addEventListener('DOMContentLoaded', () => {
         plugins: { legend: { labels: { color: '#94a3b8' } } },
         scales: {
           x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, min: 0.4, max: 2.0 }
+          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, min: 0.4, max: 2.5 }
         }
       }
     });
   }
 
-  // Chart 4: Exam Category Shift [CONSTANT BASELINE DISTRIBUTION]
+  // Chart 4: Exam Category Shift
   function renderCategoryChart() {
     const ctx = document.getElementById('chart-category').getContext('2d');
 
@@ -275,7 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 5: Leak Mechanism Shift [DYNAMIC VERIFICATION BREAKDOWN]
+  // Chart 5: Leak Mechanism Shift
   function renderMechanismChart() {
     const ctx = document.getElementById('chart-mechanism').getContext('2d');
 
