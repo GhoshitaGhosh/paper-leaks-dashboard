@@ -1,7 +1,7 @@
 # India Paper Leaks: A Statistical Audit & Dual-Regime Analysis (2004–2026)
 
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-06b6d4?style=for-the-badge&logo=github)](https://GhoshitaGhosh.github.io/paper-leaks-dashboard/)
-[![Dataset](https://img.shields.io/badge/Dataset-126_Records-10b981?style=for-the-badge)](paper_leaks_enriched.csv)
+[![Dataset](https://img.shields.io/badge/Dataset-110_Records-10b981?style=for-the-badge)](paper_leaks_enriched.csv)
 [![Baseline Dataset](https://img.shields.io/badge/Baseline_Kaggle-Sujay_Nadkarni-6366f1?style=for-the-badge)](https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026)
 
 An interactive web dashboard and econometric study evaluating public examination paper leaks in India across the UPA (2004–2014) and NDA (2014–2026) political regimes.
@@ -16,8 +16,7 @@ This study builds upon the pioneer open-source dataset compiled by **Sujay Nadka
 📌 **Dataset Citation**: Sujay Nadkarni, ["India Paper Leaks from 2004 to 2026"](https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026), Kaggle.
 
 Our project enriches Nadkarni's baseline by:
-- **Archival Reconstruction**: Uncovering **16 missing pre-2014 historical leaks** (`PL-0111` to `PL-0126`) across state PMTs, CETs, AIEEE, and Board exams (expanding pre-2014 records from 24 to 40 cases).
-- **Provenance Marking**: Every reconstructed archival case is styled with glowing badges (`✨ PL-0111`) and filterable via a dedicated dropdown option in the Data Explorer.
+- **Provenance Marking**: Every reconstructed archival case is styled with glowing badges (`✨ PL-0001`) and filterable via a dedicated dropdown option in the Data Explorer.
 - **Econometric Controls**: Filtering post-2014 noise (24.4% unconfirmed claims), normalizing executive state-years, and calculating state fixed-effects $O/E$ risk ratios.
 
 ---
@@ -40,7 +39,7 @@ Our project enriches Nadkarni's baseline by:
   - *Level 3*: State Fixed-Effects Model ($O / E$ Risk Ratios: BJP 1.05 ≈ INC 1.06).
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
 - **Layer 4: Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) and an infobox detailing 5 structural limitations of media-scraped datasets.
-- **Layer 5: 126-Incident Primary Data Explorer**: Filterable table with glowing archival badges (`✨ PL-0111`), modal popup inspector, and primary news/court links.
+- **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with glowing archival badges (`✨ PL-0001`), modal popup inspector, and primary news/court links.
 
 ---
 
@@ -60,7 +59,7 @@ Even after rigorous econometric cleaning and archival expansion, statistical mod
 - [`index.html`](index.html): Main glassmorphic 5-layer single-page web dashboard application.
 - [`styles.css`](styles.css): Custom glassmorphism CSS design system with state risk badges.
 - [`app.js`](app.js): Dynamic UI controller, Chart.js engine, and dynamic card title handlers.
-- [`data.js`](data.js): Pre-compiled dataset module containing all 126 records.
+- [`data.js`](data.js): Pre-compiled dataset module containing all 110 records.
 - [`paper_leaks_enriched.csv`](paper_leaks_enriched.csv): Enriched dataset with 28 data dimensions.
 - [`paper_leaks.csv`](paper_leaks.csv): Updated baseline dataset.
 - [`.nojekyll`](.nojekyll): GitHub Pages Jekyll bypass flag.
