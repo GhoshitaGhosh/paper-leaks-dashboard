@@ -20,10 +20,20 @@
           <div style="font-size: 11px; color: var(--text-subtle);">Dual-Regime Econometric Study (2004–2026)</div>
         </div>
       </div>
-      <div class="mode-switch-box">
-        <button id="btn-mode-enriched" class="mode-btn active">Controlled Baseline View</button>
-        <button id="btn-mode-raw" class="mode-btn">Raw Unadjusted View</button>
-      </div>
+      <div class="mode-toggle-card glass-panel text-center">
+          <span class="mode-label">Interactive Analytical Toggle:</span>
+          <div class="toggle-buttons">
+            <button id="btn-mode-enriched" class="toggle-btn active">
+              <span class="btn-icon">⚖️</span> Controlled Baseline View (Econometric Model)
+            </button>
+            <button id="btn-mode-raw" class="toggle-btn">
+              <span class="btn-icon">📊</span> Raw Unadjusted View (Sujay Nadkarni Scraper)
+            </button>
+          </div>
+          <p class="mode-description" id="mode-desc">
+            <strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk fixed-effects controls ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.
+          </p>
+        </div>
     </div>
   </header>
 
