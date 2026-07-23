@@ -1,8 +1,25 @@
-// Global Dashboard Application Controller
+// Global Dashboard Application Controller - Updated with Individual Party Disaggregation & Visual Change Indicators
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
   let charts = {};
+
+  // Individual Party Data Mappings (Strictly Individual Parties, No Alliances or Blocs)
+  const individualPartyData = {
+    'BJP': { raw: 39, confirmed: 39, stateYears: 184.1, rate: 0.212, oeRatio: 1.05 },
+    'INC': { raw: 19, confirmed: 19, stateYears: 135.0, rate: 0.141, oeRatio: 1.06 },
+    'JD(U)': { raw: 7, confirmed: 7, stateYears: 20.7, rate: 0.338, oeRatio: 1.07 },
+    'SP': { raw: 3, confirmed: 3, stateYears: 8.0, rate: 0.375, oeRatio: 0.69 },
+    'BSP': { raw: 2, confirmed: 2, stateYears: 5.0, rate: 0.400, oeRatio: 0.74 },
+    'AAP': { raw: 2, confirmed: 2, stateYears: 15.7, rate: 0.127, oeRatio: 1.82 },
+    'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeRatio: 2.85 },
+    'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeRatio: 0.73 },
+    'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeRatio: 1.10 },
+    'BRS': { raw: 1, confirmed: 1, stateYears: 9.5, rate: 0.105, oeRatio: 2.33 },
+    'JMM': { raw: 1, confirmed: 1, stateYears: 6.5, rate: 0.154, oeRatio: 1.71 },
+    'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeRatio: 0.74 },
+    'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeRatio: 1.58 }
+  };
 
   // DOM Elements
   const btnEnriched = document.getElementById('btn-mode-enriched');
@@ -49,11 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function updateKPICards() {
-    const totalRaw = data.length; // 126
-    const confirmedLeaks = data.filter(d => d.verified_leak_flag === 1).length; // 105
-    const unconfirmedClaims = totalRaw - confirmedLeaks; // 21
+    const isEnriched = currentMode === 'enriched';
 
-    if (currentMode === 'enriched') {
+    if (isEnriched) {
       document.getElementById('kpi-annual-rate').innerText = '5.35';
       document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)';
 
@@ -87,13 +102,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     renderEraChart();
-    renderPartyTenureChart();
+    renderIndividualPartyTenureChart();
     renderFixedEffectsChart();
     renderCategoryChart();
     renderMechanismChart();
   }
 
-  // Chart 1: Annual Leak Frequency (UPA vs NDA)
+  // Chart 1: Annual Leak Frequency (UPA vs NDA) [DYNAMIC VARIABLE]
   function renderEraChart() {
     const ctx = document.getElementById('chart-era').getContext('2d');
     const isEnriched = currentMode === 'enriched';
@@ -107,10 +122,10 @@ document.addEventListener('DOMContentLoaded', () => {
       data: {
         labels: labels,
         datasets: [{
-          label: isEnriched ? 'Confirmed Leak Rate (Leaks / Year)' : 'Raw Unadjusted Rate (Leaks / Year)',
+          label: isEnriched ? 'Confirmed Leak Rate (Leaks / Year) [Adjusted]' : 'Raw Unadjusted Rate (Leaks / Year) [Raw]',
           data: rates,
-          backgroundColor: ['rgba(99, 102, 241, 0.75)', 'rgba(6, 182, 212, 0.75)'],
-          borderColor: ['#6366f1', '#06b6d4'],
+          backgroundColor: isEnriched ? ['rgba(99, 102, 241, 0.75)', 'rgba(6, 182, 212, 0.75)'] : ['rgba(245, 158, 11, 0.75)', 'rgba(244, 63, 94, 0.75)'],
+          borderColor: isEnriched ? ['#6366f1', '#06b6d4'] : ['#f59e0b', '#f43f5e'],
           borderWidth: 2,
           borderRadius: 8
         }]
@@ -137,30 +152,25 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 2: State Party Leaks (Tenure-Normalized vs Raw)
-  function renderPartyTenureChart() {
+  // Chart 2: Individual State Parties (Strictly Individual Parties, No Blocs) [DYNAMIC VARIABLE]
+  function renderIndividualPartyTenureChart() {
     const ctx = document.getElementById('chart-party-tenure').getContext('2d');
     const isEnriched = currentMode === 'enriched';
 
-    const blocs = ['BJP & Allies', 'INC & Allies', 'Regional (Hindi Belt)', 'Non-Aligned Regional', 'Left Front'];
-    const rates = isEnriched ? [0.212, 0.155, 0.356, 0.085, 0.028] : [39, 24, 12, 6, 1]; // Rates vs Raw Counts
+    const partyNames = Object.keys(individualPartyData);
+    const chartData = partyNames.map(p => isEnriched ? individualPartyData[p].rate : individualPartyData[p].raw);
 
     charts.partyTenure = new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: blocs,
+        labels: partyNames,
         datasets: [{
-          label: isEnriched ? 'Normalized Rate (Leaks / State-Year)' : 'Raw Absolute Incident Count',
-          data: rates,
-          backgroundColor: [
-            'rgba(245, 158, 11, 0.75)',
-            'rgba(99, 102, 241, 0.75)',
-            'rgba(244, 63, 94, 0.75)',
-            'rgba(16, 185, 129, 0.75)',
-            'rgba(168, 85, 247, 0.75)'
-          ],
+          label: isEnriched ? 'Normalized Rate (Leaks / State-Year in Power)' : 'Raw Absolute State Leak Count',
+          data: chartData,
+          backgroundColor: isEnriched ? 'rgba(6, 182, 212, 0.75)' : 'rgba(244, 63, 94, 0.75)',
+          borderColor: isEnriched ? '#06b6d4' : '#f43f5e',
           borderWidth: 1,
-          borderRadius: 8
+          borderRadius: 6
         }]
       },
       options: {
@@ -168,25 +178,24 @@ document.addEventListener('DOMContentLoaded', () => {
         maintainAspectRatio: false,
         plugins: { legend: { labels: { color: '#94a3b8' } } },
         scales: {
-          x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } },
           y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
         }
       }
     });
   }
 
-  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio)
+  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio for Individual Parties) [DYNAMIC VARIABLE]
   function renderFixedEffectsChart() {
     const ctx = document.getElementById('chart-fixed-effects').getContext('2d');
     
-    // Fixed Effects is active in enriched mode
-    const parties = ['BJP & Allies', 'INC & Allies', 'JD(U) Bihar', 'SP (UP)', 'BSP (UP)', 'AAP', 'AITC (WB)'];
-    const oeRatios = [1.05, 1.06, 1.07, 0.69, 0.74, 1.82, 0.73];
+    const topParties = ['BJP', 'INC', 'JD(U)', 'SP', 'BSP', 'AAP', 'AITC', 'BJD'];
+    const oeRatios = topParties.map(p => individualPartyData[p].oeRatio);
 
     charts.fixedEffects = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: parties,
+        labels: topParties,
         datasets: [
           {
             label: 'Observed / Expected (O / E) Risk Ratio',
@@ -200,8 +209,8 @@ document.addEventListener('DOMContentLoaded', () => {
             tension: 0.3
           },
           {
-            label: 'State Expected Parity Baseline (1.00)',
-            data: [1.00, 1.00, 1.00, 1.00, 1.00, 1.00, 1.00],
+            label: 'State Baseline Parity Line (1.00)',
+            data: topParties.map(() => 1.00),
             borderColor: '#ef4444',
             borderWidth: 2,
             borderDash: [6, 6],
@@ -221,7 +230,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 4: Exam Category Shift
+  // Chart 4: Exam Category Shift [CONSTANT BASELINE DISTRIBUTION]
   function renderCategoryChart() {
     const ctx = document.getElementById('chart-category').getContext('2d');
 
@@ -266,7 +275,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 5: Leak Mechanism Shift
+  // Chart 5: Leak Mechanism Shift [DYNAMIC VERIFICATION BREAKDOWN]
   function renderMechanismChart() {
     const ctx = document.getElementById('chart-mechanism').getContext('2d');
 
@@ -342,7 +351,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const eraSelect = document.getElementById('filter-era');
     const catSelect = document.getElementById('filter-category');
     
-    // Only populate if empty
     if (eraSelect.children.length <= 1) {
       const eras = [...new Set(data.map(d => d.era))];
       eras.forEach(e => {

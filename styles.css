@@ -167,6 +167,33 @@ h1, h2, h3, h4, .font-heading {
   font-weight: 400;
 }
 
+/* Visual Indicator Badges (Variable vs Constant) */
+.indicator-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 10px;
+  border-radius: 12px;
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+
+  margin-bottom: 8px;
+}
+
+.indicator-tag.variable {
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--primary-cyan);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+}
+
+.indicator-tag.constant {
+  background: rgba(100, 116, 139, 0.15);
+  color: var(--text-muted);
+  border: 1px solid rgba(100, 116, 139, 0.35);
+}
+
 /* Metric KPI Cards Grid */
 .kpi-grid {
   display: grid;
@@ -209,7 +236,7 @@ h1, h2, h3, h4, .font-heading {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .kpi-value {
@@ -290,7 +317,7 @@ h1, h2, h3, h4, .font-heading {
 }
 
 .card-title {
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   margin-bottom: 16px;
   color: var(--text-main);

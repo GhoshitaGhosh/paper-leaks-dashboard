@@ -33,27 +33,31 @@
     <h1 class="hero-title">Paper Leaks in India:<br>Deconstructing Reporting Drift & Federal Risk</h1>
     <p class="hero-sub">
       A comprehensive empirical audit of 126 public exam leaks evaluating the UPA (2004–2014) and NDA (2014–2026) regimes. 
-      Correcting pre-2014 media truncation, post-2014 social media noise, and federal risk exposure.
+      Disaggregated by individual political parties, controlling for executive state-years and state risk proclivities.
     </p>
 
-    <!-- KPI Cards Grid -->
+    <!-- KPI Cards Grid with Visual Indicator Badges -->
     <div class="kpi-grid">
       <div class="kpi-card">
+        <span class="indicator-tag variable">⚡ Variable Metric</span>
         <div class="kpi-label">Annualized Leak Rate</div>
         <div id="kpi-annual-rate" class="kpi-value">5.35</div>
         <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)</div>
       </div>
       <div class="kpi-card">
+        <span class="indicator-tag variable">⚡ Variable Metric</span>
         <div class="kpi-label">Central Govt Leak Rate</div>
         <div id="kpi-central-rate" class="kpi-value">0.90</div>
         <div id="kpi-central-sub" class="kpi-sub">Central Leaks / Yr (vs 1.10 UPA)</div>
       </div>
       <div class="kpi-card">
+        <span class="indicator-tag variable">⚡ Variable Metric</span>
         <div class="kpi-label">State Fixed-Effects Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
         <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) O/E Parity</div>
       </div>
       <div class="kpi-card">
+        <span class="indicator-tag variable">⚡ Variable Metric</span>
         <div class="kpi-label">Filtered Claim Noise</div>
         <div id="kpi-unconfirmed" class="kpi-value">24.4%</div>
         <div id="kpi-unconfirmed-sub" class="kpi-sub warning">Filtered Out Post-2014 Claims Noise</div>
@@ -138,20 +142,22 @@
   <!-- Section 2: Visual Analytics Dashboard -->
   <section class="container" style="margin-bottom: 60px;">
     <div class="section-header">
-      <h2 class="section-title">Visual Analytics & Regime Comparisons</h2>
-      <p class="section-desc">Dynamic multi-dimensional charts comparing leak frequencies, tenure-adjusted rates, state fixed-effects, and vulnerability shifts.</p>
+      <h2 class="section-title">Visual Analytics & Individual Party Breakdown</h2>
+      <p class="section-desc">Disaggregated by individual political parties (no coalitions or blocs) with clear visual indicators for variable vs constant baseline metrics.</p>
     </div>
 
     <!-- Charts Row 1 -->
     <div class="grid-2">
       <div class="card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="card-title">Annualized Leak Frequency (UPA vs NDA)</div>
         <div class="chart-container">
           <canvas id="chart-era"></canvas>
         </div>
       </div>
       <div class="card">
-        <div class="card-title">State Party Leaks (Tenure Normalized)</div>
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <div class="card-title">Individual State Parties (Tenure-Normalized Rate)</div>
         <div class="chart-container">
           <canvas id="chart-party-tenure"></canvas>
         </div>
@@ -161,12 +167,14 @@
     <!-- Charts Row 2 -->
     <div class="grid-2" style="margin-top: 24px;">
       <div class="card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="card-title">State Fixed-Effects (Observed vs Expected O/E Ratio)</div>
         <div class="chart-container">
           <canvas id="chart-fixed-effects"></canvas>
         </div>
       </div>
       <div class="card">
+        <span class="indicator-tag constant">📌 Constant Baseline (Historical Distribution)</span>
         <div class="card-title">Exam Category Shift Across Eras</div>
         <div class="chart-container">
           <canvas id="chart-category"></canvas>
@@ -176,6 +184,7 @@
 
     <!-- Chart Row 3 -->
     <div class="card" style="margin-top: 24px;">
+      <span class="indicator-tag constant">📌 Constant Baseline (Historical Modus Operandi)</span>
       <div class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
       <div class="chart-container" style="height: 350px;">
         <canvas id="chart-mechanism"></canvas>
