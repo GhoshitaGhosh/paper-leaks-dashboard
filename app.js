@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Fixed Dynamic Card Titles on View Toggle
+// Global Dashboard Application Controller - Updated with Archival Addition Badges & Provenance Filters
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -350,9 +350,14 @@ document.addEventListener('DOMContentLoaded', () => {
       tr.addEventListener('click', () => openModal(row));
 
       const statusBadge = getStatusBadge(row.leak_status);
+      const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+      
+      const idBadgeHtml = isAddition ? 
+        `<span class="badge badge-addition">✨ ${row.incident_id}</span>` : 
+        `<strong>${row.incident_id}</strong>`;
 
       tr.innerHTML = `
-        <td><strong>${row.incident_id}</strong></td>
+        <td>${idBadgeHtml}</td>
         <td>${row.date}</td>
         <td>${row.era}</td>
         <td>${row.exam_name}</td>
@@ -378,6 +383,7 @@ document.addEventListener('DOMContentLoaded', () => {
   function populateDropdowns() {
     const eraSelect = document.getElementById('filter-era');
     const catSelect = document.getElementById('filter-category');
+    const statusSelect = document.getElementById('filter-status');
     
     if (eraSelect.children.length <= 1) {
       const eras = [...new Set(data.map(d => d.era))];
@@ -395,6 +401,12 @@ document.addEventListener('DOMContentLoaded', () => {
         opt.innerText = c;
         catSelect.appendChild(opt);
       });
+
+      // Add Archival Additions option to status dropdown
+      const optAddition = document.createElement('option');
+      optAddition.value = 'ArchivalAddition';
+      optAddition.innerText = '✨ Reconstructed Archival Additions (PL-0111 to PL-0126)';
+      statusSelect.appendChild(optAddition);
     }
   }
 
@@ -412,7 +424,13 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const matchesEra = !era || row.era === era;
       const matchesCat = !cat || row.exam_category === cat;
-      const matchesStatus = !status || (row.leak_status && row.leak_status.toLowerCase().includes(status.toLowerCase()));
+      
+      let matchesStatus = true;
+      if (status === 'ArchivalAddition') {
+        matchesStatus = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+      } else if (status) {
+        matchesStatus = row.leak_status && row.leak_status.toLowerCase().includes(status.toLowerCase());
+      }
 
       return matchesSearch && matchesEra && matchesCat && matchesStatus;
     });
@@ -422,18 +440,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Modal Dialog Viewer
   function openModal(row) {
+    const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+    
     document.getElementById('modal-title').innerText = row.exam_name;
-    document.getElementById('modal-id').innerText = `ID: ${row.incident_id}`;
+    document.getElementById('modal-id').innerHTML = isAddition ? 
+      `<span class="badge badge-addition">✨ Reconstructed Addition (${row.incident_id})</span>` : 
+      `ID: ${row.incident_id}`;
+
     document.getElementById('modal-date').innerText = `Date: ${row.date}`;
     document.getElementById('modal-state').innerText = `State: ${row.state_name || row.area}`;
     document.getElementById('modal-party').innerText = `Ruling Party: ${row.state_ruling_party || 'Central'}`;
     document.getElementById('modal-status').innerText = `Status: ${row.leak_status}`;
-    document.getElementById('modal-note').innerText = row.note || 'No notes available.';
+    
+    const noteText = isAddition ? 
+      `📌 [Uncovered Pre-2014 Archival Addition]: ${row.note || 'No notes available.'}` : 
+      (row.note || 'No notes available.');
+      
+    document.getElementById('modal-note').innerText = noteText;
     
     const sourceLink = document.getElementById('modal-link');
     if (row.source_url) {
       sourceLink.href = row.source_url;
-      sourceLink.innerText = `View Source (${row.source_name || 'Link'})`;
+      sourceLink.innerText = `View Primary Source (${row.source_name || 'Link'})`;
       sourceLink.style.display = 'inline-flex';
     } else {
       sourceLink.style.display = 'none';

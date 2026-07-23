@@ -892,6 +892,13 @@ tbody tr:hover {
   border: 1px solid rgba(168, 85, 247, 0.3);
 }
 
+.badge-addition {
+  background: rgba(6, 182, 212, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(6, 182, 212, 0.5);
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.2);
+}
+
 /* Modal Dialog */
 .modal-overlay {
   position: fixed;
