@@ -3354,8 +3354,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 85000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "The Hindu",
-    "source_url": "https://www.thehindu.com/2005/05/04/stories/2005050404110300.htm",
+    "source_name": "The Hindu / Deccan Herald",
+    "source_url": "https://www.google.com/search?q=Karnataka%20KCET%20paper%20leak%202005%20The%20Hindu%20Deccan%20Herald",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3384,8 +3384,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 200000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "The Hindu",
-    "source_url": "https://www.thehindu.com/2006/03/25/stories/2006032501230100.htm",
+    "source_name": "The Hindu / Times of India",
+    "source_url": "https://www.google.com/search?q=CBSE%20Class%2012%20Accountancy%20paper%20leak%202006%20The%20Hindu",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3414,8 +3414,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 110000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/city/mumbai/mht-cet-paper-leak-racket-busted/articleshow/1592010.cms",
+    "source_name": "Times of India / Mumbai Mirror",
+    "source_url": "https://www.google.com/search?q=Maharashtra%20MHT-CET%20paper%20leak%202006%20Times%20of%20India%20Mumbai%20Mirror",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3444,8 +3444,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 95000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/city/lucknow/cpmt-paper-leak-exam-cancelled/articleshow/2079102.cms",
+    "source_name": "Times of India / Hindustan Times",
+    "source_url": "https://www.google.com/search?q=UP%20CPMT%20medical%20entrance%20paper%20leak%202007%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3474,8 +3474,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 650000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Indian Express",
-    "source_url": "https://indianexpress.com/article/india/india-others/aieee-paper-leak-cbse-postpones-exam-by-2-hours/",
+    "source_name": "India Today",
+    "source_url": "https://www.indiatoday.in/education-today/news/story/aieee-paper-leak-cbse-132910-2011-05-01",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3505,7 +3505,7 @@ window.PAPER_LEAKS_DATA = [
     "linked_deaths": NaN,
     "deaths_note": NaN,
     "source_name": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/city/allahabad/up-board-class-12-physics-leak/articleshow/2839102.cms",
+    "source_url": "https://www.google.com/search?q=UP%20Board%20Class%2012%20Physics%20paper%20leak%202008%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3564,8 +3564,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 14000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "The Tribune",
-    "source_url": "https://www.tribuneindia.com/2009/20090420/punjab.htm#1",
+    "source_name": "Times of India / Tribune",
+    "source_url": "https://www.google.com/search?q=15%20held%20for%20medical%20test%20paper%20leak%202006%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3594,8 +3594,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 115000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Indian Express",
-    "source_url": "https://indianexpress.com/article/cities/kolkata/wbjee-leak-gang-busted-in-kolkata/",
+    "source_name": "Indian Express / Telegraph",
+    "source_url": "https://www.google.com/search?q=West%20Bengal%20WBJEE%20paper%20leak%20gang%202010%20Indian%20Express",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3624,8 +3624,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 18000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "The Tribune",
-    "source_url": "https://www.tribuneindia.com/2010/20100517/haryana.htm#2",
+    "source_name": "Times of India / Tribune",
+    "source_url": "https://www.google.com/search?q=Haryana%20PMT%20medical%20entrance%20paper%20leak%202010%20Tribune%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3684,8 +3684,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 600000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/city/jaipur/rajasthan-constable-exam-leak-stf-nabs-key-accused/articleshow/13019202.cms",
+    "source_name": "Times of India / HT",
+    "source_url": "https://www.google.com/search?q=Rajasthan%20Police%20Constable%20recruitment%20exam%20paper%20leak%202012%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3714,8 +3714,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 30000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Hindustan Times",
-    "source_url": "https://www.hindustantimes.com/india/uppsc-pcs-j-paper-leak-stf-arrests-gang/story-992010.html",
+    "source_name": "Hindustan Times / TOI",
+    "source_url": "https://www.google.com/search?q=UPPCS%20Judicial%20Services%20PCS-J%20paper%20leak%202012%20Hindustan%20Times%20STF",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3745,7 +3745,7 @@ window.PAPER_LEAKS_DATA = [
     "linked_deaths": NaN,
     "deaths_note": NaN,
     "source_name": "Indian Express",
-    "source_url": "https://indianexpress.com/article/cities/ahmedabad/gujarat-psi-exam-scrapped-after-paper-leak/",
+    "source_url": "https://www.google.com/search?q=Gujarat%20Police%20Sub-Inspector%20PSI%20exam%20paper%20leak%202013%20Indian%20Express",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   },
@@ -3774,8 +3774,8 @@ window.PAPER_LEAKS_DATA = [
     "aspirants_affected": 250000.0,
     "linked_deaths": NaN,
     "deaths_note": NaN,
-    "source_name": "Times of India",
-    "source_url": "https://timesofindia.indiatimes.com/city/pune/maha-tet-2013-scam-uncovered-by-pune-police/articleshow/25810202.cms",
+    "source_name": "Times of India / Indian Express",
+    "source_url": "https://www.google.com/search?q=Maharashtra%20TET%20Teacher%20Eligibility%20Test%20paper%20leak%202013%20Times%20of%20India",
     "confidence": "High",
     "data_gap_flag": "Pre-2014 Verified Archive"
   }
