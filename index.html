@@ -51,7 +51,7 @@
         <div id="kpi-central-sub" class="kpi-sub">Central Leaks / Yr (vs 1.10 UPA)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <span class="indicator-tag variable">⚡ Variable Metric</span>
         <div class="kpi-label">State Fixed-Effects Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
         <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) Controlled Parity</div>
@@ -66,7 +66,7 @@
   </section>
 
   <!-- Layer 1: The 3 Raw Flaws & 4 Econometric Controls -->
-  <section class="container" style="margin-bottom: 60px;">
+  <section class="container" style="margin-bottom: 40px;">
     <div class="section-header">
       <h2 class="section-title">Layer 1: Dataset Audit & Statistical Corrections</h2>
       <p class="section-desc">Understanding why raw web scraper datasets are distorted and how econometric controls restore baseline fairness.</p>
@@ -143,6 +143,19 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Original Kaggle Dataset Credit & History Explainer -->
+    <div class="citation-box">
+      <div class="citation-header">
+        <span>Dataset Citation & Origins: Sujay Nadkarni's Kaggle Baseline</span>
+      </div>
+      <div class="citation-text">
+        This audit builds upon the original baseline dataset compiled by <strong>Sujay Nadkarni</strong> on Kaggle titled <em>"India Paper Leaks from 2004 to 2026"</em>. Nadkarni's open-source initiative was among the first public attempts to aggregate web-scraped online news coverage of paper leak allegations in India. While invaluable as a starting point, web-scraping digital news APIs inherently creates temporal left-truncation (missing un-indexed pre-2012 regional print media) and post-2014 social media noise (including unverified Telegram claims). Our project enriches Nadkarni's original baseline by reconstructing pre-2014 regional archives, standardizing state executive tenure, and applying econometric risk controls.
+      </div>
+      <a href="https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026" target="_blank" class="kaggle-link">
+        View Original Kaggle Dataset by Sujay Nadkarni &rarr;
+      </a>
     </div>
   </section>
 
@@ -395,6 +408,13 @@
               <td><span class="tier-badge low">Lower Risk</span></td>
               <td>INC (2004–07, 2017–22), SAD/BJP (2007–17), AAP (2022–26)</td>
             </tr>
+            <tr>
+              <td><strong>Andhra Pradesh</strong></td>
+              <td>3 Incidents</td>
+              <td><code>0.135 leaks/year</code></td>
+              <td><span class="tier-badge low">Lower Risk</span></td>
+              <td>INC (2004–14), TDP (2014–19), YSRCP (2019–24)</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -402,7 +422,7 @@
   </section>
 
   <!-- Layer 4: Compiled Statistical Takeaways & Accuracy Comparison Infobox -->
-  <section class="container" style="margin-bottom: 60px;">
+  <section class="container" style="margin-bottom: 40px;">
     <div class="takeaways-box">
       <div class="section-title" style="font-size: 24px; color: var(--accent-emerald);">Layer 4: Compiled Statistical Takeaways & Accuracy Comparison</div>
       <p class="section-desc" style="margin-bottom: 24px;">Comparing the conclusions drawn from the raw Kaggle dataset vs. the controlled econometric dataset, and why the controlled takeaways are methodologically more accurate.</p>
@@ -476,6 +496,51 @@
         </div>
         <div class="reasoning-text">
           <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Leaks ($E$) proves both BJP ($1.05$) and INC ($1.06$) execute within 5-6% of exact state baseline expectations ($1.00$).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lingering Data Limitations & Methodological Constraints Infobox -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="limitations-box">
+      <div class="section-title" style="font-size: 24px; color: #fde68a;">Lingering Data Limitations & Methodological Constraints (Post-Cleaning)</div>
+      <p class="section-desc" style="margin-bottom: 20px;">Despite rigorous econometric cleaning and archival expansion, statistical models inherently retain structural limitations that readers should consider.</p>
+
+      <div class="limitations-grid">
+        <div class="limitation-card">
+          <div class="limitation-title">⚠️ 1. Residual Pre-2010 Regional Print Dark Age</div>
+          <div class="limitation-desc">
+            While we expanded pre-2014 records from 24 to 40 by integrating verified CET/PMT/Board archives, local district pullouts from small regional-language newspapers prior to 2010 remain partially un-digitized. Residual left-truncation may still exist for minor district-level recruitment tests prior to 2010.
+          </div>
+        </div>
+
+        <div class="limitation-card">
+          <div class="limitation-title">⚠️ 2. Reporting Asymmetry vs. True Incident Frequency</div>
+          <div class="limitation-desc">
+            Public leak datasets measure <em>reported and acknowledged breaches</em>, not necessarily total undetected breaches. In tightly controlled or high-coercion administrative settings, compromised exams that were never officially investigated or cancelled remain absent from all media datasets.
+          </div>
+        </div>
+
+        <div class="limitation-card">
+          <div class="limitation-title">⚠️ 3. Social Media Amplification Drift Asymmetry</div>
+          <div class="limitation-desc">
+            Post-2020 leak allegations spread instantaneously across Telegram, WhatsApp, and YouTube channels, creating rapid public pressure for official cancellations. Pre-2010 leaks lacked instant viral amplification, meaning minor leaks may have been resolved locally without national media coverage.
+          </div>
+        </div>
+
+        <div class="limitation-card">
+          <div class="limitation-title">⚠️ 4. Mid-Term Coalition Shifting Attribution</div>
+          <div class="limitation-desc">
+            In states with frequent mid-term coalition shifts (e.g. Maharashtra, Bihar), attributing a leak to a specific party requires exact date-matching against sworn cabinet dates. While our dataset maps exact incident dates to executive ruling parties, brief transition periods introduce minor attribution edge cases.
+          </div>
+        </div>
+
+        <div class="limitation-card">
+          <div class="limitation-title">⚠️ 5. Non-Quantified Economic & Aspirant Costs</div>
+          <div class="limitation-desc">
+            This study quantifies incident frequency and risk ratios, but does not quantify candidate financial loss, mental health tolls, coaching cartel revenue skews, or state re-test administrative expenses.
+          </div>
         </div>
       </div>
     </div>
@@ -563,7 +628,7 @@
   <!-- Footer -->
   <footer class="footer container">
     <p>India Paper Leaks Audit & Econometric Dashboard &bull; Deployable to GitHub Pages</p>
-    <p style="margin-top: 6px; font-size: 12px;">Based on datasets <code>paper_leaks.csv</code> and <code>paper_leaks_enriched.csv</code> &bull; Built with Chart.js & Vanilla JS</p>
+    <p style="margin-top: 6px; font-size: 12px;">Original Baseline Dataset by Sujay Nadkarni (Kaggle) &bull; Enriched Datasets <code>paper_leaks.csv</code> and <code>paper_leaks_enriched.csv</code> &bull; Built with Chart.js & Vanilla JS</p>
   </footer>
 
   <!-- Scripts -->
