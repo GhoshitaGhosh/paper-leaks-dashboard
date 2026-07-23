@@ -77,10 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     const titleEra = document.getElementById('title-chart-era');
+    const subEra = document.getElementById('sub-chart-era');
     const titlePartyTenure = document.getElementById('title-chart-party-tenure');
+    const subPartyTenure = document.getElementById('sub-chart-party-tenure');
     const titleFixedEffects = document.getElementById('title-chart-fixed-effects');
+    const subFixedEffects = document.getElementById('sub-chart-fixed-effects');
     const titleCategory = document.getElementById('title-chart-category');
+    const subCategory = document.getElementById('sub-chart-category');
     const titleMechanism = document.getElementById('title-chart-mechanism');
+    const subMechanism = document.getElementById('sub-chart-mechanism');
     const titleDataExplorer = document.getElementById('title-data-explorer');
 
     if (titleEra) {
@@ -88,11 +93,21 @@ document.addEventListener('DOMContentLoaded', () => {
         'Annualized Confirmed Leak Frequency (UPA vs NDA)' : 
         'Raw Unadjusted Leak Frequency (UPA vs NDA - Unfiltered)';
     }
+    if (subEra) {
+      subEra.innerText = isEnriched ? 
+        'Overall national annualized leak rate comparison across political eras (5.35 vs 2.40 leaks/yr).' : 
+        'Raw unadjusted incident frequency across political eras (7.07 vs 2.40 leaks/yr - unfiltered).';
+    }
 
     if (titlePartyTenure) {
       titlePartyTenure.innerText = isEnriched ? 
         'Individual State Parties (Tenure-Normalized Rate)' : 
         'Individual State Parties (Raw Absolute Incident Counts)';
+    }
+    if (subPartyTenure) {
+      subPartyTenure.innerText = isEnriched ? 
+        'Level 2 Analysis: Controls for Time in Office (State-Years), showing leaks per state-year in power.' : 
+        'Level 1 Analysis: Simple raw incident tallies under party state rule without controlling for time in office.';
     }
 
     if (titleFixedEffects) {
@@ -100,17 +115,32 @@ document.addEventListener('DOMContentLoaded', () => {
         'State Fixed-Effects (Observed vs Expected O/E Parity)' : 
         'State Fixed-Effects (Raw Truncation Skewed O/E Ratio)';
     }
+    if (subFixedEffects) {
+      subFixedEffects.innerText = isEnriched ? 
+        'Level 3 Analysis (Gold Standard): Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).' : 
+        'Unadjusted Raw Analysis: Demonstrates the artificial 2.15x BJP distortion caused by truncation skew.';
+    }
 
     if (titleCategory) {
       titleCategory.innerText = isEnriched ? 
         'Exam Category Shift Across Eras (Controlled Confirmed Distribution)' : 
         'Exam Category Shift Across Eras (Raw Unadjusted Distribution)';
     }
+    if (subCategory) {
+      subCategory.innerText = isEnriched ? 
+        'Controlled Distribution: Structural transition from Entrance Exams (Higher Ed) to Subordinate Recruitment.' : 
+        'Raw Unadjusted Distribution: Un-normalized category counts including unverified social media hoaxes.';
+    }
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
         'Leak Mechanism Taxonomy (Confirmed Leaks vs Filtered Claims Noise)' : 
         'Leak Mechanism Taxonomy (Raw Unadjusted Breakdown by Era)';
+    }
+    if (subMechanism) {
+      subMechanism.innerText = isEnriched ? 
+        'Severity Noise Filtered: Isolates 89 confirmed administrative leaks from 21 unverified social media claims.' : 
+        'Raw Breakdown: Unfiltered breakdown of all reported incidents across digital, printing press, and hoax categories.';
     }
 
     if (titleDataExplorer) {
