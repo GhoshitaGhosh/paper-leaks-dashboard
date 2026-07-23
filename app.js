@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Fixed Dynamic Fixed-Effects Chart
+// Global Dashboard Application Controller - Fixed Dynamic Card Titles on View Toggle
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -60,9 +60,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateDashboard() {
     updateKPICards();
+    updateCardHeadings();
     renderCharts();
     populateTable(data);
     populateDropdowns();
+  }
+
+  function updateCardHeadings() {
+    const isEnriched = currentMode === 'enriched';
+
+    const titleEra = document.getElementById('title-chart-era');
+    const titlePartyTenure = document.getElementById('title-chart-party-tenure');
+    const titleFixedEffects = document.getElementById('title-chart-fixed-effects');
+
+    if (titleEra) {
+      titleEra.innerText = isEnriched ? 
+        'Annualized Confirmed Leak Frequency (UPA vs NDA)' : 
+        'Raw Unadjusted Leak Frequency (UPA vs NDA - Unfiltered)';
+    }
+
+    if (titlePartyTenure) {
+      titlePartyTenure.innerText = isEnriched ? 
+        'Individual State Parties (Tenure-Normalized Rate)' : 
+        'Individual State Parties (Raw Absolute Incident Counts)';
+    }
+
+    if (titleFixedEffects) {
+      titleFixedEffects.innerText = isEnriched ? 
+        'State Fixed-Effects (Observed vs Expected O/E Parity)' : 
+        'State Fixed-Effects (Raw Truncation Skewed O/E Ratio)';
+    }
   }
 
   function updateKPICards() {
@@ -185,7 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio) [NOW DYNAMIC ON TOGGLE!]
+  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio)
   function renderFixedEffectsChart() {
     const ctx = document.getElementById('chart-fixed-effects').getContext('2d');
     const isEnriched = currentMode === 'enriched';
