@@ -1,0 +1,25 @@
+# Internal Python Processing & Analysis Scripts
+*.py
+__pycache__/
+*.py[cod]
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor & IDE Configs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary Files & Logs
+*.log
+*.tmp
+temp/
+scratch/
