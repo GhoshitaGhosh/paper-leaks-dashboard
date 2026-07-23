@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Updated with Archival Addition Badges & Provenance Filters
+// Global Dashboard Application Controller - Dynamic Table & View Synchronization
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateKPICards();
     updateCardHeadings();
     renderCharts();
-    populateTable(data);
+    filterTable(); // Dynamically filter table to match active mode!
     populateDropdowns();
   }
 
@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titleEra = document.getElementById('title-chart-era');
     const titlePartyTenure = document.getElementById('title-chart-party-tenure');
     const titleFixedEffects = document.getElementById('title-chart-fixed-effects');
+    const titleDataExplorer = document.getElementById('title-data-explorer');
 
     if (titleEra) {
       titleEra.innerText = isEnriched ? 
@@ -89,6 +90,12 @@ document.addEventListener('DOMContentLoaded', () => {
       titleFixedEffects.innerText = isEnriched ? 
         'State Fixed-Effects (Observed vs Expected O/E Parity)' : 
         'State Fixed-Effects (Raw Truncation Skewed O/E Ratio)';
+    }
+
+    if (titleDataExplorer) {
+      titleDataExplorer.innerText = isEnriched ? 
+        'Layer 5: 126-Incident Enriched Data Explorer (40 UPA vs 86 NDA)' : 
+        'Layer 5: 110-Incident Raw Baseline Explorer (24 UPA vs 86 NDA)';
     }
   }
 
@@ -340,7 +347,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Data Explorer Table & Filters
+  // Data Explorer Table & Dynamic View Filtering
   function populateTable(records) {
     const tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
@@ -369,7 +376,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tbody.appendChild(tr);
     });
 
-    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed`;
+    const isEnriched = currentMode === 'enriched';
+    const viewLabel = isEnriched ? 'Enriched Dataset (126 Incidents)' : 'Raw Baseline Dataset (110 Incidents - Excluding Archival Additions)';
+    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed (${viewLabel})`;
   }
 
   function getStatusBadge(status) {
@@ -402,7 +411,6 @@ document.addEventListener('DOMContentLoaded', () => {
         catSelect.appendChild(opt);
       });
 
-      // Add Archival Additions option to status dropdown
       const optAddition = document.createElement('option');
       optAddition.value = 'ArchivalAddition';
       optAddition.innerText = '✨ Reconstructed Archival Additions (PL-0111 to PL-0126)';
@@ -415,8 +423,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const era = document.getElementById('filter-era').value;
     const cat = document.getElementById('filter-category').value;
     const status = document.getElementById('filter-status').value;
+    const isEnriched = currentMode === 'enriched';
 
     const filtered = data.filter(row => {
+      const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+      
+      // In Raw Mode, exclude the 16 newly uncovered archival additions to mirror the 110 raw Kaggle baseline!
+      if (!isEnriched && isAddition) {
+        return false;
+      }
+
       const matchesSearch = !search || 
         (row.exam_name && row.exam_name.toLowerCase().includes(search)) ||
         (row.state_name && row.state_name.toLowerCase().includes(search)) ||
@@ -427,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       let matchesStatus = true;
       if (status === 'ArchivalAddition') {
-        matchesStatus = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+        matchesStatus = isAddition;
       } else if (status) {
         matchesStatus = row.leak_status && row.leak_status.toLowerCase().includes(status.toLowerCase());
       }
