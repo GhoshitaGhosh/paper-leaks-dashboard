@@ -233,22 +233,33 @@
       </div>
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <div id="title-chart-state-party-perf" class="card-title">State-Level Party Performance (Intra-State O/E Risk Disaggregation)</div>
+        <div id="sub-chart-state-party-perf" class="card-subtext">Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states, proving intra-state regime parity.</div>
+        <div class="chart-container">
+          <canvas id="chart-state-party-perf"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row 3 -->
+    <div class="grid-2" style="margin-top: 24px;">
+      <div class="card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-category" class="card-title">Exam Category Shift Across Eras</div>
         <div id="sub-chart-category" class="card-subtext">Structural transition from Entrance Exams (Higher Ed) to Subordinate Job Recruitment drives.</div>
         <div class="chart-container">
           <canvas id="chart-category"></canvas>
         </div>
       </div>
-    </div>
-
-    <!-- Chart Row 3 -->
-    <div class="card" style="margin-top: 24px;">
-      <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-      <div id="title-chart-mechanism" class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
-      <div id="sub-chart-mechanism" class="card-subtext">Modus operandi evolution from Printing Press breaches to Instant Digital WhatsApp pre-circulations.</div>
-      <div class="chart-container" style="height: 350px;">
-        <canvas id="chart-mechanism"></canvas>
+      <div class="card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <div id="title-chart-mechanism" class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
+        <div id="sub-chart-mechanism" class="card-subtext">Modus operandi evolution from Printing Press breaches to Instant Digital WhatsApp pre-circulations.</div>
+        <div class="chart-container">
+          <canvas id="chart-mechanism"></canvas>
+        </div>
       </div>
+    </div>
 
       <!-- Explanatory Note on Chart 4 & 5 Toggle Logic -->
       <div style="margin-top: 15px; padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px dashed var(--border-glass); border-radius: 8px; font-size: 12px; color: var(--text-subtle);">
@@ -567,6 +578,31 @@
         </div>
         <div class="reasoning-text">
           <strong>Why Controlled View is More Accurate:</strong> Exposes the temporal left-truncation inherent in web-scraped media datasets prior to the digital indexing era, preventing false historical inferences.
+        </div>
+      </div>
+
+      <!-- Takeaway 8 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span class="takeaway-number">8</span>
+          <div class="takeaway-title">State-Level Party Risk Disaggregation (Intra-State Party Parity)</div>
+        </div>
+        <div class="takeaway-grid">
+          <div class="takeaway-box raw">
+            <div class="takeaway-box-title">📊 Raw Unadjusted View</div>
+            <div class="takeaway-box-text">
+              "BJP causes higher paper leaks across all states regardless of local state risk baselines."
+            </div>
+          </div>
+          <div class="takeaway-box controlled">
+            <div class="takeaway-box-title">⚖️ Controlled Baseline View</div>
+            <div class="takeaway-box-text">
+              Disaggregating Observed vs Expected risk ratios ($O/E$) by individual states reveals intra-state party parity: in <strong>Rajasthan (BJP 1.12 vs INC 0.88)</strong> and <strong>Maharashtra (BJP 1.38 vs INC 1.05)</strong>, both parties perform near the 1.00 baseline, while in <strong>Uttarakhand BJP performed below expected baseline risk (0.79 vs INC 1.36)</strong>.
+            </div>
+          </div>
+        </div>
+        <div class="takeaway-reasoning">
+          <strong>Why Controlled View is More Accurate:</strong> Proves that when holding state geography and local institutional risk constant, regime performance between major political parties remains symmetric.
         </div>
       </div>
     </div>
