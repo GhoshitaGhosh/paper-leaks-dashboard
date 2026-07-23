@@ -48,12 +48,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function setMode(mode) {
     currentMode = mode;
+    const modeDesc = document.getElementById('mode-desc');
     if (mode === 'enriched') {
       btnEnriched.classList.add('active');
       btnRaw.classList.remove('active');
+      if (modeDesc) {
+        modeDesc.innerHTML = '<strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk fixed-effects controls ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.';
+      }
     } else {
       btnRaw.classList.add('active');
       btnEnriched.classList.remove('active');
+      if (modeDesc) {
+        modeDesc.innerHTML = '<strong>Active Mode: Raw Unadjusted Scraper View.</strong> Displays unadjusted incident counts, un-normalized party tallies, and unfiltered claims noise from Sujay Nadkarni\'s raw dataset.';
+      }
     }
     updateDashboard();
   }
