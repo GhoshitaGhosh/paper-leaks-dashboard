@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Dynamic Category Chart & View Synchronization
+// Global Dashboard Application Controller - Dynamic Chart 5 & View Synchronization
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -80,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const titlePartyTenure = document.getElementById('title-chart-party-tenure');
     const titleFixedEffects = document.getElementById('title-chart-fixed-effects');
     const titleCategory = document.getElementById('title-chart-category');
+    const titleMechanism = document.getElementById('title-chart-mechanism');
     const titleDataExplorer = document.getElementById('title-data-explorer');
 
     if (titleEra) {
@@ -104,6 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
       titleCategory.innerText = isEnriched ? 
         'Exam Category Shift Across Eras (Controlled Confirmed Distribution)' : 
         'Exam Category Shift Across Eras (Raw Unadjusted Distribution)';
+    }
+
+    if (titleMechanism) {
+      titleMechanism.innerText = isEnriched ? 
+        'Leak Mechanism Taxonomy (Confirmed Leaks vs Filtered Claims Noise)' : 
+        'Leak Mechanism Taxonomy (Raw Unadjusted Breakdown by Era)';
     }
 
     if (titleDataExplorer) {
@@ -327,13 +334,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 5: Leak Mechanism Shift
+  // Chart 5: Dynamic Leak Mechanism Shift (Enriched Confirmed/Claims vs Raw Eras)
   function renderMechanismChart() {
     const ctx = document.getElementById('chart-mechanism').getContext('2d');
+    const isEnriched = currentMode === 'enriched';
 
-    const mechanisms = ['Digital / WhatsApp Leak', 'Printing Press Breach', 'Hoax / Fake Paper', 'OMR / Result Tampering', 'In-Exam Tech Cheating', 'Impersonation Racket'];
-    const confirmedCounts = [41, 30, 0, 10, 11, 8];
-    const unconfirmedCounts = [2, 1, 14, 1, 2, 1];
+    const mechanisms = ['Digital / WhatsApp Leak', 'Printing Press Breach', 'Hoax / Fake Paper', 'In-Exam Tech Cheating', 'OMR / Result Tampering', 'Impersonation Racket'];
+    
+    // Controlled Enriched (Confirmed vs Filtered Noise Claims) vs Raw Unadjusted (UPA Raw vs NDA Raw)
+    const dataset1 = isEnriched ? [41, 30, 0, 11, 10, 8] : [5, 4, 0, 1, 7, 5];
+    const dataset2 = isEnriched ? [2, 1, 14, 2, 1, 1] : [33, 21, 14, 9, 4, 2];
+
+    const label1 = isEnriched ? 'Confirmed Administrative Leaks (105)' : 'UPA Era Raw Incidents (24)';
+    const label2 = isEnriched ? 'Filtered Unconfirmed Claims / Noise (21)' : 'NDA Era Raw Incidents (86)';
 
     charts.mechanism = new Chart(ctx, {
       type: 'bar',
@@ -341,14 +354,14 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: mechanisms,
         datasets: [
           {
-            label: 'Confirmed Administrative Leaks',
-            data: confirmedCounts,
-            backgroundColor: 'rgba(16, 185, 129, 0.75)'
+            label: label1,
+            data: dataset1,
+            backgroundColor: isEnriched ? 'rgba(16, 185, 129, 0.75)' : 'rgba(99, 102, 241, 0.75)'
           },
           {
-            label: 'Unconfirmed / Disproven Claims',
-            data: unconfirmedCounts,
-            backgroundColor: 'rgba(244, 63, 94, 0.75)'
+            label: label2,
+            data: dataset2,
+            backgroundColor: isEnriched ? 'rgba(244, 63, 94, 0.75)' : 'rgba(6, 182, 212, 0.75)'
           }
         ]
       },
