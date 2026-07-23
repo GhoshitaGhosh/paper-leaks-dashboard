@@ -193,7 +193,7 @@
   </section>
 
   <!-- Section 3: Verbose Statistical Methodology Infobox -->
-  <section class="container" style="margin-bottom: 60px;">
+  <section class="container" style="margin-bottom: 40px;">
     <div class="methodology-box">
       <div class="section-title" style="font-size: 24px;">Methodology & Statistical Cleaning Guide</div>
       <p class="section-desc" style="margin-bottom: 24px;">A step-by-step accounting of the mathematical definitions, rate adjustments, and risk controls applied in this study.</p>
@@ -258,7 +258,87 @@
     </div>
   </section>
 
-  <!-- Section 4: Interactive Data Explorer -->
+  <!-- Section 4: Compiled Statistical Takeaways & Accuracy Comparison Infobox -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="takeaways-box">
+      <div class="section-title" style="font-size: 24px; color: var(--accent-emerald);">Compiled Statistical Takeaways & Accuracy Comparison</div>
+      <p class="section-desc" style="margin-bottom: 24px;">Comparing the conclusions drawn from the raw Kaggle dataset vs. the controlled econometric dataset, and why the controlled takeaways are methodologically more accurate.</p>
+
+      <!-- Takeaway 1 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span>1. Overall Regime Leak Parity (UPA vs. NDA)</span>
+        </div>
+        <div class="comparison-pills">
+          <div class="comparison-pill raw">
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "NDA era saw a massive 3.6x surge in paper leaks (86 vs 24 cases), proving an unprecedented administrative collapse after 2014."
+          </div>
+          <div class="comparison-pill controlled">
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Confirmed leak rates are closely comparable (5.35 leaks/yr under NDA vs 4.00 leaks/yr under UPA), with Central Government leak rates lower under NDA (0.90 vs 1.10 leaks/yr)."
+          </div>
+        </div>
+        <div class="reasoning-text">
+          <strong>Why Controlled View is More Accurate:</strong> The raw dataset suffers from severe left-truncation (pre-2014 web scrapers miss regional print archives) and post-2014 noise inflation (24.4% of post-2014 entries are disproven social media claims/hoaxes). Removing noise and reconstructing historical archives reveals that Central leaks are virtually identical (11 cases in each era) and sensitivity modeling shows a missing offset of just 1.4 regional print leaks/year achieves complete mathematical parity (5.40 vs 5.35).
+        </div>
+      </div>
+
+      <!-- Takeaway 2 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span>2. Federal Governance & Constitutional Misattribution</span>
+        </div>
+        <div class="comparison-pills">
+          <div class="comparison-pill raw">
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "The Central Union Government is solely responsible for the nationwide epidemic of paper leaks."
+          </div>
+          <div class="comparison-pill controlled">
+            <strong>✓ Controlled Econometric Takeaway:</strong> "79.0% of all confirmed paper leaks (83 out of 105) occurred in state-administered examinations under autonomous State PSCs and Boards."
+          </div>
+        </div>
+        <div class="reasoning-text">
+          <strong>Why Controlled View is More Accurate:</strong> Raw datasets collapse all leaks under the prime minister's era label without disaggregating jurisdictional level. Under Article 315 of the Constitution of India, State PSCs and State Education Boards operate independently of the Union Ministry. Controlling for federal domain proves paper leaks are primarily a state-level administrative challenge.
+        </div>
+      </div>
+
+      <!-- Takeaway 3 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span>3. Political Party Exposure Bias & Tenure Normalization</span>
+        </div>
+        <div class="comparison-pills">
+          <div class="comparison-pill raw">
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP state governments had twice as many leaks as INC state governments (39 vs 19 cases), proving one party is twice as prone to leaks."
+          </div>
+          <div class="comparison-pill controlled">
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.212 leaks/state-year vs INC at 0.141 leaks/state-year."
+          </div>
+        </div>
+        <div class="reasoning-text">
+          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 184.1 State-Years vs 135.0 for INC). Normalizing by executive tenure eliminates exposure bias and shows both parties experience state leaks at modest frequencies (1 leak per 4.7 to 7.1 state-years).
+        </div>
+      </div>
+
+      <!-- Takeaway 4 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span>4. State Fixed-Effects Risk Proclivity (Geographic Controlling)</span>
+        </div>
+        <div class="comparison-pills">
+          <div class="comparison-pill raw">
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Party governance performance can be judged purely by absolute leak tallies."
+          </div>
+          <div class="comparison-pill controlled">
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for state baseline risk (UP: 0.542/yr, MP: 0.451/yr, Raj: 0.451/yr), BJP (O/E = 1.05) and INC (O/E = 1.06) perform identically relative to state expectations."
+          </div>
+        </div>
+        <div class="reasoning-text">
+          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Parties governing these states more often naturally incur higher leak counts. Calculating Expected Leaks ($E$) proves both BJP ($1.05$) and INC ($1.06$) execute within 5-6% of exact state baseline expectations ($1.00$).
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Interactive Data Explorer -->
   <section class="container" style="margin-bottom: 80px;">
     <div class="section-header">
       <h2 class="section-title">126-Incident Interactive Data Explorer</h2>
