@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Dynamic Table & View Synchronization
+// Global Dashboard Application Controller - Fixed Archival Addition ID Matcher (PL-0111 to PL-0126)
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -20,6 +20,13 @@ document.addEventListener('DOMContentLoaded', () => {
     'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeControlled: 0.74, oeRaw: 0.74 },
     'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeControlled: 1.58, oeRaw: 1.58 }
   };
+
+  // Helper: Exact Archival Addition ID Matcher (PL-0111 to PL-0126)
+  function isArchivalAddition(id) {
+    if (!id) return false;
+    const num = parseInt(id.replace('PL-', ''), 10);
+    return !isNaN(num) && num >= 111 && num <= 126;
+  }
 
   // DOM Elements
   const btnEnriched = document.getElementById('btn-mode-enriched');
@@ -357,7 +364,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tr.addEventListener('click', () => openModal(row));
 
       const statusBadge = getStatusBadge(row.leak_status);
-      const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+      const isAddition = isArchivalAddition(row.incident_id);
       
       const idBadgeHtml = isAddition ? 
         `<span class="badge badge-addition">✨ ${row.incident_id}</span>` : 
@@ -426,7 +433,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     const filtered = data.filter(row => {
-      const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+      const isAddition = isArchivalAddition(row.incident_id);
       
       // In Raw Mode, exclude the 16 newly uncovered archival additions to mirror the 110 raw Kaggle baseline!
       if (!isEnriched && isAddition) {
@@ -456,7 +463,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Modal Dialog Viewer
   function openModal(row) {
-    const isAddition = row.incident_id && (row.incident_id.startsWith('PL-011') || row.incident_id.startsWith('PL-012') || row.data_gap_flag === 1);
+    const isAddition = isArchivalAddition(row.incident_id);
     
     document.getElementById('modal-title').innerText = row.exam_name;
     document.getElementById('modal-id').innerHTML = isAddition ? 
