@@ -192,7 +192,73 @@
     </div>
   </section>
 
-  <!-- Section 3: Interactive Data Explorer -->
+  <!-- Section 3: Verbose Statistical Methodology Infobox -->
+  <section class="container" style="margin-bottom: 60px;">
+    <div class="methodology-box">
+      <div class="section-title" style="font-size: 24px;">Methodology & Statistical Cleaning Guide</div>
+      <p class="section-desc" style="margin-bottom: 24px;">A step-by-step accounting of the mathematical definitions, rate adjustments, and risk controls applied in this study.</p>
+
+      <div class="methodology-grid">
+        <!-- Step 1 -->
+        <div class="method-card">
+          <div class="method-header">
+            <div class="step-num">1</div>
+            <div class="method-title">Level-1 Confirmed Severity Filter</div>
+          </div>
+          <div class="method-text">
+            Pre-2014 entries in web scrapers represent a "High-Severity Only" tail (cases leading to CBI probes or court convictions). Post-2014 data captures social media claims, Telegram hoaxes, and disproven allegations (24.4% noise). We filter strictly for **Level-1 Confirmed Leaks** (official cancellations, re-tests, FIRs) to establish an un-biased baseline between eras.
+          </div>
+          <div class="formula-box">
+            Filter: leak_status == 'Confirmed' (Noise = 21 claims removed)
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="method-card">
+          <div class="method-header">
+            <div class="step-num">2</div>
+            <div class="method-title">Pre-2014 Archival Reconstruction</div>
+          </div>
+          <div class="method-text">
+            Due to the 2004–2012 regional print media "digital dark age" (un-indexed local pullouts of *Dainik Jagran*, *Amar Ujala*, *Eenadu*), pre-2014 entries suffer from left-truncation. We reconstructed 16 additional verified historical leaks (expanding pre-2014 data from 24 to 40 cases) across state PMTs, CETs, school board exams, and AIEEE sets.
+          </div>
+          <div class="formula-box">
+            Pre-2014 Sample Size: 24 → 40 Verified Cases (+66.7% Expansion)
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="method-card">
+          <div class="method-header">
+            <div class="step-num">3</div>
+            <div class="method-title">Party Executive Tenure Normalization</div>
+          </div>
+          <div class="method-text">
+            Comparing raw leak counts by political party (e.g. BJP: 39 vs INC: 19) introduces **exposure bias** because the BJP held state executive power across more states for longer aggregate durations post-2014 (~184 State-Years vs ~135 for INC). We divide confirmed leaks by cumulative **State-Years in Power** (1 State-Year = 1 state governed for 1 year).
+          </div>
+          <div class="formula-box">
+            Tenure Rate = Confirmed Leaks / Cumulative State-Years (2004–2026)
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="method-card">
+          <div class="method-header">
+            <div class="step-num">4</div>
+            <div class="method-title">State Fixed-Effects Risk Model ($O / E$)</div>
+          </div>
+          <div class="method-text">
+            Certain states (UP: 0.542 leaks/yr, MP: 0.451/yr, Rajasthan: 0.451/yr) have higher baseline leak proclivities due to candidate density and coaching hubs. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. An $O/E$ ratio of 1.00 represents exact parity with state baseline expectations.
+          </div>
+          <div class="formula-box">
+            Expected E = ∑ (State_Baseline_Risk_s × Years_Governed_s)
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 4: Interactive Data Explorer -->
   <section class="container" style="margin-bottom: 80px;">
     <div class="section-header">
       <h2 class="section-title">126-Incident Interactive Data Explorer</h2>
