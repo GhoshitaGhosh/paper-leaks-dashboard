@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Enabled Incident ID Search (e.g. 0119 / PL-0119)
+// Global Dashboard Application Controller - 110 Authenticated Records
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -20,13 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
     'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeControlled: 0.74, oeRaw: 0.74 },
     'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeControlled: 1.58, oeRaw: 1.58 }
   };
-
-  // Helper: Exact Archival Addition ID Matcher (PL-0111 to PL-0126)
-  function isArchivalAddition(id) {
-    if (!id) return false;
-    const num = parseInt(id.replace('PL-', ''), 10);
-    return !isNaN(num) && num >= 111 && num <= 126;
-  }
 
   // DOM Elements
   const btnEnriched = document.getElementById('btn-mode-enriched');
@@ -69,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateKPICards();
     updateCardHeadings();
     renderCharts();
-    filterTable(); // Dynamically filter table to match active mode!
+    filterTable();
     populateDropdowns();
   }
 
@@ -115,8 +108,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleDataExplorer) {
       titleDataExplorer.innerText = isEnriched ? 
-        'Layer 5: 126-Incident Enriched Data Explorer (40 UPA vs 86 NDA)' : 
-        'Layer 5: 110-Incident Raw Baseline Explorer (24 UPA vs 86 NDA)';
+        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 24 UPA vs 86 NDA)' : 
+        'Layer 5: 110-Incident Authenticated Data Explorer (Raw Unadjusted View)';
     }
   }
 
@@ -125,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isEnriched) {
       document.getElementById('kpi-annual-rate').innerText = '5.35';
-      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 2.40 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '0.90';
       document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 1.10 UPA)';
@@ -151,7 +144,6 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function renderCharts() {
-    // Destroy existing chart instances before re-rendering
     Object.keys(charts).forEach(key => {
       if (charts[key]) charts[key].destroy();
     });
@@ -163,14 +155,13 @@ document.addEventListener('DOMContentLoaded', () => {
     renderMechanismChart();
   }
 
-  // Chart 1: Annual Leak Frequency (UPA vs NDA)
   function renderEraChart() {
     const ctx = document.getElementById('chart-era').getContext('2d');
     const isEnriched = currentMode === 'enriched';
 
     const labels = ['UPA Era (2004–2014)', 'NDA Era (2014–2026)'];
-    const rates = isEnriched ? [4.00, 5.35] : [2.40, 7.07];
-    const totalLeaks = isEnriched ? [40, 65] : [24, 86];
+    const rates = isEnriched ? [2.40, 5.35] : [2.40, 7.07];
+    const totalLeaks = isEnriched ? [24, 65] : [24, 86];
 
     charts.era = new Chart(ctx, {
       type: 'bar',
@@ -207,7 +198,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 2: Individual State Parties (Tenure-Normalized vs Raw)
   function renderIndividualPartyTenureChart() {
     const ctx = document.getElementById('chart-party-tenure').getContext('2d');
     const isEnriched = currentMode === 'enriched';
@@ -240,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 3: State Fixed-Effects (Observed vs Expected O/E Ratio)
   function renderFixedEffectsChart() {
     const ctx = document.getElementById('chart-fixed-effects').getContext('2d');
     const isEnriched = currentMode === 'enriched';
@@ -286,15 +275,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 4: Dynamic Exam Category Shift Across Eras
   function renderCategoryChart() {
     const ctx = document.getElementById('chart-category').getContext('2d');
     const isEnriched = currentMode === 'enriched';
 
     const categories = ['Subordinate Recruitment', 'Entrance Tests (Higher Ed)', 'Police & Defense', 'Teacher Recruitment / TET', 'School Board Exam', 'Civil Services / PSC'];
     
-    // Controlled Enriched (40 UPA vs 65 NDA) vs Raw Unadjusted (24 UPA vs 86 NDA)
-    const upaCounts = isEnriched ? [2, 19, 4, 3, 6, 3] : [2, 10, 2, 2, 3, 2];
+    const upaCounts = [2, 10, 2, 2, 3, 2];
     const ndaCounts = isEnriched ? [22, 4, 10, 10, 6, 8] : [30, 7, 11, 13, 6, 12];
 
     charts.category = new Chart(ctx, {
@@ -303,7 +290,7 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: categories,
         datasets: [
           {
-            label: isEnriched ? 'UPA Era Confirmed (40 Cases)' : 'UPA Era Raw (24 Cases)',
+            label: 'UPA Era (24 Cases)',
             data: upaCounts,
             borderColor: '#6366f1',
             backgroundColor: 'rgba(99, 102, 241, 0.25)',
@@ -334,18 +321,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Chart 5: Dynamic Leak Mechanism Shift (Enriched Confirmed/Claims vs Raw Eras)
   function renderMechanismChart() {
     const ctx = document.getElementById('chart-mechanism').getContext('2d');
     const isEnriched = currentMode === 'enriched';
 
     const mechanisms = ['Digital / WhatsApp Leak', 'Printing Press Breach', 'Hoax / Fake Paper', 'In-Exam Tech Cheating', 'OMR / Result Tampering', 'Impersonation Racket'];
     
-    // Controlled Enriched (Confirmed vs Filtered Noise Claims) vs Raw Unadjusted (UPA Raw vs NDA Raw)
-    const dataset1 = isEnriched ? [41, 30, 0, 11, 10, 8] : [5, 4, 0, 1, 7, 5];
+    const dataset1 = isEnriched ? [28, 20, 0, 9, 8, 7] : [5, 4, 0, 1, 7, 5];
     const dataset2 = isEnriched ? [2, 1, 14, 2, 1, 1] : [33, 21, 14, 9, 4, 2];
 
-    const label1 = isEnriched ? 'Confirmed Administrative Leaks (105)' : 'UPA Era Raw Incidents (24)';
+    const label1 = isEnriched ? 'Confirmed Administrative Leaks (89)' : 'UPA Era Raw Incidents (24)';
     const label2 = isEnriched ? 'Filtered Unconfirmed Claims / Noise (21)' : 'NDA Era Raw Incidents (86)';
 
     charts.mechanism = new Chart(ctx, {
@@ -377,7 +362,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Data Explorer Table & Dynamic View Filtering
   function populateTable(records) {
     const tbody = document.getElementById('table-body');
     tbody.innerHTML = '';
@@ -387,14 +371,9 @@ document.addEventListener('DOMContentLoaded', () => {
       tr.addEventListener('click', () => openModal(row));
 
       const statusBadge = getStatusBadge(row.leak_status);
-      const isAddition = isArchivalAddition(row.incident_id);
-      
-      const idBadgeHtml = isAddition ? 
-        `<span class="badge badge-addition">✨ ${row.incident_id}</span>` : 
-        `<strong>${row.incident_id}</strong>`;
 
       tr.innerHTML = `
-        <td>${idBadgeHtml}</td>
+        <td><strong>${row.incident_id}</strong></td>
         <td>${row.date}</td>
         <td>${row.era}</td>
         <td>${row.exam_name}</td>
@@ -406,9 +385,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tbody.appendChild(tr);
     });
 
-    const isEnriched = currentMode === 'enriched';
-    const viewLabel = isEnriched ? 'Enriched Dataset (126 Incidents)' : 'Raw Baseline Dataset (110 Incidents - Excluding Archival Additions)';
-    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed (${viewLabel})`;
+    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed (110 Authenticated Records)`;
   }
 
   function getStatusBadge(status) {
@@ -422,7 +399,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function populateDropdowns() {
     const eraSelect = document.getElementById('filter-era');
     const catSelect = document.getElementById('filter-category');
-    const statusSelect = document.getElementById('filter-status');
     
     if (eraSelect.children.length <= 1) {
       const eras = [...new Set(data.map(d => d.era))];
@@ -440,11 +416,6 @@ document.addEventListener('DOMContentLoaded', () => {
         opt.innerText = c;
         catSelect.appendChild(opt);
       });
-
-      const optAddition = document.createElement('option');
-      optAddition.value = 'ArchivalAddition';
-      optAddition.innerText = '✨ Reconstructed Archival Additions (PL-0111 to PL-0126)';
-      statusSelect.appendChild(optAddition);
     }
   }
 
@@ -453,16 +424,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const era = document.getElementById('filter-era').value;
     const cat = document.getElementById('filter-category').value;
     const status = document.getElementById('filter-status').value;
-    const isEnriched = currentMode === 'enriched';
 
     const filtered = data.filter(row => {
-      const isAddition = isArchivalAddition(row.incident_id);
-      
-      // In Raw Mode, exclude the 16 newly uncovered archival additions to mirror the 110 raw Kaggle baseline!
-      if (!isEnriched && isAddition) {
-        return false;
-      }
-
       const matchesSearch = !search || 
         (row.incident_id && row.incident_id.toLowerCase().includes(search)) ||
         (row.exam_name && row.exam_name.toLowerCase().includes(search)) ||
@@ -472,13 +435,7 @@ document.addEventListener('DOMContentLoaded', () => {
       
       const matchesEra = !era || row.era === era;
       const matchesCat = !cat || row.exam_category === cat;
-      
-      let matchesStatus = true;
-      if (status === 'ArchivalAddition') {
-        matchesStatus = isAddition;
-      } else if (status) {
-        matchesStatus = row.leak_status && row.leak_status.toLowerCase().includes(status.toLowerCase());
-      }
+      const matchesStatus = !status || (row.leak_status && row.leak_status.toLowerCase().includes(status.toLowerCase()));
 
       return matchesSearch && matchesEra && matchesCat && matchesStatus;
     });
@@ -486,25 +443,14 @@ document.addEventListener('DOMContentLoaded', () => {
     populateTable(filtered);
   }
 
-  // Modal Dialog Viewer
   function openModal(row) {
-    const isAddition = isArchivalAddition(row.incident_id);
-    
     document.getElementById('modal-title').innerText = row.exam_name;
-    document.getElementById('modal-id').innerHTML = isAddition ? 
-      `<span class="badge badge-addition">✨ Reconstructed Addition (${row.incident_id})</span>` : 
-      `ID: ${row.incident_id}`;
-
+    document.getElementById('modal-id').innerText = `ID: ${row.incident_id}`;
     document.getElementById('modal-date').innerText = `Date: ${row.date}`;
     document.getElementById('modal-state').innerText = `State: ${row.state_name || row.area}`;
     document.getElementById('modal-party').innerText = `Ruling Party: ${row.state_ruling_party || 'Central'}`;
     document.getElementById('modal-status').innerText = `Status: ${row.leak_status}`;
-    
-    const noteText = isAddition ? 
-      `📌 [Uncovered Pre-2014 Archival Addition]: ${row.note || 'No notes available.'}` : 
-      (row.note || 'No notes available.');
-      
-    document.getElementById('modal-note').innerText = noteText;
+    document.getElementById('modal-note').innerText = row.note || 'No notes available.';
     
     const sourceLink = document.getElementById('modal-link');
     if (row.source_url) {
