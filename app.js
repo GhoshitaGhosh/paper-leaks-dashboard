@@ -201,6 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderEraChart();
     renderIndividualPartyTenureChart();
     renderFixedEffectsChart();
+    renderStatePartyPerformanceChart();
     renderCategoryChart();
     renderMechanismChart();
   }
