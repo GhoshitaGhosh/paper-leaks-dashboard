@@ -139,11 +139,41 @@
     </div>
   </section>
 
-  <!-- Section 2: Visual Analytics Dashboard -->
+  <!-- Section 2: Visual Analytics & 3-Stage Reader Progression -->
   <section class="container" style="margin-bottom: 60px;">
     <div class="section-header">
       <h2 class="section-title">Visual Analytics & Individual Party Breakdown</h2>
-      <p class="section-desc">Disaggregated by individual political parties (no coalitions or blocs) with clear visual indicators for variable vs constant baseline metrics.</p>
+      <p class="section-desc">Disaggregated by individual political parties with a structured 3-level reader progression from raw counts to fully controlled risk models.</p>
+    </div>
+
+    <!-- 3-Stage Reader Progression Explanation Banner -->
+    <div class="progression-container">
+      <div style="font-size: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif;">
+        Understanding State Party Metrics: A 3-Level Reader Progression
+      </div>
+      <div class="progression-grid">
+        <div class="progression-card">
+          <span class="stage-badge level-1">Level 1: Naïve Raw Counts</span>
+          <div class="progression-title">Unadjusted Total Incidents</div>
+          <div class="progression-desc">
+            Simple tally of leaks under a party's state rule (BJP = 39, INC = 19). <strong>Flawed:</strong> Ignores how long parties held office (exposure bias).
+          </div>
+        </div>
+        <div class="progression-card">
+          <span class="stage-badge level-2">Level 2: Tenure Rate</span>
+          <div class="progression-title">Leaks per State-Year in Power</div>
+          <div class="progression-desc">
+            Adjusts for time in office (BJP = 0.212/state-yr, INC = 0.141/state-yr). <strong>Limitation:</strong> Treats high-risk exam hubs (UP/MP) identical to low-risk states.
+          </div>
+        </div>
+        <div class="progression-card">
+          <span class="stage-badge level-3">Level 3: State Fixed-Effects</span>
+          <div class="progression-title">Observed vs Expected (O / E)</div>
+          <div class="progression-desc">
+            Controls for <strong>BOTH</strong> time in office <strong>AND</strong> state geographic risk proclivity. <strong>Conclusion:</strong> Proves exact party parity (BJP 1.05 ≈ INC 1.06).
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Charts Row 1 -->
@@ -151,6 +181,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-era" class="card-title">Annualized Confirmed Leak Frequency (UPA vs NDA)</div>
+        <div class="card-subtext">Overall national annualized leak rate comparison across political eras.</div>
         <div class="chart-container">
           <canvas id="chart-era"></canvas>
         </div>
@@ -158,6 +189,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-party-tenure" class="card-title">Individual State Parties (Tenure-Normalized Rate)</div>
+        <div class="card-subtext">Level 2 Analysis: Controls for Time in Office (State-Years), but treats all states as having equal risk.</div>
         <div class="chart-container">
           <canvas id="chart-party-tenure"></canvas>
         </div>
@@ -169,6 +201,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-fixed-effects" class="card-title">State Fixed-Effects (Observed vs Expected O/E Parity)</div>
+        <div class="card-subtext">Level 3 Analysis (Gold Standard): Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).</div>
         <div class="chart-container">
           <canvas id="chart-fixed-effects"></canvas>
         </div>
@@ -176,6 +209,7 @@
       <div class="card">
         <span class="indicator-tag constant">📌 Constant Baseline (Historical Distribution)</span>
         <div class="card-title">Exam Category Shift Across Eras</div>
+        <div class="card-subtext">Structural transition from Entrance Exams to Subordinate Job Recruitments.</div>
         <div class="chart-container">
           <canvas id="chart-category"></canvas>
         </div>
@@ -186,6 +220,7 @@
     <div class="card" style="margin-top: 24px;">
       <span class="indicator-tag constant">📌 Constant Baseline (Historical Modus Operandi)</span>
       <div class="card-title">Leak Mechanism Taxonomy (Confirmed Leaks vs Claims)</div>
+      <div class="card-subtext">Modus operandi evolution from Printing Press breaches to Instant Digital WhatsApp leaks.</div>
       <div class="chart-container" style="height: 350px;">
         <canvas id="chart-mechanism"></canvas>
       </div>
