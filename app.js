@@ -128,19 +128,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subCategory) {
       subCategory.innerText = isEnriched ? 
-        'Controlled Distribution: Structural transition from Entrance Exams (Higher Ed) to Subordinate Recruitment.' : 
-        'Raw Unadjusted Distribution: Un-normalized category counts including unverified social media hoaxes.';
+        'Controlled Distribution: Groups 110 incidents by exam level, showing structural shift from Entrance Tests (10 UPA vs 4 NDA) to Subordinate Recruitment (2 UPA vs 22 NDA).' : 
+        'Raw Unadjusted Distribution: Unadjusted distribution comparing 24 UPA incidents against 86 NDA incidents across exam categories.';
     }
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
         'Leak Mechanism Taxonomy (Confirmed Leaks vs Filtered Claims Noise)' : 
-        'Leak Mechanism Taxonomy (Raw Unadjusted Breakdown by Era)';
+        'Leak Mechanism Taxonomy (Raw Incident Breakdown by Political Era)';
     }
     if (subMechanism) {
       subMechanism.innerText = isEnriched ? 
-        'Severity Noise Filtered: Isolates 89 confirmed administrative leaks from 21 unverified social media claims.' : 
-        'Raw Breakdown: Unfiltered breakdown of all reported incidents across digital, printing press, and hoax categories.';
+        'Grouped by Verification Severity: Isolates 89 Level-1 Confirmed Leaks (Green) from 21 Filtered Social Media Claims (Red), exposing 14 fake paper hoaxes exclusive to post-2014.' : 
+        'Grouped by Political Era: Unfiltered breakdown of all 110 incidents comparing 24 UPA Raw Incidents (Indigo) vs 86 NDA Raw Incidents (Cyan).';
     }
 
     if (titleDataExplorer) {
