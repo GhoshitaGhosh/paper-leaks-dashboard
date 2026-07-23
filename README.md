@@ -15,8 +15,7 @@ An interactive web dashboard and econometric study evaluating public examination
 This study builds upon the pioneer open-source dataset compiled by **Sujay Nadkarni** on Kaggle:  
 📌 **Dataset Citation**: Sujay Nadkarni, ["India Paper Leaks from 2004 to 2026"](https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026), Kaggle.
 
-Our project enriches Nadkarni's baseline by:
-- **Provenance Marking**: Every reconstructed archival case is styled with glowing badges (`✨ PL-0001`) and filterable via a dedicated dropdown option in the Data Explorer.
+Our project audits Nadkarni's baseline by:
 - **Econometric Controls**: Filtering post-2014 noise (24.4% unconfirmed claims), normalizing executive state-years, and calculating state fixed-effects $O/E$ risk ratios.
 
 ---
@@ -39,7 +38,7 @@ Our project enriches Nadkarni's baseline by:
   - *Level 3*: State Fixed-Effects Model ($O / E$ Risk Ratios: BJP 1.05 ≈ INC 1.06).
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
 - **Layer 4: Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) and an infobox detailing 5 structural limitations of media-scraped datasets.
-- **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with glowing archival badges (`✨ PL-0001`), modal popup inspector, and primary news/court links.
+- **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with incident modal popup inspector and primary news/court links.
 
 ---
 

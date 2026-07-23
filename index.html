@@ -156,7 +156,7 @@
         <span>Dataset Citation & Origins: Sujay Nadkarni's Kaggle Baseline</span>
       </div>
       <div class="citation-text">
-        This audit builds upon the original baseline dataset compiled by <strong>Sujay Nadkarni</strong> on Kaggle titled <em>"India Paper Leaks from 2004 to 2026"</em>. Nadkarni's open-source initiative was among the first public attempts to aggregate web-scraped online news coverage of paper leak allegations in India. While invaluable as a starting point, web-scraping digital news APIs inherently creates temporal left-truncation (missing un-indexed pre-2012 regional print media) and post-2014 social media noise (including unverified Telegram claims). Our project enriches Nadkarni's original baseline by reconstructing pre-2014 regional archives, standardizing state executive tenure, and applying econometric risk controls.
+        This audit builds upon the original baseline dataset compiled by <strong>Sujay Nadkarni</strong> on Kaggle titled <em>"India Paper Leaks from 2004 to 2026"</em>. Nadkarni's open-source initiative was among the first public attempts to aggregate web-scraped online news coverage of paper leak allegations in India. While invaluable as a starting point, web-scraping digital news APIs inherently creates temporal left-truncation (missing un-indexed pre-2012 regional print media) and post-2014 social media noise (including unverified Telegram claims). Our project audits Nadkarni's original 110-incident baseline by standardizing state executive tenure, modeling state baseline risk fixed-effects, and applying severity noise filtering.
       </div>
       <a href="https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026" target="_blank" class="kaggle-link">
         View Original Kaggle Dataset by Sujay Nadkarni &rarr;
@@ -277,13 +277,13 @@
         <div class="method-card">
           <div class="method-header">
             <div class="step-num">2</div>
-            <div class="method-title">Pre-2014 Archival Reconstruction</div>
+            <div class="method-title">Pre-2014 Digital Left-Truncation Audit</div>
           </div>
           <div class="method-text">
-            Due to the 2004–2012 regional print media "digital dark age" (un-indexed local pullouts of *Dainik Jagran*, *Amar Ujala*, *Eenadu*), pre-2014 entries suffer from left-truncation. We reconstructed 16 additional verified historical leaks (expanding pre-2014 data from 24 to 40 cases) across state PMTs, CETs, school board exams, and AIEEE sets.
+            Due to the 2004–2012 regional print media "digital dark age" (un-indexed local pullouts of regional newspapers), pre-2014 entries suffer from search API left-truncation. Our audit evaluates the 24 authenticated pre-2014 baseline incidents (PL-0001 to PL-0024) against post-2014 reporting to correct left-truncation skew.
           </div>
           <div class="formula-box">
-            Pre-2014 Sample Size: 24 → 40 Verified Cases (+66.7% Expansion)
+            Pre-2014 Baseline Sample: 24 Authenticated Leaks (UPA Era)
           </div>
         </div>
 
@@ -543,18 +543,18 @@
       <!-- Takeaway 7 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>7. Reconstructed Archival Provenance (Pre-2012 Digital Media Dark Age)</span>
+          <span>7. Digital Left-Truncation Audit (Pre-2012 Media Dark Age)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks were almost non-existent prior to 2012 (only 24 cases in web scrapers)."
+            <strong>❌ Flawed Raw Scraper Interpretation:</strong> "Paper leaks were rare prior to 2012 because raw web scrapers only captured 24 pre-2014 incidents."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Reconstructing 16 verified pre-2014 historical leaks  from regional print archives (Dainik Jagran, Amar Ujala, Eenadu) proves leaks occurred regularly pre-2014 (40 cases) but were un-indexed by digital web search scrapers."
+            <strong>✓ Controlled Econometric Analysis:</strong> "Auditing the 24 authenticated pre-2014 baseline leaks (PL-0001 to PL-0024) proves paper leaks occurred regularly pre-2014, but were under-indexed by digital search APIs compared to post-2014 social media coverage."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Exposes the temporal left-truncation inherent in web-scraped media datasets prior to the digital indexing era, demonstrating how active archival recovery restores historical baseline accuracy.
+          <strong>Why Controlled View is More Accurate:</strong> Exposes the temporal left-truncation inherent in web-scraped media datasets prior to the digital indexing era, preventing false historical inferences.
         </div>
       </div>
     </div>
