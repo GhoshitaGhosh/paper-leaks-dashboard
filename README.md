@@ -2,11 +2,23 @@
 
 [![Live Dashboard](https://img.shields.io/badge/Live_Dashboard-GitHub_Pages-06b6d4?style=for-the-badge&logo=github)](https://GhoshitaGhosh.github.io/paper-leaks-dashboard/)
 [![Dataset](https://img.shields.io/badge/Dataset-126_Records-10b981?style=for-the-badge)](paper_leaks_enriched.csv)
-[![License](https://img.shields.io/badge/License-MIT-6366f1?style=for-the-badge)](LICENSE)
+[![Baseline Dataset](https://img.shields.io/badge/Baseline_Kaggle-Sujay_Nadkarni-6366f1?style=for-the-badge)](https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026)
 
 An interactive web dashboard and econometric study evaluating public examination paper leaks in India across the UPA (2004–2014) and NDA (2014–2026) political regimes.
 
 👉 **Live Interactive Dashboard**: [https://GhoshitaGhosh.github.io/paper-leaks-dashboard/](https://GhoshitaGhosh.github.io/paper-leaks-dashboard/)
+
+---
+
+## Dataset Provenance & Kaggle Citation
+
+This study builds upon the pioneer open-source dataset compiled by **Sujay Nadkarni** on Kaggle:  
+📌 **Dataset Citation**: Sujay Nadkarni, ["India Paper Leaks from 2004 to 2026"](https://www.kaggle.com/datasets/sujaynadkarni/india-paper-leaks-from-2004-to-2026), Kaggle.
+
+Our project enriches Nadkarni's baseline by:
+- **Archival Reconstruction**: Uncovering **16 missing pre-2014 historical leaks** (`PL-0111` to `PL-0126`) across state PMTs, CETs, AIEEE, and Board exams (expanding pre-2014 records from 24 to 40 cases).
+- **Provenance Marking**: Every reconstructed archival case is styled with glowing badges (`✨ PL-0111`) and filterable via a dedicated dropdown option in the Data Explorer.
+- **Econometric Controls**: Filtering post-2014 noise (24.4% unconfirmed claims), normalizing executive state-years, and calculating state fixed-effects $O/E$ risk ratios.
 
 ---
 
@@ -21,33 +33,25 @@ An interactive web dashboard and econometric study evaluating public examination
 
 ## 5-Layer Readability Architecture
 
-- **Layer 1: Dataset Audit & Statistical Corrections**: Deconstructs the 3 raw dataset flaws (pre-2014 media truncation, post-2014 noise inflation, federal misattribution) and details the 4 econometric controls implemented.
+- **Layer 1: Dataset Audit & Kaggle Provenance**: Deconstructs the 3 raw dataset flaws, cites Sujay Nadkarni's Kaggle baseline, and details the 4 econometric controls implemented.
 - **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **3-Level Reader Progression Framework**:
   - *Level 1*: Naïve Raw Counts (Unadjusted total leaks).
   - *Level 2*: Tenure Normalization (Leaks per State-Year in Power).
   - *Level 3*: State Fixed-Effects Model ($O / E$ Risk Ratios: BJP 1.05 ≈ INC 1.06).
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
-- **Layer 4: Compiled Takeaways & Accuracy Comparison**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) explaining why controlled analysis is methodologically superior.
-- **Layer 5: 126-Incident Primary Data Explorer**: Filterable, searchable table and modal inspector with direct primary source links, FIR tallies, and notes.
+- **Layer 4: Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) and an infobox detailing 5 structural limitations of media-scraped datasets.
+- **Layer 5: 126-Incident Primary Data Explorer**: Filterable table with glowing archival badges (`✨ PL-0111`), modal popup inspector, and primary news/court links.
 
 ---
 
-## State Baseline Risk Proclivity ($R_s$) & Expected Leak Model ($E$)
+## Lingering Data Limitations (Post-Cleaning)
 
-$$\text{State Baseline Risk Rate } (R_s) = \frac{\text{Confirmed Leaks in State } s}{22.16 \text{ Total Years (2004–2026)}}$$
-
-$$E_{\text{party}} = \sum_{s} \left( R_s \times \text{Years Party Governed State } s \right)$$
-
-$$O / E = \frac{\text{Observed Confirmed Leaks under Party}}{\text{Expected Leaks based on specific states governed}}$$
-
-| State Name | Confirmed Leaks (2004–2026) | State Baseline Risk Rate ($R_s$) | Risk Tier | Primary Executive Ruling Parties |
-| :--- | :--- | :--- | :--- | :--- |
-| **Uttar Pradesh** | 12 Incidents | `0.542 leaks/year` | **High Risk Hub** | SP (2004–07, 2012–17), BSP (2007–12), BJP (2017–26) |
-| **Madhya Pradesh** | 10 Incidents | `0.451 leaks/year` | **High Risk Hub** | BJP (2004–18, 2020–26), INC (2018–20) |
-| **Rajasthan** | 10 Incidents | `0.451 leaks/year` | **High Risk Hub** | INC (2008–13, 2018–23), BJP (2004–08, 2013–18, 2023–26) |
-| **Bihar** | 7 Incidents | `0.316 leaks/year` | **High Risk Hub** | JD(U) / NDA (2005–26), RJD (2004–05) |
-| **Telangana** | 5 Incidents | `0.226 leaks/year` | **Medium Risk** | BRS (2014–23), INC (2023–26) |
-| **Maharashtra** | 4 Incidents | `0.181 leaks/year` | **Medium Risk** | INC / NCP (2004–14), BJP / Shiv Sena (2014–26) |
+Even after rigorous econometric cleaning and archival expansion, statistical models inherently retain structural limitations:
+1. **Residual Pre-2010 Regional Print Dark Age**: District pullouts from small regional-language newspapers prior to 2010 remain partially un-digitized.
+2. **Reporting Asymmetry**: Measures *reported and acknowledged breaches*, not undetected breaches in closed administrative settings.
+3. **Social Media Amplification Drift**: Post-2020 leak allegations spread instantaneously across Telegram/WhatsApp channels compared to pre-2010 leaks.
+4. **Mid-Term Coalition Shifting**: Brief transition periods in states with frequent coalition shifts introduce minor attribution edge cases.
+5. **Non-Quantified Economic Costs**: Quantifies incident frequency and risk ratios, but does not measure candidate financial loss, coaching cartel revenue skews, or re-test expenses.
 
 ---
 
