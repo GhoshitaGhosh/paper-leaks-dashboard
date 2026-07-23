@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 2.40 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '0.90';
-      document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 1.10 UPA)';
+      document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 0.70 UPA)';
 
       document.getElementById('kpi-oe-ratio').innerText = '1.05 vs 1.06';
       document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) Controlled Parity';
