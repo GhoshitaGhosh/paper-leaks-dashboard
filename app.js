@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - Dynamic Chart 5 & View Synchronization
+// Global Dashboard Application Controller - Enabled Incident ID Search (e.g. 0119 / PL-0119)
 document.addEventListener('DOMContentLoaded', () => {
   const data = window.PAPER_LEAKS_DATA || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -464,9 +464,11 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const matchesSearch = !search || 
+        (row.incident_id && row.incident_id.toLowerCase().includes(search)) ||
         (row.exam_name && row.exam_name.toLowerCase().includes(search)) ||
         (row.state_name && row.state_name.toLowerCase().includes(search)) ||
-        (row.conducting_body && row.conducting_body.toLowerCase().includes(search));
+        (row.conducting_body && row.conducting_body.toLowerCase().includes(search)) ||
+        (row.note && row.note.toLowerCase().includes(search));
       
       const matchesEra = !era || row.era === era;
       const matchesCat = !cat || row.exam_category === cat;
