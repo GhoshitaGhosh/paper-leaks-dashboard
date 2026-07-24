@@ -219,7 +219,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const consEl = document.getElementById('kpi-cons-ratio');
       if (consEl) consEl.innerText = '1.02 vs 0.89';
       const consSub = document.getElementById('kpi-cons-sub');
-      if (consSub) consSub.innerText = 'BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.14)';
+      if (consSub) consSub.innerText = 'BJP (1.02) vs INC (0.89) Consolidated (All Controls = 1.14)';
     } else {
       const centEl = document.getElementById('kpi-central-rate');
       if (centEl) centEl.innerText = '1.23 vs 0.60';
@@ -727,7 +727,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (idx === 1) return 'Tenure Rate: 0.183 vs 0.075 incidents/state-yr (Ratio = 2.45)';
                 if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.83 (Ratio = 1.32)';
                 if (idx === 3) return 'Sourced Notifications: 11.02 vs 6.61 / 1k notifs (Ratio = 1.67)';
-                if (idx === 4) return 'Consolidated Triple-Control: 1.01 vs 0.91 (Ratio = 1.14)';
+                if (idx === 4) return 'Consolidated Triple-Control: 1.02 vs 0.89 (Ratio = 1.14)';
                 return '';
               }
             }
