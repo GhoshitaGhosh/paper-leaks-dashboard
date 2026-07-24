@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderIndividualPartyTenureChart();
     renderFixedEffectsChart();
     renderStatePartyPerformanceChart();
+    renderExamVolumeChart();
     renderCategoryChart();
     renderMechanismChart();
   }
@@ -367,6 +368,63 @@ document.addEventListener('DOMContentLoaded', () => {
         scales: {
           x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
           y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true, max: 2.5 }
+        }
+      }
+    });
+  }
+
+  function renderExamVolumeChart() {
+    const el = document.getElementById('chart-exam-volume');
+    if (!el) return;
+    const ctx = el.getContext('2d');
+    const isEnriched = currentMode === 'enriched';
+
+    const parties = ['BJP', 'INC', 'JD(U)', 'SP', 'JMM', 'AAP', 'AITC', 'BJD'];
+    const volumeRates = [1.287, 1.069, 1.158, 1.250, 0.635, 0.394, 0.439, 0.332];
+    const tenureRates = [0.234, 0.128, 0.290, 0.250, 0.095, 0.059, 0.066, 0.050];
+
+    charts.examVolume = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: parties,
+        datasets: [
+          {
+            label: 'Level-4: Exam Volume Rate (Leaks / 1,000 Major Exams)',
+            data: volumeRates,
+            backgroundColor: 'rgba(16, 185, 129, 0.75)',
+            borderColor: '#10b981',
+            borderWidth: 1.5,
+            borderRadius: 6
+          },
+          {
+            label: 'Level-2: Executive Tenure Rate (Leaks / State-Year)',
+            data: tenureRates,
+            backgroundColor: 'rgba(99, 102, 241, 0.45)',
+            borderColor: '#6366f1',
+            borderWidth: 1.5,
+            borderRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#94a3b8' } },
+          tooltip: {
+            callbacks: {
+              afterBody: (context) => {
+                const idx = context[0].dataIndex;
+                if (parties[idx] === 'BJP') return 'BJP Total Exams: 28,751 | Confirmed Leaks: 37 | Rate Ratio: 1.20';
+                if (parties[idx] === 'INC') return 'INC Total Exams: 13,094 | Confirmed Leaks: 14 | Rate Ratio: 1.20';
+                return '';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true }
         }
       }
     });

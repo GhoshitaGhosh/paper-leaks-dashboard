@@ -241,8 +241,8 @@
     <div class="grid-2" style="margin-top: 24px;">
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div id="title-chart-fixed-effects" class="card-title">State Fixed-Effects (Observed vs Expected O/E Parity)</div>
-        <div id="sub-chart-fixed-effects" class="card-subtext">Level 3 Analysis (Gold Standard): Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).</div>
+        <div id="title-chart-fixed-effects" class="card-title">State Baseline Risk Standardization (Observed vs Expected O/E Model)</div>
+        <div id="sub-chart-fixed-effects" class="card-subtext">Level 3 Analysis: Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.09 vs INC 0.86).</div>
         <div class="chart-container">
           <canvas id="chart-fixed-effects"></canvas>
         </div>
@@ -250,9 +250,21 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-state-party-perf" class="card-title">State-Level Party Performance (Intra-State O/E Risk Disaggregation)</div>
-        <div id="sub-chart-state-party-perf" class="card-subtext">Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states, proving intra-state regime parity.</div>
+        <div id="sub-chart-state-party-perf" class="card-subtext">Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states.</div>
         <div class="chart-container">
           <canvas id="chart-state-party-perf"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row 3 (Level 4 Analysis: Exam Conduct Volume Control) -->
+    <div class="grid-1" style="margin-top: 24px;">
+      <div class="card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <div id="title-chart-exam-volume" class="card-title">Level-4 Analysis: Exam Conduct Volume Exposure Normalization (Leaks / 1,000 Major Exams)</div>
+        <div id="sub-chart-exam-volume" class="card-subtext">📌 Scope: Exam Conduct Volume Control. Controls for post-2014 recruitment exam conduct expansion (28,751 BJP vs 13,094 INC exams), bringing the rate ratio down from 1.83 (Level 2) to 1.20 (Level 4: 1.287 vs 1.069 leaks / 1,000 exams).</div>
+        <div class="chart-container" style="height: 320px;">
+          <canvas id="chart-exam-volume"></canvas>
         </div>
       </div>
     </div>
@@ -337,13 +349,27 @@
         <div class="method-card">
           <div class="method-header">
             <div class="step-num">4</div>
-            <div class="method-title">State Fixed-Effects Risk Model ($O / E$)</div>
+            <div class="method-title">Stratified Baseline Risk Standardization ($O / E$)</div>
           </div>
           <div class="method-text">
-            Certain states (UP: 0.542 leaks/yr, MP: 0.451/yr, Rajasthan: 0.451/yr) have higher baseline leak proclivities due to candidate density and coaching hubs. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. An $O/E$ ratio of 1.00 represents exact parity with state baseline expectations.
+            High-density examination states (UP: 0.496 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. Ratios of BJP ($1.09$) vs INC ($0.86$) demonstrate performance near state baseline expectations.
           </div>
           <div class="formula-box">
             Expected E_party = ∑ (State_Baseline_Risk_s × Years_Governed_s)
+          </div>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="method-card">
+          <div class="method-header">
+            <div class="step-num">5</div>
+            <div class="method-title">Level-4 Exam Conduct Volume Exposure Normalization</div>
+          </div>
+          <div class="method-text">
+            Controlling for time in office (Level 2) and state risk (Level 3) leaves **examination conduct opportunity exposure** uncontrolled. Following the creation of autonomous state selection boards (RSMSSB 2014, UPSSSC 2014, HSSC portal) and multi-shift CBT paper set multiplication, exam conduct volume expanded by **2.2× post-2014**. We normalize confirmed leaks per 1,000 major exams conducted.
+          </div>
+          <div class="formula-box">
+            Volume Rate = (Confirmed State Leaks / Total Est. Major Exams) × 1,000  (BJP 1.29 vs INC 1.07; RR = 1.20)
           </div>
         </div>
       </div>
@@ -546,7 +572,25 @@
       <!-- Takeaway 5 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>5. Exam Category Transition (Entrance Tests vs Subordinate Job Recruitment)</span>
+          <span>5. Level-4 Examination Conduct Volume Exposure Control</span>
+        </div>
+        <div class="comparison-pills">
+          <div class="comparison-pill raw">
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Raw incident growth post-2014 reflects a 2.6x increase in state-level examination vulnerability."
+          </div>
+          <div class="comparison-pill controlled">
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for the 2.2x expansion in recruitment examination activity post-2014, BJP's incident rate is 1.287 / 1,000 exams vs INC's 1.069 / 1,000 exams (Volume Rate Ratio = 1.20)."
+          </div>
+        </div>
+        <div class="reasoning-text">
+          <strong>Why Controlled View is More Accurate:</strong> Raw tenure rates treat an era with 150 exams per state-year identically to an era with 400 exams per state-year. Normalizing per 1,000 major recruitment exams conducted demonstrates that incident growth is predominantly a function of examination conduct volume expansion.
+        </div>
+      </div>
+
+      <!-- Takeaway 6 -->
+      <div class="takeaway-card">
+        <div class="takeaway-header">
+          <span>6. Exam Category Transition (Entrance Tests vs Subordinate Job Recruitment)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
@@ -561,10 +605,10 @@
         </div>
       </div>
 
-      <!-- Takeaway 6 -->
+      <!-- Takeaway 7 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>6. Leak Mechanism Evolution & Social Media Noise Filtering</span>
+          <span>7. Leak Mechanism Evolution & Social Media Noise Filtering</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
@@ -579,10 +623,10 @@
         </div>
       </div>
 
-      <!-- Takeaway 7 -->
+      <!-- Takeaway 8 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>7. Digital Left-Truncation Audit (Pre-2012 Media Dark Age)</span>
+          <span>8. Digital Left-Truncation Audit (Pre-2012 Media Dark Age)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
@@ -597,10 +641,10 @@
         </div>
       </div>
 
-      <!-- Takeaway 8 -->
+      <!-- Takeaway 9 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>8. State-Level Party Risk Disaggregation (Intra-State Party Parity)</span>
+          <span>9. State-Level Party Risk Disaggregation (Intra-State Party Parity)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
