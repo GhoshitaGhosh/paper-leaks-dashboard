@@ -97,19 +97,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subStatePartyPerf) {
       subStatePartyPerf.innerText = isEnriched ? 
-        'Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states, proving intra-state regime parity (e.g. Rajasthan BJP 1.12 vs INC 0.88).' : 
-        'Raw incident distribution by state without controlling for state-specific baseline risk or tenure.';
+        '📌 Scope: All Exam Integrity Breaches. Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states, proving intra-state regime parity (e.g. Rajasthan BJP 1.12 vs INC 0.88).' : 
+        '📌 Scope: All Exam Integrity Breaches. Raw incident distribution by state without controlling for state-specific baseline risk or tenure.';
     }
 
     if (titleEra) {
       titleEra.innerText = isEnriched ? 
-        'Annualized Confirmed Leak Frequency (UPA vs NDA)' : 
-        'Raw Unadjusted Leak Frequency (UPA vs NDA - Unfiltered)';
+        'Annualized Confirmed Incident Frequency (UPA vs NDA)' : 
+        'Raw Unadjusted Incident Frequency (UPA vs NDA - Unfiltered)';
     }
     if (subEra) {
       subEra.innerText = isEnriched ? 
-        'Overall national annualized leak rate comparison across political eras (5.35 vs 2.40 leaks/yr).' : 
-        'Raw unadjusted incident frequency across political eras (7.07 vs 2.40 leaks/yr - unfiltered).';
+        '📌 Scope: All Exam Integrity Breaches. Overall national annualized incident rate comparison across political eras (5.35 vs 2.30 breaches/yr).' : 
+        '📌 Scope: All Exam Integrity Breaches. Raw unadjusted incident frequency across political eras (7.07 vs 2.30 breaches/yr - unfiltered).';
     }
 
     if (titlePartyTenure) {
@@ -119,19 +119,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subPartyTenure) {
       subPartyTenure.innerText = isEnriched ? 
-        'Level 2 Analysis: Controls for Time in Office (State-Years), showing leaks per state-year in power.' : 
-        'Level 1 Analysis: Simple raw incident tallies under party state rule without controlling for time in office.';
+        '📌 Scope: All Exam Integrity Breaches. Controls for Time in Office (State-Years), showing breaches per state-year in power.' : 
+        '📌 Scope: All Exam Integrity Breaches. Simple raw incident tallies under party state rule without controlling for time in office.';
     }
 
     if (titleFixedEffects) {
       titleFixedEffects.innerText = isEnriched ? 
-        'State Fixed-Effects (Observed vs Expected O/E Parity)' : 
-        'State Fixed-Effects (Raw Truncation Skewed O/E Ratio)';
+        'State Baseline Risk Standardization (Observed vs Expected O/E Parity)' : 
+        'State Baseline Risk Standardization (Raw Truncation Skewed O/E Ratio)';
     }
     if (subFixedEffects) {
       subFixedEffects.innerText = isEnriched ? 
-        'Level 3 Analysis (Gold Standard): Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).' : 
-        'Unadjusted Raw Analysis: Demonstrates the artificial 2.15x BJP distortion caused by truncation skew.';
+        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).' : 
+        '📌 Scope: All Exam Integrity Breaches. Unadjusted Raw Analysis: Demonstrates the artificial 2.15x BJP distortion caused by truncation skew.';
     }
 
     if (titleCategory) {
@@ -141,19 +141,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subCategory) {
       subCategory.innerText = isEnriched ? 
-        'Controlled Distribution: Groups 110 incidents by exam level, showing structural shift from Entrance Tests (10 UPA vs 4 NDA) to Subordinate Recruitment (2 UPA vs 22 NDA).' : 
-        'Raw Unadjusted Distribution: Unadjusted distribution comparing 24 UPA incidents against 86 NDA incidents across exam categories.';
+        '📌 Scope: All Exam Integrity Breaches. Groups 110 incidents by exam level, showing structural shift from Entrance Tests (6 UPA vs 10 NDA) to Subordinate Recruitment (8 UPA vs 18 NDA).' : 
+        '📌 Scope: All Exam Integrity Breaches. Unadjusted distribution comparing 23 UPA incidents against 86 NDA incidents across exam categories.';
     }
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
-        'Leak Mechanism Taxonomy (Confirmed Leaks vs Filtered Claims Noise)' : 
-        'Leak Mechanism Taxonomy (Raw Incident Breakdown by Political Era)';
+        'Construct Disaggregation & Mechanism Taxonomy (Confirmed Leaks vs Claims Noise)' : 
+        'Construct Disaggregation & Mechanism Taxonomy (Raw Breakdown by Era)';
     }
     if (subMechanism) {
       subMechanism.innerText = isEnriched ? 
-        'Grouped by Verification Severity: Isolates 89 Level-1 Confirmed Leaks (Green) from 21 Filtered Social Media Claims (Red), exposing 14 fake paper hoaxes exclusive to post-2014.' : 
-        'Grouped by Political Era: Unfiltered breakdown of all 110 incidents comparing 24 UPA Raw Incidents (Indigo) vs 86 NDA Raw Incidents (Cyan).';
+        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 54 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 18 Filtered Social Media Claims Noise.' : 
+        '📌 Scope: Construct Disaggregation Engine. Unfiltered breakdown of all 110 incidents comparing 23 UPA Raw Incidents vs 86 NDA Raw Incidents.';
     }
 
     if (titleDataExplorer) {
