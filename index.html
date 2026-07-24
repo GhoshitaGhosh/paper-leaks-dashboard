@@ -38,7 +38,7 @@
 
     <!-- Interactive Active Mode Banner -->
     <div style="margin: 20px auto 30px; max-width: 800px; padding: 12px 20px; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-glass); border-radius: 12px; font-size: 13px; color: var(--text-subtle); text-align: center;">
-      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.</span>
+      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization (O/E), and severity noise filtering across the 110 authenticated dataset incidents.</span>
     </div>
 
     <!-- Top KPI Summary Cards Grid (5-Level Controlled Risk Matrix) -->
@@ -151,7 +151,7 @@
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">State Baseline Risk Standardization Model</div>
-              <div class="item-desc">Calculates Observed vs Expected ($O/E$) risk ratios: **BJP (1.05) and INC (1.06)** perform identically relative to state risk profiles.</div>
+              <div class="item-desc">Calculates Observed vs Expected (O/E) risk ratios: **BJP (1.05) and INC (1.06)** perform identically relative to state risk profiles.</div>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="progression-card">
-          <span class="stage-badge level-3">Level 3: Baseline Risk ($O / E$)</span>
+          <span class="stage-badge level-3">Level 3: Baseline Risk (O / E)</span>
           <div class="progression-title">Observed vs Expected Ratios</div>
           <div class="progression-desc">
             Controls for state geographic risk proclivity (BJP O/E = 1.10 vs INC O/E = 0.83).
@@ -414,13 +414,13 @@
         <div class="method-card">
           <div class="method-header">
             <div class="step-num">4</div>
-            <div class="method-title">Stratified Baseline Risk Standardization ($O / E$)</div>
+            <div class="method-title">Stratified Baseline Risk Standardization (O / E)</div>
           </div>
           <div class="method-text">
-            High-density examination states (UP: 0.496 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. Ratios of BJP ($1.10$) vs INC ($0.83$) demonstrate performance near state baseline expectations.
+            High-density examination states (UP: 0.496 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks (E)** under a neutral null model and compare with **Observed Leaks (O)**. Ratios of BJP (1.10) vs INC (0.83) demonstrate performance near state baseline expectations.
           </div>
           <div class="formula-box">
-            Expected E_party = ∑ (State_Baseline_Risk_s × Years_Governed_s)
+            Expected E_party = ∑ (State_Baseline_Risk<sub>s</sub> × Years_Governed<sub>s</sub>)
           </div>
         </div>
 
@@ -442,10 +442,10 @@
       <!-- State Baseline Risk Proclivity & Expected Leak Table -->
       <div class="state-risk-box">
         <div style="font-size: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif;">
-          State-Wise Baseline Risk Proclivity ($R_s$) & Expected Leak Model
+          State-Wise Baseline Risk Proclivity (R<sub>s</sub>) & Expected Leak Model
         </div>
         <p style="font-size: 13px; color: var(--text-muted); margin-top: 4px;">
-          Each state's baseline risk rate ($R_s$) is calculated as: <code>Rs = Total Confirmed State Leaks / 22.16 Years</code>. A party's Expected Leaks ($E$) is the sum of its governing years in each state multiplied by that state's baseline risk rate.
+          Each state's baseline risk rate (R<sub>s</sub>) is calculated as: <code>Rs = Total Confirmed State Leaks / 22.16 Years</code>. A party's Expected Leaks (E) is the sum of its governing years in each state multiplied by that state's baseline risk rate.
         </p>
 
         <table class="state-risk-table">
@@ -453,7 +453,7 @@
             <tr>
               <th>State Name</th>
               <th>Confirmed Leaks (2004–2026)</th>
-              <th>State Baseline Risk Rate ($R_s$)</th>
+              <th>State Baseline Risk Rate (R<sub>s</sub>)</th>
               <th>Risk Tier</th>
               <th>Primary Executive Ruling Parties</th>
             </tr>
@@ -643,7 +643,7 @@
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents ($E$) shows both BJP ($O/E = 1.10$) and INC ($O/E = 0.83$) execute near state baseline expectations ($1.00$).
+          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents (E) shows both BJP (O/E = 1.10) and INC (O/E = 0.83) execute near state baseline expectations (1.00).
         </div>
       </div>
 
@@ -740,18 +740,18 @@
       <!-- Takeaway 10 -->
       <div class="takeaway-card" style="border: 1px solid var(--accent-emerald);">
         <div class="takeaway-header">
-          <span style="color: var(--accent-emerald);">10. Consolidated Triple-Controlled Risk Model ($O / E_{\text{full}}$)</span>
+          <span style="color: var(--accent-emerald);">10. Consolidated Triple-Controlled Risk Model (O / E<sub>full</sub>)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Unadjusted raw leak tallies demonstrate a structural governance collapse under BJP state administrations."
           </div>
           <div class="comparison-pill controlled" style="background: rgba(16, 185, 129, 0.12); border-color: #10b981;">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for Time in Office + Geographic State Risk + Exam Conduct Volume simultaneously yields BJP $O / E_{\text{full}} = 1.01$ vs INC $O / E_{\text{full}} = 0.91$ ($\text{Consolidated Party Risk Ratio} = \mathbf{1.11}$ [95% CI: $\mathbf{0.60, 2.05}$])."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for Time in Office + Geographic State Risk + Exam Conduct Volume simultaneously yields BJP O / E<sub>full</sub> = 1.01 vs INC O / E<sub>full</sub> = 0.91 (<strong>Consolidated Party Risk Ratio = 1.11</strong> (95% CI: <strong>0.60 – 2.05</strong>))."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Exposes that when all 3 controls are applied simultaneously, both BJP ($1.01 \approx 1.00$) and INC ($0.91 \approx 1.00$) perform near expected neutral state baselines. Because the 95% Poisson confidence interval [0.60, 2.05] includes 1.00, there is no statistically significant partisan difference between the two major parties.
+          <strong>Why Controlled View is More Accurate:</strong> Exposes that when all 3 controls are applied simultaneously, both BJP (1.01 ≈ 1.00) and INC (0.91 ≈ 1.00) perform near expected neutral state baselines. Because the 95% Poisson confidence interval [0.60, 2.05] includes 1.00, there is no statistically significant partisan difference between the two major parties.
         </div>
       </div>
     </div>
