@@ -27,8 +27,8 @@ Our project audits Nadkarni's baseline by:
 2. **Sample Attribution Scope**: **79.8% of confirmed incidents included in this dataset (71/89)** were assigned to state-level institutions under autonomous State PSCs and Boards.
 3. **Descriptive Party State-Year Normalization**: Disaggregating strictly by individual political parties via dynamic date-range interval lookup across all 31 States & UTs:
    - *Broad Construct*: BJP experienced 0.183 incidents/state-year vs INC at 0.075 incidents/state-year (Poisson Rate Ratio = 2.45, 95% CI [1.33, 4.53]).
-   - *Narrow Question-Paper Leak Subtype*: BJP experienced 0.135 leaks/state-year vs INC at 0.064 leaks/state-year (Poisson Rate Ratio = 1.88, **95% CI [0.95, 3.75]** — spans 1.00, meaning the difference is **not statistically significant**).
-4. **Stratified Baseline Risk Indirect Standardization (O / E = 1.10 vs 0.82)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.496/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), both BJP (O/E = 1.10) and INC (O/E = 0.82) perform near state baseline expectations.
+   - *Narrow Question-Paper Leak Subtype*: BJP experienced 0.120 leaks/state-year vs INC at 0.064 leaks/state-year (Poisson Rate Ratio = 1.88, **95% CI [0.95, 3.75]** — spans 1.00, meaning the difference is **not statistically significant**).
+4. **Stratified Baseline Risk Indirect Standardization (O / E = 1.10 vs 0.82)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.406/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), both BJP (O/E = 1.10) and INC (O/E = 0.82) perform near state baseline expectations.
 5. **Consolidated Triple-Controlled Risk Model (O / E<sub>full</sub> = 1.02 vs 0.89)**: Simultaneously controlling for time in office, geographic baseline risk, and exam conduct volume yields a Consolidated Risk Ratio of **1.14 (95% CI [0.62 – 2.11])** — proving no statistically significant partisan difference exists.
 
 ---
@@ -37,7 +37,7 @@ Our project audits Nadkarni's baseline by:
 
 - **Layer 1: Dataset Audit & Kaggle Provenance**: Deconstructs raw dataset flaws, cites Sujay Nadkarni's Kaggle baseline, and details the econometric controls implemented.
 - **Layer 2: Visual Analytics & 5-Level Reader Progression**: Interactive Chart.js visual engine featuring a **5-Level Reader Progression Framework** and 8 interactive charts (including State-Level Party Performance O/E Disaggregation and Party Risk Ratio Convergence Engine).
-- **Layer 3: Methodology & State Baseline Risk Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
+- **Layer 3: Methodology & State Baseline Risk Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 31-state risk table.
 - **Layer 4: Compiled Takeaways & Methodological Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) with Poisson Rate Ratio 95% CIs and an infobox detailing structural limitations.
 - **Layer 5: 110-Incident Authenticated Data Explorer**: Filterable table with incident modal popup inspector and primary news/court links.
 - **Layer 6: Speculative Econometric Projection Model (Underreporting Imputation Sandbox)**: Isolated speculative sandbox applying Poisson Media-Truncation Decay and Lincoln-Petersen Capture-Recapture DSE to model pre-2012 regional print underreporting without altering empirical facts in Layers 1–5.
@@ -61,7 +61,7 @@ python scripts/reproduce_audit.py
 - [`styles.css`](styles.css): Custom glassmorphism CSS design system with state risk badges.
 - [`app.js`](app.js): Dynamic UI controller, Chart.js engine, and dynamic card title handlers.
 - [`data.js`](data.js): Pre-compiled dataset module containing all 110 records.
-- [`paper_leaks_enriched.csv`](paper_leaks_enriched.csv): Enriched dataset with 28 data dimensions.
+- [`paper_leaks_enriched.csv`](paper_leaks_enriched.csv): Enriched dataset with 24 data dimensions.
 - [`paper_leaks.csv`](paper_leaks.csv): Updated baseline dataset.
 - [`data/state_tenures.csv`](data/state_tenures.csv): State executive tenure database (2004–2026).
 - [`data/sourced_exam_counts.csv`](data/sourced_exam_counts.csv): Official State PSC Annual Report notification counts.

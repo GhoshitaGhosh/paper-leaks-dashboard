@@ -696,7 +696,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'Level 4: Sourced Notifs',
       'Consolidated (O/E_full)'
     ];
-    const ratios = [2.71, 2.45, 1.32, 1.67, 1.14];
+    const ratios = [2.71, 2.45, 1.33, 1.67, 1.14];
 
     charts.progressiveConvergence = new Chart(ctx, {
       type: 'line',

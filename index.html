@@ -65,7 +65,7 @@
         <span class="indicator-tag variable">⚡ Level 3: Baseline Risk (O/E)</span>
         <div class="kpi-label">Stratified O/E Risk Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.10 vs 0.82</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.33)</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.82) O/E (Baseline Risk Ratio = 1.33)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Level 4: Sourced Notifications</span>
@@ -255,7 +255,7 @@
 
         <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #3b82f6; border-radius: 8px;">
           <div style="font-size: 11px; font-weight: 700; color: #3b82f6; text-transform: uppercase;">Step 3: Geographic Risk (O/E)</div>
-          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1.32 Baseline Risk Ratio</div>
+          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1.33 Baseline Risk Ratio</div>
           <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> BJP O/E = 1.10 vs INC O/E = 0.82.<br><strong>Adjustment:</strong> Controls for state risk baselines (UP 0.50/yr, MP 0.45/yr, Raj 0.41/yr). Both perform near expected baseline (1.00).</div>
         </div>
 
@@ -308,7 +308,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-fixed-effects" class="card-title">State Baseline Risk Standardization (Observed vs Expected O/E Model)</div>
-        <div id="sub-chart-fixed-effects" class="card-subtext">Level 3 Analysis: Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.10 vs INC 0.83).</div>
+        <div id="sub-chart-fixed-effects" class="card-subtext">Level 3 Analysis: Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.10 vs INC 0.82).</div>
         <div class="chart-container">
           <canvas id="chart-fixed-effects"></canvas>
         </div>
@@ -431,7 +431,7 @@
             <div class="method-title">Stratified Baseline Risk Standardization (O / E)</div>
           </div>
           <div class="method-text">
-            High-density examination states (UP: 0.406 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks (E)** under a neutral null model and compare with **Observed Leaks (O)**. Ratios of BJP (1.10) vs INC (0.83) demonstrate performance near state baseline expectations.
+            High-density examination states (UP: 0.406 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks (E)** under a neutral null model and compare with **Observed Leaks (O)**. Ratios of BJP (1.10) vs INC (0.82) demonstrate performance near state baseline expectations.
           </div>
           <div class="formula-box">
             Expected E_party = ∑ (State_Baseline_Risk<sub>s</sub> × Years_Governed<sub>s</sub>)
@@ -442,13 +442,13 @@
         <div class="method-card">
           <div class="method-header">
             <div class="step-num">5</div>
-            <div class="method-title">Level-4 Exam Conduct Volume Exposure Normalization</div>
+            <div class="method-title">Level-4 Sourced Agency Recruitment Notification Exposure Normalization</div>
           </div>
           <div class="method-text">
-            Controlling for time in office (Level 2) and state risk (Level 3) leaves **examination conduct opportunity exposure** uncontrolled. Following the creation of autonomous state selection boards (RSMSSB 2014, UPSSSC 2014, HSSC portal) and multi-shift CBT paper set multiplication, exam conduct volume expanded by **2.2× post-2014**. We normalize confirmed leaks per 1,000 major exams conducted.
+            Controlling for time in office (Level 2) and state risk (Level 3) leaves **examination conduct opportunity exposure** uncontrolled. Evaluating recruitment notifications from State PSC Annual Reports (`data/sourced_exam_counts.csv`) as an exposure sensitivity proxy yields **11.02 vs 6.61 / 1,000 notifications (Sourced Rate Ratio = 1.67)**.
           </div>
           <div class="formula-box">
-            Volume Rate = (Confirmed State Leaks / Total Est. Major Exams) × 1,000  (BJP 1.29 vs INC 1.07; RR = 1.20)
+            Sourced Rate = (Confirmed State Leaks / Total Sourced Notifications) × 1,000  (BJP 11.02 vs INC 6.61; Sourced RR = 1.67)
           </div>
         </div>
       </div>
@@ -726,7 +726,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "NDA era saw a massive 3.6x surge in paper leaks (86 vs 23 cases), proving an administrative collapse post-2014."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "For broad examination-integrity events, confirmed rates are 5.35 vs 2.30 events/yr (Central: 0.90 vs 0.60 events/yr). Isolating narrow Question-Paper Leaks yields 3.87 vs 1.10 leaks/yr, while Central Question-Paper Leaks achieve virtual parity: NDA-II 0.58 leaks/yr (7 in 12.2 yrs) vs UPA 0.50 leaks/yr (5 in 10.0 yrs)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "For broad examination-integrity events, confirmed rates are 5.35 vs 2.30 events/yr (Central: 0.90 vs 0.60 events/yr). Isolating narrow Question-Paper Leaks yields 4.03 vs 1.00 leaks/yr, while Central Question-Paper Leaks achieve virtual parity: NDA-II 0.58 leaks/yr (7 in 12.2 yrs) vs UPA 0.50 leaks/yr (5 in 10.0 yrs)."
           </div>
         </div>
         <div class="reasoning-text">
@@ -816,7 +816,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks increased uniformly across higher education entrance exams and civil service tests."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Pre-2014 leaks were concentrated in Higher Education Entrance Tests (26.1% under UPA), whereas post-2014 leaks shifted overwhelmingly to Subordinate Job Recruitment drives (36.9% under NDA)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Pre-2014 leaks were concentrated in Higher Education Entrance Tests (39.1% under UPA), whereas post-2014 leaks shifted overwhelmingly to Subordinate Job Recruitment drives (36.9% under NDA)."
           </div>
         </div>
         <div class="reasoning-text">
