@@ -145,12 +145,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
-        'Construct Disaggregation & Mechanism Taxonomy (57 Confirmed Paper Leaks)' : 
+        'Construct Disaggregation & Mechanism Taxonomy (58 Confirmed Paper Leaks)' : 
         'Construct Disaggregation & Mechanism Taxonomy (Raw Breakdown by Era)';
     }
     if (subMechanism) {
       subMechanism.innerText = isEnriched ? 
-        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 57 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 18 Filtered Social Media Claims Noise.' : 
+        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 58 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 21 Filtered Claims Noise.' : 
         '📌 Scope: Construct Disaggregation Engine. Unfiltered breakdown of all 110 incidents comparing 23 UPA Raw Incidents vs 86 NDA-II Raw Incidents.';
     }
 

@@ -450,7 +450,7 @@ const paperLeaksData = [
     "source_name": "The Assam Tribune",
     "source_url": "https://assamtribune.com/assam/rakesh-paul-33-others-convicted-in-apsc-cash-for-job-scam-1544892",
     "confidence": "High",
-    "incident_type": "OMR/Result Tampering",
+    "incident_type": "Paper Leak",
     "state_name": "Assam",
     "state_ruling_party": "INC",
     "exam_category": "Civil Services / PSC"
@@ -2640,8 +2640,3 @@ const paperLeaksData = [
     "exam_category": "Subordinate Recruitment"
   }
 ];
-
-if (typeof window !== 'undefined') {
-  window.paperLeaksData = paperLeaksData;
-  window.PAPER_LEAKS_DATA = paperLeaksData;
-}
