@@ -97,7 +97,7 @@ def run_audit():
     print(f"INC Observed = {inc_leaks} | Expected = {e_inc:.2f} | O/E Ratio = {oe_inc:.2f}")
     print(f"Geographic Risk Standardized O/E Ratios: BJP ({oe_bjp:.2f}) vs INC ({oe_inc:.2f})")
     
-    # 5. EXAM CONDUCT VOLUME NORMALIZATION INDEX (CONTROLLING FOR EXAM ACTIVITY EXPANSION)
+    # 5. EXAM CONDUCT VOLUME NORMALIZATION INDEX (LEVEL-4 ANALYSIS)
     bjp_total_exams = df_tenures[df_tenures['party'] == 'BJP']['total_exams_conducted'].sum()
     inc_total_exams = df_tenures[df_tenures['party'] == 'INC']['total_exams_conducted'].sum()
     
@@ -110,15 +110,35 @@ def run_audit():
     print(f"INC Total Est. Major Exams Conducted: {inc_total_exams:.0f} | Rate = {inc_exam_rate:.3f} incidents / 1,000 exams")
     print(f"Exam Conduct Volume-Normalized Rate Ratio (BJP / INC): {vol_rr:.2f}")
 
-    # 6. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN
-    print("\n--- 6. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN ---")
+    # 6. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (TIME + GEOGRAPHIC RISK + EXAM VOLUME)
+    state_total_exams = df_tenures.groupby('state_name')['total_exams_conducted'].sum()
+    state_vs = {}
+    for st in df_tenures['state_name'].unique():
+        leaks = state_counts.get(st, 0)
+        exams = state_total_exams.get(st, 1)
+        state_vs[st] = leaks / exams if exams > 0 else 0
+
+    e_full_bjp = sum([state_vs.get(row['state_name'], 0) * row['total_exams_conducted'] for _, row in df_tenures[df_tenures['party'] == 'BJP'].iterrows()])
+    e_full_inc = sum([state_vs.get(row['state_name'], 0) * row['total_exams_conducted'] for _, row in df_tenures[df_tenures['party'] == 'INC'].iterrows()])
+
+    oe_full_bjp = bjp_leaks / e_full_bjp if e_full_bjp > 0 else 0
+    oe_full_inc = inc_leaks / e_full_inc if e_full_inc > 0 else 0
+    cons_rr = oe_full_bjp / oe_full_inc if oe_full_inc > 0 else 0
+
+    print("\n--- 6. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (ALL CONTROLS COMBINED) ---")
+    print(f"BJP Observed = {bjp_leaks} | Consolidated Expected (E_full) = {e_full_bjp:.2f} | O/E_full Ratio = {oe_full_bjp:.2f}")
+    print(f"INC Observed = {inc_leaks} | Consolidated Expected (E_full) = {e_full_inc:.2f} | O/E_full Ratio = {oe_full_inc:.2f}")
+    print(f"Consolidated Triple-Controlled Party Risk Ratio (BJP / INC): {cons_rr:.2f}")
+
+    # 7. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN
+    print("\n--- 7. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN ---")
     type_counts = df_leaks['incident_type'].value_counts()
     for t, c in type_counts.items():
         conf_t = len(df_leaks[(df_leaks['incident_type'] == t) & (df_leaks['leak_status'].str.contains('Confirmed', na=False))])
         print(f"  {t:<32}: {c:>2} Total Incidents ({conf_t:>2} Confirmed, {c/len(df_leaks)*100:.1f}%)")
         
-    # 7. EXAM CATEGORY RADAR DISTRIBUTION
-    print("\n--- 7. EXAM CATEGORY DISTRIBUTION ---")
+    # 8. EXAM CATEGORY RADAR DISTRIBUTION
+    print("\n--- 8. EXAM CATEGORY DISTRIBUTION ---")
     cat_counts = df_leaks['exam_category'].value_counts()
     for c, cnt in cat_counts.items():
         print(f"  {c:<32}: {cnt:>2} Incidents ({cnt/len(df_leaks)*100:.1f}%)")

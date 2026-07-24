@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-rate').innerText = '0.90';
       document.getElementById('kpi-central-sub').innerText = 'Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.09 vs 0.86';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.09) vs INC (0.86) O/E (Poisson RR CI [0.99, 3.38])';
+      document.getElementById('kpi-oe-ratio').innerText = '1.00 vs 0.93';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.00) vs INC (0.93) Consolidated (Time + Risk + Volume Controlled)';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = '1.29 vs 1.07';
