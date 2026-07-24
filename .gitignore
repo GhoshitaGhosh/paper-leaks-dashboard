@@ -1,5 +1,6 @@
 # Internal Python Processing & Analysis Scripts
 *.py
+!scripts/reproduce_audit.py
 __pycache__/
 *.py[cod]
 

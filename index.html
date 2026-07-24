@@ -30,15 +30,15 @@
   <!-- Hero Section -->
   <section class="hero container">
     <div class="hero-tag">A Progressive Empirical Guide: 2004 – 2026</div>
-    <h1 class="hero-title">Paper Leaks in India:<br>Deconstructing Reporting Drift & Federal Risk</h1>
+    <h1 class="hero-title">Exam Integrity Incidents in India:<br>Deconstructing Reporting Drift & Federal Risk</h1>
     <p class="hero-sub">
-      A structured, multi-layered statistical audit of 110 authenticated public exam leaks comparing the UPA (2004–2014) and NDA (2014–2026) regimes. 
+      A structured, multi-layered statistical audit of 110 authenticated public exam integrity incidents comparing the UPA (2004–2014) and NDA (2014–2026) regimes. 
       Disaggregated by individual political parties, controlling for executive state-years and state risk proclivities.
     </p>
 
     <!-- Interactive Active Mode Banner -->
     <div style="margin: 20px auto 30px; max-width: 800px; padding: 12px 20px; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-glass); border-radius: 12px; font-size: 13px; color: var(--text-subtle); text-align: center;">
-      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk fixed-effects controls ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.</span>
+      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.</span>
     </div>
 
     <!-- KPI Cards Grid with Visual Indicator Badges -->
@@ -47,7 +47,7 @@
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Annualized Leak Rate</div>
         <div id="kpi-annual-rate" class="kpi-value">5.35</div>
-        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 4.00 UPA)</div>
+        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 2.30 UPA)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
@@ -57,9 +57,9 @@
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">State Fixed-Effects Ratio</div>
+        <div class="kpi-label">Stratified O/E Risk Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) Controlled Parity</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) O/E (Poisson RR CI [0.87, 2.60])</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
@@ -90,7 +90,7 @@
             <div class="flaw-icon">1</div>
             <div>
               <div class="item-title">Pre-2014 Media Truncation</div>
-              <div class="item-desc">Scrapers miss regional print media (*Dainik Jagran*, *Amar Ujala*, *Eenadu*) prior to 2012, recording only 24 pre-2014 leaks vs 86 post-2014.</div>
+              <div class="item-desc">Scrapers miss regional print media (*Dainik Jagran*, *Amar Ujala*, *Eenadu*) prior to 2012, recording only 23 pre-2014 leaks vs 86 post-2014.</div>
             </div>
           </div>
           <div class="flaw-item">
@@ -129,7 +129,7 @@
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Pre-2014 Digital Left-Truncation Audit</div>
-              <div class="item-desc">Audits the pre-2012 regional print media dark age where digital web scrapers under-indexed older print media reports, evaluating the 24 authenticated pre-2014 baseline incidents against post-2014 reporting.</div>
+              <div class="item-desc">Audits the pre-2012 regional print media dark age where digital web scrapers under-indexed older print media reports, evaluating the 23 authenticated pre-2014 baseline incidents against post-2014 reporting.</div>
             </div>
           </div>
           <div class="control-item">
@@ -142,7 +142,7 @@
           <div class="control-item">
             <div class="control-icon">✓</div>
             <div>
-              <div class="item-title">State Fixed-Effects Risk Model</div>
+              <div class="item-title">State Baseline Risk Standardization Model</div>
               <div class="item-desc">Calculates Observed vs Expected ($O/E$) risk ratios: **BJP (1.05) and INC (1.06)** perform identically relative to state risk profiles.</div>
             </div>
           </div>
@@ -462,14 +462,14 @@
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "NDA era saw a massive 3.6x surge in paper leaks (86 vs 24 cases), proving an administrative collapse post-2014."
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "NDA era saw a massive 3.6x surge in paper leaks (86 vs 23 cases), proving an administrative collapse post-2014."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Confirmed leak rates are closely comparable (5.35 leaks/yr under NDA vs 2.40 leaks/yr under UPA), with Central Government leak rates under NDA (0.90 leaks/yr) remaining closely comparable to UPA (0.70 leaks/yr)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Confirmed leak rates are closely comparable (5.35 leaks/yr under NDA vs 2.30 leaks/yr under UPA), with Central Government leak rates under NDA (0.90 leaks/yr) remaining closely comparable to UPA (0.70 leaks/yr)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> The raw dataset suffers from severe left-truncation (pre-2014 scrapers missed regional print archives) and post-2014 noise inflation (24.4% of post-2014 entries are disproven social media claims/hoaxes). Removing noise and reconstructing archives shows Central leaks are virtually identical (11 cases in each era) and sensitivity modeling shows a missing offset of just 1.4 regional leaks/year achieves complete mathematical parity (5.40 vs 5.35).
+          <strong>Why Controlled View is More Accurate:</strong> The raw dataset suffers from severe left-truncation (pre-2014 scrapers missed regional print archives) and post-2014 noise inflation (24.4% of post-2014 entries are disproven social media claims/hoaxes). Removing noise and reconstructing archives shows Central leaks are virtually identical (11 cases in each era) and sensitivity modeling shows a missing offset of just 1.4 regional leaks/year achieves complete mathematical parity (3.70 vs 5.35).
         </div>
       </div>
 
@@ -487,7 +487,7 @@
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Raw datasets collapse all leaks under the prime minister's era label without disaggregating jurisdictional level. Under Article 315 of the Constitution of India, State PSCs and Boards operate independently of the Union Ministry.
+          <strong>Why Controlled View is More Accurate:</strong> Raw datasets collapse all leaks under the prime minister's era label without disaggregating jurisdictional level. Under Article 315 of the Constitution of India, State PSCs operate as autonomous constitutional bodies, while state selection boards operate under state legislative statutes independent of Union Ministries.
         </div>
       </div>
 
@@ -501,18 +501,18 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP state governments had twice as many leaks as INC state governments (39 vs 19 cases), proving one party is twice as leak-prone."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.212 leaks/state-year vs INC at 0.141 leaks/state-year."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.212 leaks/state-year vs INC at 0.141 leaks/state-year (Poisson Rate Ratio = 1.51, 95% CI [0.87, 2.60], failing to reject rate parity at alpha = 0.05)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 184.1 State-Years vs 135.0 for INC). Normalizing by executive tenure eliminates exposure bias.
+          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 184.1 State-Years vs 135.0 for INC). Normalizing by executive tenure eliminates exposure bias, while the 95% confidence interval [0.87, 2.60] fails to reject rate parity.
         </div>
       </div>
 
       <!-- Takeaway 4 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>4. State Fixed-Effects Risk Proclivity (Geographic Controlling)</span>
+          <span>4. Stratified Baseline Risk Standardization (Geographic Controlling)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
@@ -537,7 +537,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks increased uniformly across higher education entrance exams and civil service tests."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Pre-2014 leaks were concentrated in Higher Education Entrance Tests (41.7% under UPA), whereas post-2014 leaks shifted overwhelmingly to Subordinate Job Recruitment drives (33.8% under NDA)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Pre-2014 leaks were concentrated in Higher Education Entrance Tests (26.1% under UPA), whereas post-2014 leaks shifted overwhelmingly to Subordinate Job Recruitment drives (27.7% under NDA)."
           </div>
         </div>
         <div class="reasoning-text">
@@ -555,7 +555,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Physical printing press security collapsed post-2014, causing widespread physical paper theft."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Physical printing press breaches remained constant (21 confirmed cases across 22 years), while digital instant pre-circulation (WhatsApp/Telegram) and social media fake paper hoaxes (14 cases / 24.4% noise) emerged exclusively post-2014."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Physical printing press breaches remained constant (5 confirmed cases across 22 years), while digital instant pre-circulation (WhatsApp/Telegram) and social media fake paper hoaxes (18 cases / 24.4% noise) emerged exclusively post-2014."
           </div>
         </div>
         <div class="reasoning-text">
@@ -570,10 +570,10 @@
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks were rare prior to 2012 because raw web scrapers only captured 24 pre-2014 incidents."
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks were rare prior to 2012 because raw web scrapers only captured 23 pre-2014 incidents."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Auditing the 24 authenticated pre-2014 baseline leaks (PL-0001 to PL-0024) proves paper leaks occurred regularly pre-2014, but were under-indexed by digital search APIs compared to post-2014 social media coverage."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Auditing the 23 authenticated pre-2014 baseline leaks (PL-0002 to PL-0024) proves paper leaks occurred regularly pre-2014, but were under-indexed by digital search APIs compared to post-2014 social media coverage."
           </div>
         </div>
         <div class="reasoning-text">

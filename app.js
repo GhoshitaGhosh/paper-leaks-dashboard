@@ -158,7 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleDataExplorer) {
       titleDataExplorer.innerText = isEnriched ? 
-        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 24 UPA vs 86 NDA)' : 
+        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 23 UPA vs 86 NDA)' : 
         'Layer 5: 110-Incident Authenticated Data Explorer (Raw Unadjusted View)';
     }
   }
@@ -168,19 +168,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isEnriched) {
       document.getElementById('kpi-annual-rate').innerText = '5.35';
-      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 2.40 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 2.30 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '0.90';
       document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 0.70 UPA)';
 
       document.getElementById('kpi-oe-ratio').innerText = '1.05 vs 1.06';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) Controlled Parity';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) O/E (Poisson RR CI [0.87, 2.60])';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
     } else {
       document.getElementById('kpi-annual-rate').innerText = '7.07';
-      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Leaks / Yr (vs 2.40 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Leaks / Yr (vs 2.30 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '1.23';
       document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Leaks / Yr (vs 0.70 UPA)';
@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     const labels = ['UPA Era (2004–2014)', 'NDA Era (2014–2026)'];
-    const rates = isEnriched ? [2.40, 5.35] : [2.40, 7.07];
-    const totalLeaks = isEnriched ? [24, 65] : [24, 86];
+    const rates = isEnriched ? [2.30, 5.35] : [2.30, 7.07];
+    const totalLeaks = isEnriched ? [23, 65] : [23, 86];
 
     charts.era = new Chart(ctx, {
       type: 'bar',
@@ -380,8 +380,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categories = ['Subordinate Recruitment', 'Entrance Tests (Higher Ed)', 'Police & Defense', 'Teacher Recruitment / TET', 'School Board Exam', 'Civil Services / PSC'];
     
-    const upaCounts = [2, 10, 2, 2, 3, 2];
-    const ndaCounts = isEnriched ? [22, 4, 10, 10, 6, 8] : [30, 7, 11, 13, 6, 12];
+    const upaCounts = [8, 6, 2, 2, 3, 2];
+    const ndaCounts = isEnriched ? [18, 10, 10, 9, 9, 9] : [24, 13, 10, 11, 14, 14];
 
     charts.category = new Chart(ctx, {
       type: 'radar',
@@ -389,7 +389,7 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: categories,
         datasets: [
           {
-            label: 'UPA Era (24 Cases)',
+            label: 'UPA Era (23 Cases)',
             data: upaCounts,
             borderColor: '#6366f1',
             backgroundColor: 'rgba(99, 102, 241, 0.25)',
@@ -426,10 +426,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mechanisms = ['Digital / WhatsApp Leak', 'Printing Press Breach', 'Hoax / Fake Paper', 'In-Exam Tech Cheating', 'OMR / Result Tampering', 'Impersonation Racket'];
     
-    const dataset1 = isEnriched ? [28, 20, 0, 9, 8, 7] : [5, 4, 0, 1, 7, 5];
-    const dataset2 = isEnriched ? [2, 1, 14, 2, 1, 1] : [33, 21, 14, 9, 4, 2];
+    const dataset1 = isEnriched ? [54, 5, 1, 5, 14, 10] : [9, 1, 1, 1, 7, 4];
+    const dataset2 = isEnriched ? [2, 0, 18, 0, 0, 1] : [46, 4, 18, 4, 7, 7];
 
-    const label1 = isEnriched ? 'Confirmed Administrative Leaks (89)' : 'UPA Era Raw Incidents (24)';
+    const label1 = isEnriched ? 'Confirmed Administrative Leaks (89)' : 'UPA Era Raw Incidents (23)';
     const label2 = isEnriched ? 'Filtered Unconfirmed Claims / Noise (21)' : 'NDA Era Raw Incidents (86)';
 
     charts.mechanism = new Chart(ctx, {

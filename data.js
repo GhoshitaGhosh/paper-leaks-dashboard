@@ -1,8 +1,8 @@
-window.PAPER_LEAKS_DATA = [
+const paperLeaksData = [
   {
     "incident_id": "PL-0001",
     "date": "2004-04-11",
-    "era": "UPA (2004-May2014)",
+    "era": "NDA-I",
     "exam_name": "All India Pre-Medical Test (AIPMT/CBSE-PMT) 2004",
     "conducting_body": "Central Board of Secondary Education (CBSE)",
     "body_type": "Central",
@@ -17,7 +17,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/2004/20040412/main5.htm",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0002",
@@ -37,7 +41,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/2006/20060831/himachal.htm",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Himachal Pradesh",
+    "state_ruling_party": "INC",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0003",
@@ -57,7 +65,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The420.in",
     "source_url": "https://the420.in/vyapam-scam-cbi-court-patwari-exam-fraud-10-convicts-sentenced/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Document/Certificate Forgery",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0004",
@@ -77,7 +89,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Free Press Journal",
     "source_url": "https://www.freepressjournal.in/education/indore-5-years-imprisonment-to-candidate-and-impersonator-in-2009-pmt-exam-case",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0005",
@@ -97,7 +113,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Week",
     "source_url": "https://www.theweek.in/wire-updates/national/2024/01/30/del90-cbi-railways.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0006",
@@ -117,7 +137,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/archive/nation/vyapam-cbi-chargesheets-ex-minister-529713/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0007",
@@ -137,7 +161,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "icbse.com",
     "source_url": "https://www.icbse.com/news/cbse-question-papers-leaked-nicobar-bjp-mp-p1qv",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Andaman & Nicobar Islands",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0008",
@@ -157,7 +185,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "icbse.com",
     "source_url": "https://www.icbse.com/news/aieee-2011-question-paper-leaked-exam-postponed-elrl",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0009",
@@ -177,7 +209,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV News",
     "source_url": "https://www.indiatvnews.com/news/india/chhatisgarh-pmt-rescheduled-after-paper-leak-12-held-8582.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Chhattisgarh",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0010",
@@ -197,7 +233,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV News",
     "source_url": "https://www.indiatvnews.com/news/india/up-secondary-education-board-director-arrested-in-tet-scam-cash-documents-seized-14180.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BSP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0011",
@@ -217,7 +257,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Vyapam_scam",
-    "confidence": "Low"
+    "confidence": "Low",
+    "incident_type": "Paper Leak",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0012",
@@ -237,7 +281,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Vyapam_scam",
-    "confidence": "Low"
+    "confidence": "Low",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0013",
@@ -257,7 +305,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Outlook India",
     "source_url": "https://www.outlookindia.com/national/india-news-cbi-gives-clean-chit-to-former-mp-minister-in-vyapam-scam-news-323886",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0014",
@@ -277,7 +329,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careerindia",
     "source_url": "https://www.careerindia.com/news/2012/01/16/two-doctors-arrested-for-aims-question-paper-leak-case.html",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Delhi",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0015",
@@ -297,7 +353,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careerindia",
     "source_url": "https://www.careerindia.com/news/2012/04/05/karnataka-pu-paper-leak-case-10-arrested-by-cid.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Karnataka",
+    "state_ruling_party": "BJP",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0016",
@@ -317,7 +377,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Greater Kashmir",
     "source_url": "https://www.greaterkashmir.com/kashmir/bopee-scam-convicted-students-had-made-astronomical-jump-in-ranking/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Jammu & Kashmir",
+    "state_ruling_party": "Other",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0017",
@@ -337,7 +401,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Vyapam_scam",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0018",
@@ -357,13 +425,17 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV",
     "source_url": "https://www.indiatvnews.com/madhya-pradesh/vyapam-case-special-cbi-court-sentences-11-to-7-years-mpesb-case-madhya-pradesh-police-constable-recruitment-examination-mpre-act-2024-05-27-933724",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0019",
     "date": "2013-01-01",
     "era": "UPA (2004-May2014)",
-    "exam_name": "Agricultural Development Officer & combined competitive recruitment (2013–2014)",
+    "exam_name": "Agricultural Development Officer & combined competitive recruitment (2013\u20132014)",
     "conducting_body": "Assam Public Service Commission (APSC)",
     "body_type": "State",
     "area": "Assam",
@@ -377,7 +449,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Assam Tribune",
     "source_url": "https://assamtribune.com/assam/rakesh-paul-33-others-convicted-in-apsc-cash-for-job-scam-1544892",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Assam",
+    "state_ruling_party": "INC",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0020",
@@ -397,7 +473,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV",
     "source_url": "https://www.indiatvnews.com/news/india/2013-police-constable-recruitment-vyapam-scam-cbi-court-sentence-improsinment-31-accused-566413",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0021",
@@ -417,7 +497,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "SSC Portal",
     "source_url": "https://sscportal.in/news/si-exam-topper-caught-during-ssc-paper-leak-case",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0022",
@@ -437,7 +521,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": "SCAM-WIDE, not this single exam: the MP SIT acknowledged 23 'unnatural' deaths of people linked to the Vyapam scam (~7 suicides, ~11 road accidents, ~3 alcohol-related illness); opposition/some press put it at 40-46. CBI probed 24 such deaths and ruled out foul play in every one it examined. Deaths span the whole 2009-2015 scam; attributed to the 2013 PMT row only for indexing. Mostly not suicides and highly contested. Sources: The News Minute, IBTimes, Business Standard.",
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/vyapam-scam-five-sentenced-imprisonment-for-fraud-at-mp-medical-entrance-test-in-2013/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0023",
@@ -457,7 +545,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": "Not an aspirant: the alleged mastermind of the leak died under suspicious circumstances during a custody transfer (Varanasi->Jaipur) in 2014; his family alleged murder. No suicide. Source: Careers360.",
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/rajasthan-ras-paper-leak-mastermind-dies-under-suspicious-circumstances-family-alleges-murder",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0024",
@@ -477,7 +569,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV News",
     "source_url": "https://www.indiatvnews.com/news/india/latest-news-cbse-class-12-physics-paper-leaked-manipur-retest-34302.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Manipur (Imphal)",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0025",
@@ -497,7 +593,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "SCC Online (Supreme Court judgment coverage)",
     "source_url": "https://www.scconline.com/blog/post/2021/03/05/recruitment-to-public-services-must-command-public-confidence-supreme-court-upholds-cancellation-of-dsssb-head-clerk-selection-process-in-light-of-systematic-irregularities/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Delhi",
+    "state_ruling_party": "AAP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0026",
@@ -517,7 +617,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/archive/nation/uppcs-exam-cancelled-after-paper-leak-three-arrested-60480",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "SP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0027",
@@ -537,7 +641,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Republic World",
     "source_url": "https://www.republicworld.com/education/entrance-exams/when-supreme-court-cancelled-aipmt-2015-a-reminder-for-neet-ug-integrity-amid-paper-leak-row",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0028",
@@ -557,7 +665,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/archive/haryana/htet-paper-leaked-in-jind-exam-cancelled-158218",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Haryana",
+    "state_ruling_party": "BJP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0029",
@@ -577,7 +689,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "DD News",
     "source_url": "https://ddnews.gov.in/en/west-bengal-teacher-recruitment-scam-calcutta-hc-declares-2016-ssc-recruitment-null-and-void-orders-fresh-appointments/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "West Bengal",
+    "state_ruling_party": "AITC",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0030",
@@ -597,7 +713,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Prokerala (PTI)",
     "source_url": "https://www.prokerala.com/news/articles/a1588652.html",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "INC",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0031",
@@ -617,7 +737,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360 (NEET leak history)",
     "source_url": "https://medicine.careers360.com/articles/how-many-times-neet-paper-leaked",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0032",
@@ -637,7 +761,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune (PTI)",
     "source_url": "https://www.tribuneindia.com/news/archive/nation/paper-leak-case-bihar-staff-service-commission-chairman-arrested-in-jharkhand-368898",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0033",
@@ -657,7 +785,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360 (NEET leak history)",
     "source_url": "https://medicine.careers360.com/articles/how-many-times-neet-paper-leaked",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0034",
@@ -677,7 +809,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/2017-hcs-exam-paper-leak-case-delhi-court-sentences-punjab-haryana-judicial-hc-ex-registrar-5-year-jail",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Haryana",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0035",
@@ -697,7 +833,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Ground Report",
     "source_url": "https://www.groundreport.in/education/how-many-exam-papers-leaked-in-yogi-govt-rule/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "SP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0036",
@@ -717,7 +857,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/archive/delhi/cm-urges-lg-to-cancel-dsssb-papers-hold-exams-again-507254",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Delhi",
+    "state_ruling_party": "AAP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0037",
@@ -737,7 +881,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/archive/nation/sify-employees-among-17-booked-in-ssc-paper-leak-case-593733",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0038",
@@ -757,7 +905,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/cbse-paper-leak-class-12-economics-re-exam-april-25-class-10-maths-likely-july/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0039",
@@ -777,7 +929,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/cbse-paper-leak-class-12-economics-re-exam-april-25-class-10-maths-likely-july/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0040",
@@ -797,7 +953,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Ground Report",
     "source_url": "https://www.groundreport.in/education/how-many-exam-papers-leaked-in-yogi-govt-rule/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0041",
@@ -817,7 +977,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Ground Report",
     "source_url": "https://www.groundreport.in/education/how-many-exam-papers-leaked-in-yogi-govt-rule/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0042",
@@ -837,7 +1001,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Federal",
     "source_url": "https://thefederal.com/states/west/gujarat/after-13-govt-exam-paper-leaks-in-nine-years-gujarat-proposes-new-law",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Document/Certificate Forgery",
+    "state_name": "Gujarat",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0043",
@@ -857,7 +1025,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Daijiworld",
     "source_url": "https://daijiworld.com/news/newsDisplay?newsID=1054403",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0044",
@@ -877,7 +1049,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/tet-case-ias-officer-held-in-thane-count-of-arrested-rises-13",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Maharashtra",
+    "state_ruling_party": "Shiv Sena",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0045",
@@ -897,7 +1073,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Sentinel",
     "source_url": "https://www.sentinelassam.com/north-east-india-news/assam-news/3-arrested-in-connection-with-leaking-assam-police-si-written-test-question-paper-503093",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Assam",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0046",
@@ -917,7 +1097,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/punjab/1-957-clear-dental-medical-officer-retest-161116",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Punjab",
+    "state_ruling_party": "INC",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0047",
@@ -937,7 +1121,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/rajasthan-je-recruitment-2020-question-paper-for-exam-recruit-junior-engineers-was-leaked-even-during-re-test-police/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0048",
@@ -957,7 +1145,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ThePrint",
     "source_url": "https://theprint.in/india/railways-exam-paper-leak-cbi-registers-case-against-mumbai-based-aptech-ltd/1916726/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Gujarat",
+    "state_ruling_party": "Central",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0049",
@@ -977,7 +1169,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/punjab/paper-leak-hssc-cancels-gram-sachiv-examination-two-more-arrested-in-hisar-199422",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Haryana",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0050",
@@ -997,7 +1193,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/nation/army-cancels-recruitment-exam-after-paper-leak-218658",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0051",
@@ -1017,7 +1217,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360 (PTI)",
     "source_url": "https://news.careers360.com/uttarakhand-three-government-recruitment-exams-uksssc-graduate-level-forest-guard-secretariat-guard-exam-cancelled-uksssc-chairman",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0052",
@@ -1037,7 +1241,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/haryana/four-years-on-one-more-held-in-hssc-constable-exam-leak-case",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Haryana",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0053",
@@ -1057,7 +1265,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360 (NEET leak history)",
     "source_url": "https://medicine.careers360.com/articles/how-many-times-neet-paper-leaked",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0054",
@@ -1077,7 +1289,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ETV Bharat",
     "source_url": "https://www.etvbharat.com/en/!state/rajasthan-high-court-cancels-2021-si-recruitment-exam-over-paper-leak-enn25082802897",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0055",
@@ -1097,7 +1313,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/reet-2021-rajasthan-govt-cancels-level-2-exam/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0056",
@@ -1117,7 +1337,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Quint",
     "source_url": "https://www.thequint.com/news/politics/explained-all-you-need-to-know-about-psi-scam-for-the-recruitment-of-police-sub-inspectors-in-karnataka",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Karnataka",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0057",
@@ -1137,7 +1361,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/patwari-exam-coaching-institute-owner-govt-school-clerk-held-in-rajasthan-for-malpractice/amp",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0058",
@@ -1157,7 +1385,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV News",
     "source_url": "https://www.indiatvnews.com/education/news-uptet-2021-question-paper-leaked-uttar-pradesh-tet-exam-cancelled-updeled-gov-in-747079",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0059",
@@ -1177,7 +1409,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ThePrint (PTI)",
     "source_url": "https://theprint.in/india/20-people-arrested-in-uksssc-paper-leak-case-so-far-uttarakhand-police/1089684/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0060",
@@ -1197,7 +1433,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/guj-exam-for-recruitment-govt-posts-cancelled-after-paper-leak-key-accused-held-gujarat-head-clerk-scam",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Gujarat",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0061",
@@ -1217,7 +1457,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV",
     "source_url": "https://www.indiatvnews.com/education/news-mhada-recruitment-exam-cancelled-after-3-held-for-bid-to-leak-question-paper-749260",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Maharashtra",
+    "state_ruling_party": "Shiv Sena",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0062",
@@ -1237,7 +1481,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The News Minute",
     "source_url": "https://www.thenewsminute.com/article/tn-revision-exam-papers-class-10-and-12-leaked-official-suspended-160999",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Tamil Nadu (Tiruvannamalai)",
+    "state_ruling_party": "Other",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0063",
@@ -1257,7 +1505,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Daijiworld",
     "source_url": "https://daijiworld.com/news/newsDisplay?newsID=1054403",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Document/Certificate Forgery",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0064",
@@ -1277,7 +1529,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/gujarat-forest-guard-recruitment-exam-candidate-detained-sheet-answers-aap-congress-slam-bjp-govt-gujarat-university-forest-department/amp",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Gujarat",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0065",
@@ -1297,7 +1553,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/himachal/cbi-chargesheets-88-in-cop-recruitment-paper-leak-case-599581/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Himachal Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0066",
@@ -1317,7 +1577,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Siasat (archive)",
     "source_url": "https://archive.siasat.com/news/andhra-pradesh-how-teachers-plotted-2022-leak-of-class-x-papers-2535422/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Andhra Pradesh",
+    "state_ruling_party": "Other",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0067",
@@ -1337,7 +1601,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/bpsc-67th-question-paper-leak-bdo-college-invigilator-four-arrested-in-exam-paper-leak-case",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0068",
@@ -1357,7 +1625,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/rajasthan-police-constable-exam-paper-leak-fresh-test-on-july-2/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0069",
@@ -1377,7 +1649,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/punjab/5-arrested-for-helping-candidates-cheat-in-punjab-naib-tehsildar-recruitment-test-451278",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Punjab",
+    "state_ruling_party": "INC",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0070",
@@ -1397,7 +1673,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Siasat (PTI)",
     "source_url": "https://archive.siasat.com/news/3-arrested-in-uttarakhand-assistant-and-junior-engineer-paper-leak-case-2518878/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0071",
@@ -1417,7 +1697,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ThePrint",
     "source_url": "https://theprint.in/india/up-lekhpal-exam-solvers-candidates-among-21-arrested-akhilesh-alleges-paper-leak/1063273/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0072",
@@ -1437,7 +1721,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/appsc-examination-paper-leak-secretary-joint-secretary-suspended",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Arunachal Pradesh",
+    "state_ruling_party": "Other",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0073",
@@ -1457,7 +1745,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/rajasthan-forest-guard-exams-one-shift-cancelled-over-paper-leak-9-held/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0074",
@@ -1477,7 +1769,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/bssc-cgl-question-paper-2022-leaked-exam-images-go-viral-on-twitter-bihar",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0075",
@@ -1497,7 +1793,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Print",
     "source_url": "https://theprint.in/india/rajasthan-2nd-grade-teacher-recruitment-exam-paper-leaked-44-held/1280589/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0076",
@@ -1517,7 +1817,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/himachal/jr-asst-paper-leaked-in-hamirpur-six-arrested-464017",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Himachal Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0077",
@@ -1537,7 +1841,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360 (PTI)",
     "source_url": "https://news.careers360.com/after-series-of-paper-leak-cases-incident-free-lekhpal-exam-in-uttarakhand",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0078",
@@ -1557,7 +1865,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/gujarat-junior-clerk-exam-cancelled-after-question-paper-leak-1-suspect-detained",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Gujarat",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0079",
@@ -1577,7 +1889,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Free Press Journal",
     "source_url": "https://www.freepressjournal.in/education/reet-2023-37-arrested-in-police-raid-over-alleged-attempts-to-leak-question-paper",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Rajasthan",
+    "state_ruling_party": "INC",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0080",
@@ -1597,7 +1913,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The South First",
     "source_url": "https://thesouthfirst.com/news/tspsc-paper-leak-fees-waived-for-those-reappearing-in-cancelled-exams-sit-gets-custody-of-accused/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Telangana",
+    "state_ruling_party": "BRS",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0081",
@@ -1617,7 +1937,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Week",
     "source_url": "https://www.theweek.in/news/india/2023/07/13/mp-patwari-recruitment-scam-worry-for-bjp-govt-as-youths-hold-massive-statewide-protests.html",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0082",
@@ -1637,7 +1961,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/chhattisgarh/cgpsc-nepotism-scam-cbi-arrests-ex-chairman-businessman-for-rs-45-lakh-bribe/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Chhattisgarh",
+    "state_ruling_party": "INC",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0083",
@@ -1657,7 +1985,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Bansal News",
     "source_url": "https://bansalnews.com/mp-forest-guard-bharti-scam-result-hold-esb-investigation-hindi-news-zvj/",
-    "confidence": "Low"
+    "confidence": "Low",
+    "incident_type": "Document/Certificate Forgery",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0084",
@@ -1677,7 +2009,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/delhi/cbi-arrests-mastermind-of-aiims-nursing-officer-recruitment-paper-leak-519366",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0085",
@@ -1697,7 +2033,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Outlook India",
     "source_url": "https://www.outlookindia.com/education/ossc-cancels-main-written-exam-of-je-civil-as-police-confirm-leak-of-question-paper-news-305233",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Odisha",
+    "state_ruling_party": "BJD",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0086",
@@ -1717,7 +2057,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Lokmat Times",
     "source_url": "https://www.lokmattimes.com/maharashtra/leaks-cheating-and-cries-for-justice-unraveling-the-talathi-exam-scandal-a475/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Maharashtra",
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0087",
@@ -1737,7 +2081,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Week (PTI)",
     "source_url": "https://www.theweek.in/wire-updates/national/2023/10/04/cal1-bh-police-paper-leak.html",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0088",
@@ -1757,7 +2105,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/jssc-cgl-2024-exam-postponed-due-paper-leak-new-dates-soon",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Jharkhand",
+    "state_ruling_party": "JMM",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0089",
@@ -1777,7 +2129,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/uttar-pradesh/up-government-cancels-ro-aro-exam-over-paper-leak-596545",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0090",
@@ -1797,7 +2153,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/uttar-pradesh/up-government-cancels-police-constable-recruitment-exam-orders-re-examination-594134",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Police & Defense"
   },
   {
     "incident_id": "PL-0091",
@@ -1817,7 +2177,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/bpsc-tre-30-exam-cancelled-due-paper-leak-re-exam-dates-announced-soon-latest-news",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0092",
@@ -1837,7 +2201,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ETV Bharat",
     "source_url": "https://www.etvbharat.com/en/!state/jharkhand-alleged-question-paper-leak-of-jpsc-examination-enn24031702642",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Jharkhand",
+    "state_ruling_party": "JMM",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0093",
@@ -1857,7 +2225,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": ">=4 NEET aspirants' suicides were reported by families/press as linked to the leak and exam cancellation (2 in Nagpur, incl. an 18-yr-old who left a note refusing the retest; cases in Kokrajhar, Assam and Kalaburagi, Karnataka). Causation (leak vs. general exam stress) is contested and not officially established; count is a floor of individually-reported cases. Sources: India.com, The Quint, Careers360.",
     "source_name": "National Herald",
     "source_url": "https://www.nationalheraldindia.com/national/neet-ug-exam-cbi-confirms-paper-leak-limited-to-bihar-centre",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0094",
@@ -1877,7 +2249,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/india/cbi-closes-ugc-net-paper-leak-case-finds-no-evidence-of-breach",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0095",
@@ -1897,7 +2273,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/india/case-registered-for-bid-to-sell-online-fake-question-paper-of-madhya-pradesh-public-service-commission-exam-633671/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Madhya Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0096",
@@ -1917,7 +2297,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Medical Dialogues",
     "source_url": "https://medicaldialogues.in/news/education/neet-pg-2024-was-postponed-due-to-impersonation-threats-report-131706",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0097",
@@ -1937,7 +2321,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ThePrint",
     "source_url": "https://theprint.in/india/5-irb-jawans-among-8-arrested-by-jharkhand-cid-over-recruitment-exam-paper-leak/2564847/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Jharkhand",
+    "state_ruling_party": "JMM",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0098",
@@ -1957,7 +2345,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV",
     "source_url": "https://www.indiatvnews.com/jobs/news/nhm-bihar-cho-2024-recruitment-exam-cancelled-due-to-paper-leak-2024-12-02-964328",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0099",
@@ -1977,7 +2369,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/bpsc-70th-cce-re-exam-on-january-4-for-patna-bapu-exam-centre-paper-leak-protest-cancelled",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Bihar",
+    "state_ruling_party": "JD(U)",
+    "exam_category": "Civil Services / PSC"
   },
   {
     "incident_id": "PL-0100",
@@ -1997,7 +2393,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "India TV News",
     "source_url": "https://www.indiatvnews.com/news/india/railways-ropes-in-rrb-for-all-departmental-exams-after-cbi-arrests-26-officials-in-paper-leak-case-2025-03-05-979280",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "Central",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0101",
@@ -2017,7 +2417,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/upessc-assistant-professor-exam-cancellation-paper-leak-stf-arrests-fir-chairperson-resignation-fresh-recruitment-examination/amp",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttar Pradesh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0102",
@@ -2037,7 +2441,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune (PTI)",
     "source_url": "https://www.tribuneindia.com/news/examcancelled/paper-leak-uttarakhand-govt-cancels-graduate-level-recruitment-examination-to-be-held-within-3-months",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Uttarakhand",
+    "state_ruling_party": "BJP",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0103",
@@ -2057,7 +2465,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/maharashtra-tet-paper-leak-18-arrested-in-kolhapur-for-alleged-exam-scam",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Maharashtra",
+    "state_ruling_party": "BJP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0104",
@@ -2077,7 +2489,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/bathinda/six-months-on-probe-into-punjab-group-b-paper-leak-still-pending/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Punjab",
+    "state_ruling_party": "AAP",
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0105",
@@ -2097,7 +2513,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/maharashtra-board-exams-2026-class-12-chemistry-paper-leak-coaching-class-director-arrested-in-nagpurs-umred-area/amp",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Maharashtra",
+    "state_ruling_party": "BJP",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0106",
@@ -2117,7 +2537,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/chhattisgarh-board-12th-hindi-re-exam-2026-on-april-10-timings-cgbse-paper-leak-social-media-claims",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "Paper Leak",
+    "state_name": "Chhattisgarh",
+    "state_ruling_party": "BJP",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0107",
@@ -2137,7 +2561,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "ThePrint",
     "source_url": "https://theprint.in/india/jkhand-159-candidates-among-164-held-over-paper-leak-allegations-in-excise-recruitment-exam/2903103/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Jharkhand",
+    "state_ruling_party": "JMM",
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0108",
@@ -2157,7 +2585,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": "~13 aspirant suicides reported by press amid post-cancellation retest anxiety, incl. a top-scoring Rajasthan aspirant. This is a press tally, not an official causal count, and conflates leak-specific distress with broader retest/exam-pressure suicides. Sources: Outlook India, WION, Al Jazeera.",
     "source_name": "Wikipedia (2026 NEET controversy)",
     "source_url": "https://en.wikipedia.org/wiki/2026_NEET_controversy",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Paper Leak",
+    "state_name": "Central",
+    "state_ruling_party": "Central",
+    "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
     "incident_id": "PL-0109",
@@ -2177,7 +2609,11 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/haryana/haryana-teacher-eligibility-test-marred-by-controversy/",
-    "confidence": "Medium"
+    "confidence": "Medium",
+    "incident_type": "OMR/Result Tampering",
+    "state_name": "Haryana",
+    "state_ruling_party": "BJP",
+    "exam_category": "Teacher Recruitment / TET"
   },
   {
     "incident_id": "PL-0110",
@@ -2197,6 +2633,10 @@ window.PAPER_LEAKS_DATA = [
     "deaths_note": NaN,
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/punjab/police-arrest-7-kingpins-28-candidates-in-punjab-pharmacist-officer-recruitment-exam-scam/",
-    "confidence": "High"
+    "confidence": "High",
+    "incident_type": "Impersonation/Cheating Racket",
+    "state_name": "Punjab",
+    "state_ruling_party": "AAP",
+    "exam_category": "Subordinate Recruitment"
   }
 ];
