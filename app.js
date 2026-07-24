@@ -1,6 +1,6 @@
 // Global Dashboard Application Controller - 110 Authenticated Records
 document.addEventListener('DOMContentLoaded', () => {
-  const data = window.PAPER_LEAKS_DATA || [];
+  const data = (typeof paperLeaksData !== 'undefined' ? paperLeaksData : window.PAPER_LEAKS_DATA) || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
   let charts = {};
 

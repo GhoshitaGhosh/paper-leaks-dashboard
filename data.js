@@ -2640,3 +2640,7 @@ const paperLeaksData = [
     "exam_category": "Subordinate Recruitment"
   }
 ];
+if (typeof window !== 'undefined') {
+  window.paperLeaksData = paperLeaksData;
+  window.PAPER_LEAKS_DATA = paperLeaksData;
+}
