@@ -171,31 +171,38 @@
       <p class="section-desc">Progressing from raw counts to tenure normalization and state fixed-effects risk models.</p>
     </div>
 
-    <!-- 3-Stage Reader Progression Explanation Banner -->
+    <!-- 4-Stage Reader Progression Explanation Banner -->
     <div class="progression-container">
       <div style="font-size: 16px; font-weight: 700; color: var(--text-main); font-family: 'Outfit', sans-serif;">
-        Understanding State Party Metrics: A 3-Level Reader Progression
+        Understanding State Party Metrics: A 4-Level Reader Progression
       </div>
-      <div class="progression-grid">
+      <div class="progression-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         <div class="progression-card">
           <span class="stage-badge level-1">Level 1: Naïve Raw Counts</span>
           <div class="progression-title">Unadjusted Total Incidents</div>
           <div class="progression-desc">
-            Simple tally of leaks under a party's state rule (BJP = 39, INC = 11 Raw / 19 Controlled). <strong>Flawed:</strong> Ignores how long parties held office (exposure bias).
+            Simple tally of breaches (BJP = 37, INC = 14 Confirmed). <strong>Flawed:</strong> Ignores time in office and exam volume.
           </div>
         </div>
         <div class="progression-card">
-          <span class="stage-badge level-2">Level 2: Tenure Rate</span>
-          <div class="progression-title">Leaks per State-Year in Power</div>
+          <span class="stage-badge level-2">Level 2: Executive Tenure Rate</span>
+          <div class="progression-title">Breaches per State-Year in Power</div>
           <div class="progression-desc">
-            Adjusts for time in office (BJP = 0.212/state-yr, INC = 0.141/state-yr). <strong>Limitation:</strong> Treats high-risk exam hubs (UP/MP) identical to low-risk states.
+            Adjusts for time in office (BJP = 0.234/state-yr, INC = 0.128/state-yr; Poisson RR CI [0.99, 3.38]).
           </div>
         </div>
         <div class="progression-card">
-          <span class="stage-badge level-3">Level 3: State Baseline Risk</span>
-          <div class="progression-title">Observed vs Expected (O / E)</div>
+          <span class="stage-badge level-3">Level 3: Baseline Risk ($O / E$)</span>
+          <div class="progression-title">Observed vs Expected Ratios</div>
           <div class="progression-desc">
-            Controls for <strong>BOTH</strong> time in office <strong>AND</strong> state geographic risk proclivity. <strong>Conclusion:</strong> Fails to reject party parity (BJP 1.05 ≈ INC 1.06).
+            Controls for state geographic risk proclivity (BJP O/E = 1.09 vs INC O/E = 0.86).
+          </div>
+        </div>
+        <div class="progression-card">
+          <span class="stage-badge level-3" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: #10b981;">Level 4: Exam Conduct Volume</span>
+          <div class="progression-title">Leaks per 1,000 Exams Conducted</div>
+          <div class="progression-desc">
+            Controls for post-2014 exam conduct volume expansion (BJP = 1.287 vs INC = 1.069 leaks / 1,000 exams; <strong>RR = 1.20</strong>).
           </div>
         </div>
       </div>
