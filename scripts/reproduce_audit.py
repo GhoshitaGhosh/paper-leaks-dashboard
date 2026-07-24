@@ -161,6 +161,26 @@ def run_audit():
     print(f"INC Observed = {inc_leaks} | Consolidated Expected (E_full) = {e_full_inc:.2f} | O/E_full Ratio = {oe_full_inc:.2f}")
     print(f"Consolidated Triple-Controlled Party Risk Ratio (BJP / INC): {cons_rr:.2f}")
 
+    # 8. MATCHED BIPARTISAN WITHIN-STATE GOVERNANCE CONTROL (GEOGRAPHIC MATCHED SAMPLE)
+    matched_states = ['Rajasthan', 'Madhya Pradesh', 'Himachal Pradesh', 'Uttarakhand', 'Karnataka', 'Maharashtra']
+    df_m_leaks = conf_state[conf_state['state_name'].isin(matched_states)]
+    df_m_tenures = df_tenures[df_tenures['state_name'].isin(matched_states)]
+
+    bjp_m_leaks = len(df_m_leaks[df_m_leaks['joined_ruling_party'] == 'BJP'])
+    inc_m_leaks = len(df_m_leaks[df_m_leaks['joined_ruling_party'] == 'INC'])
+    bjp_m_yrs = df_m_tenures[df_m_tenures['party'] == 'BJP']['years'].sum()
+    inc_m_yrs = df_m_tenures[df_m_tenures['party'] == 'INC']['years'].sum()
+
+    bjp_m_rate = bjp_m_leaks / bjp_m_yrs if bjp_m_yrs > 0 else 0
+    inc_m_rate = inc_m_leaks / inc_m_yrs if inc_m_yrs > 0 else 0
+    matched_rr = bjp_m_rate / inc_m_rate if inc_m_rate > 0 else 0
+
+    print("\n--- 8. MATCHED BIPARTISAN WITHIN-STATE GOVERNANCE CONTROL ---")
+    print(f"Matched Bipartisan States: {', '.join(matched_states)}")
+    print(f"BJP Confirmed Leaks: {bjp_m_leaks} | State-Years: {bjp_m_yrs:.1f} | Rate = {bjp_m_rate:.3f} leaks/state-yr")
+    print(f"INC Confirmed Leaks: {inc_m_leaks} | State-Years: {inc_m_yrs:.1f} | Rate = {inc_m_rate:.3f} leaks/state-yr")
+    print(f"Matched Intra-State Rate Ratio (BJP / INC): {matched_rr:.2f}")
+
     # 7. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN
     print("\n--- 7. CONSTRUCT VALIDITY INCIDENT TYPE BREAKDOWN ---")
     type_counts = df_leaks['incident_type'].value_counts()
