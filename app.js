@@ -128,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subFixedEffects) {
       subFixedEffects.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.09 vs INC 0.84).' : 
+        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.10 vs INC 0.83).' : 
         '📌 Scope: All Exam Integrity Breaches. Unadjusted Raw Analysis: Demonstrates the artificial BJP distortion caused by truncation skew.';
     }
 

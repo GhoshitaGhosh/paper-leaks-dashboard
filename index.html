@@ -258,7 +258,7 @@
       🎯 <strong>Construct Scope Transparency Guide:</strong>
       <ul style="margin: 6px 0 0 18px; padding: 0;">
         <li><strong>Charts 1, 2, 3, 4 & 6 Scope</strong>: Plot all <strong>110 Exam Integrity Breaches</strong> (Paper Leaks + OMR Tampering + Impersonation + Forgery) to evaluate total systemic examination corruption.</li>
-        <li><strong>Chart 5 Scope (Construct Disaggregation)</strong>: Explicitly disaggregates the dependent variable, isolating true <strong>Question Paper Leaks (54 confirmed)</strong> from <strong>OMR Mark Alteration (14)</strong>, <strong>Proxy Cheating Rackets (15)</strong>, and <strong>Social Media Claims Noise (18)</strong>.</li>
+        <li><strong>Chart 5 Scope (Construct Disaggregation)</strong>: Explicitly disaggregates the dependent variable, isolating true <strong>Question Paper Leaks (58 confirmed)</strong> from <strong>OMR Mark Alteration (14)</strong>, <strong>Proxy Cheating Rackets (15)</strong>, and <strong>Social Media Claims Noise (18)</strong>.</li>
       </ul>
     </div>
 
@@ -267,7 +267,7 @@
       <div class="card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div id="title-chart-era" class="card-title">Annualized Confirmed Leak Frequency (UPA vs NDA)</div>
-        <div id="sub-chart-era" class="card-subtext">Overall national annualized leak rate comparison across political eras (5.35 vs 2.40 leaks/yr).</div>
+        <div id="sub-chart-era" class="card-subtext">Overall national annualized leak rate comparison across political eras (5.35 vs 2.30 leaks/yr).</div>
         <div class="chart-container">
           <canvas id="chart-era"></canvas>
         </div>
@@ -348,7 +348,7 @@
 
       <!-- Explanatory Note on Chart 4 & 5 Toggle Logic -->
       <div style="margin-top: 15px; padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px dashed var(--border-glass); border-radius: 8px; font-size: 12px; color: var(--text-subtle);">
-        💡 <strong>Analytical Explainer (How Charts 4 & 5 Transform on Toggle):</strong> Both views analyze the exact same 110 authenticated dataset incidents. In <strong>Raw View</strong>, Chart 5 plots incidents by <em>Political Era</em> (24 UPA vs 86 NDA) to show unadjusted scraper counts. In <strong>Controlled View</strong>, Chart 5 transforms to plot incidents by <em>Verification Severity</em> (89 Confirmed Leaks vs 21 Filtered Noise Claims), proving that 14 out of 14 fake paper hoaxes occurred exclusively in the post-2014 social media era.
+        💡 <strong>Analytical Explainer (How Charts 4 & 5 Transform on Toggle):</strong> Both views analyze the exact same 110 authenticated dataset incidents. In <strong>Raw View</strong>, Chart 5 plots incidents by <em>Political Era</em> (23 UPA vs 86 NDA-II) to show unadjusted scraper counts. In <strong>Controlled View</strong>, Chart 5 transforms to plot incidents by <em>Verification Severity</em> (89 Confirmed Leaks vs 21 Filtered Noise Claims), proving that 14 out of 14 fake paper hoaxes occurred exclusively in the post-2014 social media era.
       </div>
     </div>
   </section>
@@ -381,10 +381,10 @@
             <div class="method-title">Pre-2014 Digital Left-Truncation Audit</div>
           </div>
           <div class="method-text">
-            Due to the 2004–2012 regional print media "digital dark age" (un-indexed local pullouts of regional newspapers), pre-2014 entries suffer from search API left-truncation. Our audit evaluates the 24 authenticated pre-2014 baseline incidents (PL-0001 to PL-0024) against post-2014 reporting to correct left-truncation skew.
+            Due to the 2004–2012 regional print media "digital dark age" (un-indexed local pullouts of regional newspapers), pre-2014 entries suffer from search API left-truncation. Our audit evaluates the 23 authenticated pre-2014 baseline incidents (PL-0002 to PL-0024) against post-2014 reporting to correct left-truncation skew.
           </div>
           <div class="formula-box">
-            Pre-2014 Baseline Sample: 24 Authenticated Leaks (UPA Era)
+            Pre-2014 Baseline Sample: 23 Authenticated Leaks (UPA Era)
           </div>
         </div>
 
@@ -395,7 +395,7 @@
             <div class="method-title">Party Executive Tenure Normalization</div>
           </div>
           <div class="method-text">
-            Comparing raw leak counts by political party (e.g. BJP: 39 vs INC: 19) introduces **exposure bias** because the BJP held state executive power across more states for longer aggregate durations post-2014 (~184 State-Years vs ~135 for INC). We divide confirmed leaks by cumulative **State-Years in Power** (1 State-Year = 1 state governed for 1 year).
+            Comparing raw leak counts by political party (e.g. BJP: 38 vs INC: 14) introduces **exposure bias** because the BJP held state executive power across more states for longer aggregate durations post-2014 (169.6 State-Years for BJP vs 125.8 for INC). We divide confirmed leaks by cumulative **State-Years in Power** (1 State-Year = 1 state governed for 1 year).
           </div>
           <div class="formula-box">
             Tenure Rate = Confirmed Leaks / Cumulative State-Years (2004–2026)
@@ -409,7 +409,7 @@
             <div class="method-title">Stratified Baseline Risk Standardization ($O / E$)</div>
           </div>
           <div class="method-text">
-            High-density examination states (UP: 0.496 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. Ratios of BJP ($1.09$) vs INC ($0.86$) demonstrate performance near state baseline expectations.
+            High-density examination states (UP: 0.496 leaks/yr, MP: 0.451/yr, Rajasthan: 0.406/yr) have inherently higher baseline leak proclivities. We calculate **Expected Leaks ($E$)** under a neutral null model and compare with **Observed Leaks ($O$)**. Ratios of BJP ($1.10$) vs INC ($0.83$) demonstrate performance near state baseline expectations.
           </div>
           <div class="formula-box">
             Expected E_party = ∑ (State_Baseline_Risk_s × Years_Governed_s)
@@ -795,7 +795,7 @@
   <!-- Layer 5: Interactive Data Explorer -->
   <section class="container" style="margin-bottom: 80px;">
     <div class="section-header">
-      <h2 id="title-data-explorer" class="section-title">Layer 5: 110-Incident Authenticated Data Explorer (40 UPA vs 86 NDA)</h2>
+      <h2 id="title-data-explorer" class="section-title">Layer 5: 110-Incident Authenticated Data Explorer (23 UPA vs 86 NDA-II)</h2>
       <p class="section-desc">Search, filter, and inspect documented incidents with direct court/news sources, arrest tallies, and notes.</p>
     </div>
 

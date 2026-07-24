@@ -29,11 +29,12 @@ Our project audits Nadkarni's baseline by:
 ## 6-Layer Readability Architecture
 
 - **Layer 1: Dataset Audit & Kaggle Provenance**: Deconstructs the 3 raw dataset flaws, cites Sujay Nadkarni's Kaggle baseline, and details the 4 econometric controls implemented.
-- **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **4-Level Reader Progression Framework** and 7 interactive charts (including State-Level Party Performance $O/E$ Disaggregation).
+- **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **5-Level Reader Progression Framework** and 8 interactive charts (including State-Level Party Performance $O/E$ Disaggregation and Party Risk Ratio Convergence Engine).
   - *Level 1*: Naïve Raw Counts (Unadjusted total leaks).
   - *Level 2*: Executive Tenure Normalization (Breaches per State-Year in Power).
   - *Level 3*: Stratified Baseline Risk Indirect Standardization Model ($O / E$ Risk Ratios: BJP 1.10 vs INC 0.83).
-  - *Level 4*: Exam Conduct Volume Sensitivity Model (Leaks per 1,000 Major Recruitment Exams Conducted: BJP 1.25 vs INC 0.97; Sensitivity Rate Ratio = 1.28).
+  - *Level 4*: Sourced Agency Notification Exposure Metric (Leaks per 1,000 Notifications: BJP 11.67 vs INC 7.75; Sourced Rate Ratio = 1.51).
+  - *Level 5*: Consolidated Triple-Controlled Risk Model ($O / E_{\text{full}}$: BJP 1.01 vs INC 0.91; Consolidated Rate Ratio = 1.11).
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
 - **Layer 4: 8 Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) with Poisson Rate Ratio 95% CIs and an infobox detailing structural limitations.
 - **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with incident modal popup inspector and primary news/court links.
