@@ -105,14 +105,14 @@
             <div class="flaw-icon">2</div>
             <div>
               <div class="item-title">Post-2014 Reporting Drift & Noise</div>
-              <div class="item-desc">Post-2014 entries include social media claims, Telegram hoaxes, and disproven allegations (24.4% noise), whereas pre-2014 includes 100% court/CBI cases.</div>
+              <div class="item-desc">Post-2014 entries include social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims out of 110 records), whereas pre-2014 includes 100% court/CBI cases.</div>
             </div>
           </div>
           <div class="flaw-item">
             <div class="flaw-icon">3</div>
             <div>
               <div class="item-title">Federal Domain Misattribution</div>
-              <div class="item-desc">79.0% of leaks are state-administered breaches under State PSCs and Boards, but raw datasets attribute them to Union Government UPA/NDA eras.</div>
+              <div class="item-desc">79.8% of confirmed incidents in this dataset (71/89) were assigned to state-level institutions under State PSCs and Boards, but raw datasets attribute them to Union Government UPA/NDA eras.</div>
             </div>
           </div>
         </div>
@@ -376,7 +376,7 @@
             <div class="method-title">Level-1 Confirmed Severity Filter</div>
           </div>
           <div class="method-text">
-            Pre-2014 entries in web scrapers represent a "High-Severity Only" tail (cases leading to CBI probes or court convictions). Post-2014 data captures social media claims, Telegram hoaxes, and disproven allegations (24.4% noise). We filter strictly for **Level-1 Confirmed Leaks** (official cancellations, re-tests, FIRs) to establish an un-biased baseline between eras.
+            Pre-2014 entries in web scrapers represent a "High-Severity Only" tail (cases leading to CBI probes or court convictions). Post-2014 data captures social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims removed). We filter strictly for **Level-1 Confirmed Leaks** (official cancellations, re-tests, FIRs) to establish an un-biased baseline between eras.
           </div>
           <div class="formula-box">
             Filter: leak_status == 'Confirmed' (Noise = 21 claims removed)
@@ -590,7 +590,7 @@
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> The raw dataset suffers from temporal left-truncation (pre-2014 scrapers missed regional print archives) and post-2014 noise inflation (24.4% of post-2014 entries are disproven social media claims/hoaxes). Removing noise shows Central leaks are closely comparable (11 NDA-II vs 6 UPA Central confirmed cases).
+          <strong>Why Controlled View is More Accurate:</strong> The raw dataset suffers from temporal left-truncation (pre-2014 scrapers missed regional print archives) and post-2014 noise inflation (19.1% overall noise: 21 unconfirmed claims out of 110 records). Removing noise shows Central leaks are closely comparable (11 NDA-II vs 6 UPA Central confirmed cases).
         </div>
       </div>
 
