@@ -6,10 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Individual Party Data Mappings (Dynamically Verified via Interval Lookup)
   const individualPartyData = {
-    'BJP': { raw: 45, confirmed: 38, stateYears: 169.6, rate: 0.224, oeControlled: 1.10, oeRaw: 1.30 },
-    'INC': { raw: 17, confirmed: 14, stateYears: 125.8, rate: 0.111, oeControlled: 0.83, oeRaw: 1.01 },
+    'BJP': { raw: 45, confirmed: 38, stateYears: 207.8, rate: 0.183, oeControlled: 1.10, oeRaw: 1.30 },
+    'INC': { raw: 17, confirmed: 14, stateYears: 187.9, rate: 0.075, oeControlled: 0.83, oeRaw: 1.01 },
     'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.290, oeControlled: 1.07, oeRaw: 1.07 },
-    'AAP': { raw: 4, confirmed: 2, stateYears: 11.0, rate: 0.182, oeControlled: 0.90, oeRaw: 1.80 },
+    'AAP': { raw: 4, confirmed: 2, stateYears: 14.5, rate: 0.138, oeControlled: 0.90, oeRaw: 1.80 },
     'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 0.90, oeRaw: 3.60 },
     'SP': { raw: 1, confirmed: 1, stateYears: 8.0, rate: 0.125, oeControlled: 0.69, oeRaw: 0.69 },
     'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeControlled: 2.85, oeRaw: 2.85 },
@@ -176,9 +176,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (rawSub) rawSub.innerText = 'BJP (38) vs INC (14) Confirmed Incidents (Unadjusted Raw)';
 
       const tenureEl = document.getElementById('kpi-tenure-rate');
-      if (tenureEl) tenureEl.innerText = '0.224 vs 0.111';
+      if (tenureEl) tenureEl.innerText = '0.183 vs 0.075';
       const tenureSub = document.getElementById('kpi-tenure-sub');
-      if (tenureSub) tenureSub.innerText = 'BJP (0.224) vs INC (0.111) Leaks/State-Yr (Tenure Ratio = 2.01)';
+      if (tenureSub) tenureSub.innerText = 'BJP (0.183) vs INC (0.075) Incidents/State-Yr (Tenure Ratio = 2.45)';
 
       const oeEl = document.getElementById('kpi-oe-ratio');
       if (oeEl) oeEl.innerText = '1.10 vs 0.83';
@@ -473,8 +473,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const categories = ['Subordinate Recruitment', 'Entrance Tests (Higher Ed)', 'Police & Defense', 'Teacher Recruitment / TET', 'School Board Exam', 'Civil Services / PSC'];
     
-    const upaCounts = [8, 6, 2, 2, 3, 2];
-    const ndaCounts = isEnriched ? [18, 10, 10, 9, 9, 9] : [24, 13, 10, 11, 14, 14];
+    const upaCounts = categories.map(cat => data.filter(d => (d.era || '').includes('UPA') && (d.leak_status || '').includes('Confirmed') && d.exam_category === cat).length);
+    const ndaCounts = categories.map(cat => isEnriched ? 
+      data.filter(d => (d.era || '').includes('NDA-II') && (d.leak_status || '').includes('Confirmed') && d.exam_category === cat).length : 
+      data.filter(d => (d.era || '').includes('NDA-II') && d.exam_category === cat).length
+    );
+
+    const upaTotal = upaCounts.reduce((a, b) => a + b, 0);
+    const ndaTotal = ndaCounts.reduce((a, b) => a + b, 0);
 
     charts.category = new Chart(ctx, {
       type: 'radar',
@@ -482,14 +488,14 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: categories,
         datasets: [
           {
-            label: 'UPA Era (23 Cases)',
+            label: `UPA Era Confirmed (${upaTotal} Cases)`,
             data: upaCounts,
             borderColor: '#6366f1',
             backgroundColor: 'rgba(99, 102, 241, 0.25)',
             borderWidth: 2
           },
           {
-            label: isEnriched ? 'NDA Era Confirmed (65 Cases)' : 'NDA Era Raw (86 Cases)',
+            label: isEnriched ? `NDA-II Era Confirmed (${ndaTotal} Cases)` : `NDA-II Era Raw (${ndaTotal} Cases)`,
             data: ndaCounts,
             borderColor: '#06b6d4',
             backgroundColor: 'rgba(6, 182, 212, 0.25)',
@@ -517,13 +523,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const ctx = document.getElementById('chart-mechanism').getContext('2d');
     const isEnriched = currentMode === 'enriched';
 
-    const mechanisms = ['Digital / WhatsApp Leak', 'Printing Press Breach', 'Hoax / Fake Paper', 'In-Exam Tech Cheating', 'OMR / Result Tampering', 'Impersonation Racket'];
-    
-    const dataset1 = isEnriched ? [54, 5, 1, 5, 14, 10] : [9, 1, 1, 1, 7, 4];
-    const dataset2 = isEnriched ? [2, 0, 18, 0, 0, 1] : [46, 4, 18, 4, 7, 7];
+    const mechanisms = [
+      'Digital/Messaging Pre-circulation',
+      'Physical Theft/Local Leak',
+      'OMR/Result Tampering',
+      'Proxy Impersonation',
+      'In-Exam Tech Cheating',
+      'Certificate Forgery'
+    ];
 
-    const label1 = isEnriched ? 'Confirmed Administrative Leaks (89)' : 'UPA Era Raw Incidents (23)';
-    const label2 = isEnriched ? 'Filtered Unconfirmed Claims / Noise (21)' : 'NDA Era Raw Incidents (86)';
+    let dataset1, dataset2, label1, label2;
+
+    if (isEnriched) {
+      label1 = 'Confirmed Administrative Incidents (89)';
+      label2 = 'Filtered Unconfirmed Claims / Noise (21)';
+      dataset1 = mechanisms.map(m => data.filter(d => (d.leak_status || '').includes('Confirmed') && d.incident_mechanism === m).length);
+      dataset2 = mechanisms.map(m => data.filter(d => !(d.leak_status || '').includes('Confirmed') && d.incident_mechanism === m).length);
+    } else {
+      label1 = 'UPA Era Raw Incidents (23)';
+      label2 = 'NDA-II Era Raw Incidents (86)';
+      dataset1 = mechanisms.map(m => data.filter(d => (d.era || '').includes('UPA') && d.incident_mechanism === m).length);
+      dataset2 = mechanisms.map(m => data.filter(d => (d.era || '').includes('NDA-II') && d.incident_mechanism === m).length);
+    }
 
     charts.mechanism = new Chart(ctx, {
       type: 'bar',

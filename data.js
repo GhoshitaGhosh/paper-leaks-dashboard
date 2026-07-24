@@ -21,7 +21,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0002",
@@ -45,7 +47,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Himachal Pradesh",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Printing Press Breach",
+    "incident_mechanism": "Printing Press Breach"
   },
   {
     "incident_id": "PL-0003",
@@ -69,7 +73,9 @@ const paperLeaksData = [
     "incident_type": "Document/Certificate Forgery",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Document/Certificate Forgery",
+    "incident_mechanism": "Certificate Forgery"
   },
   {
     "incident_id": "PL-0004",
@@ -93,7 +99,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0005",
@@ -117,7 +125,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0006",
@@ -141,7 +151,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0007",
@@ -165,7 +177,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Andaman & Nicobar Islands",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0008",
@@ -189,7 +203,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0009",
@@ -213,7 +229,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Chhattisgarh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0010",
@@ -237,7 +255,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BSP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0011",
@@ -258,10 +278,12 @@ const paperLeaksData = [
     "source_name": "Wikipedia",
     "source_url": "https://en.wikipedia.org/wiki/Vyapam_scam",
     "confidence": "Low",
-    "incident_type": "Paper Leak",
+    "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0012",
@@ -285,7 +307,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0013",
@@ -309,7 +333,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0014",
@@ -333,7 +359,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Delhi",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0015",
@@ -357,7 +385,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Karnataka",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0016",
@@ -378,10 +408,12 @@ const paperLeaksData = [
     "source_name": "Greater Kashmir",
     "source_url": "https://www.greaterkashmir.com/kashmir/bopee-scam-convicted-students-had-made-astronomical-jump-in-ranking/",
     "confidence": "High",
-    "incident_type": "OMR/Result Tampering",
+    "incident_type": "Paper Leak",
     "state_name": "Jammu & Kashmir",
     "state_ruling_party": "Other",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0017",
@@ -405,7 +437,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0018",
@@ -429,7 +463,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0019",
@@ -453,7 +489,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Assam",
     "state_ruling_party": "INC",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0020",
@@ -477,7 +515,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0021",
@@ -501,7 +541,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0022",
@@ -525,7 +567,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0023",
@@ -549,7 +593,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0024",
@@ -573,7 +619,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Manipur (Imphal)",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0025",
@@ -596,8 +644,10 @@ const paperLeaksData = [
     "confidence": "Medium",
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Delhi",
-    "state_ruling_party": "AAP",
-    "exam_category": "School Board Exam"
+    "state_ruling_party": "Other",
+    "exam_category": "School Board Exam",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0026",
@@ -621,7 +671,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "SP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0027",
@@ -645,7 +697,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0028",
@@ -669,7 +723,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0029",
@@ -693,7 +749,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "West Bengal",
     "state_ruling_party": "AITC",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0030",
@@ -717,7 +775,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0031",
@@ -741,7 +801,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0032",
@@ -765,7 +827,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0033",
@@ -789,7 +853,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0034",
@@ -813,7 +879,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0035",
@@ -837,7 +905,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0036",
@@ -861,7 +931,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Delhi",
     "state_ruling_party": "AAP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0037",
@@ -885,7 +957,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0038",
@@ -909,7 +983,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0039",
@@ -930,10 +1006,12 @@ const paperLeaksData = [
     "source_name": "Careers360",
     "source_url": "https://news.careers360.com/cbse-paper-leak-class-12-economics-re-exam-april-25-class-10-maths-likely-july/amp",
     "confidence": "High",
-    "incident_type": "OMR/Result Tampering",
+    "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0040",
@@ -957,7 +1035,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0041",
@@ -981,7 +1061,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0042",
@@ -1005,7 +1087,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0043",
@@ -1026,10 +1110,12 @@ const paperLeaksData = [
     "source_name": "Daijiworld",
     "source_url": "https://daijiworld.com/news/newsDisplay?newsID=1054403",
     "confidence": "High",
-    "incident_type": "OMR/Result Tampering",
+    "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0044",
@@ -1053,7 +1139,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Maharashtra",
     "state_ruling_party": "Shiv Sena",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0045",
@@ -1077,7 +1165,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Assam",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0046",
@@ -1101,7 +1191,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Punjab",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0047",
@@ -1125,7 +1217,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0048",
@@ -1149,7 +1243,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "Central",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "In-Exam Tech Cheating"
   },
   {
     "incident_id": "PL-0049",
@@ -1173,7 +1269,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0050",
@@ -1197,7 +1295,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0051",
@@ -1221,7 +1321,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0052",
@@ -1245,7 +1347,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0053",
@@ -1269,7 +1373,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0054",
@@ -1293,7 +1399,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0055",
@@ -1317,7 +1425,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0056",
@@ -1341,7 +1451,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Karnataka",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "OMR/Result Tampering",
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0057",
@@ -1365,7 +1477,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0058",
@@ -1389,7 +1503,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0059",
@@ -1413,7 +1529,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0060",
@@ -1437,7 +1555,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Printing Press Breach",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0061",
@@ -1461,7 +1581,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Maharashtra",
     "state_ruling_party": "Shiv Sena",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0062",
@@ -1485,7 +1607,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Tamil Nadu (Tiruvannamalai)",
     "state_ruling_party": "Other",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0063",
@@ -1509,7 +1633,9 @@ const paperLeaksData = [
     "incident_type": "Document/Certificate Forgery",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Document/Certificate Forgery",
+    "incident_mechanism": "Certificate Forgery"
   },
   {
     "incident_id": "PL-0064",
@@ -1533,7 +1659,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0065",
@@ -1557,7 +1685,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Himachal Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0066",
@@ -1581,7 +1711,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Andhra Pradesh",
     "state_ruling_party": "YSRCP",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0067",
@@ -1605,7 +1737,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0068",
@@ -1629,7 +1763,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0069",
@@ -1653,7 +1789,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Punjab",
     "state_ruling_party": "AAP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0070",
@@ -1677,7 +1815,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "BJP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0071",
@@ -1701,7 +1841,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0072",
@@ -1724,8 +1866,10 @@ const paperLeaksData = [
     "confidence": "High",
     "incident_type": "Paper Leak",
     "state_name": "Arunachal Pradesh",
-    "state_ruling_party": "Other",
-    "exam_category": "Civil Services / PSC"
+    "state_ruling_party": "BJP",
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0073",
@@ -1749,7 +1893,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "In-Exam Tech Cheating"
   },
   {
     "incident_id": "PL-0074",
@@ -1773,7 +1919,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0075",
@@ -1797,7 +1945,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0076",
@@ -1821,7 +1971,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Himachal Pradesh",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0077",
@@ -1845,7 +1997,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "BJP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0078",
@@ -1869,7 +2023,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0079",
@@ -1893,7 +2049,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0080",
@@ -1917,7 +2075,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Telangana",
     "state_ruling_party": "BRS",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0081",
@@ -1941,7 +2101,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0082",
@@ -1965,7 +2127,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Chhattisgarh",
     "state_ruling_party": "INC",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0083",
@@ -1989,7 +2153,9 @@ const paperLeaksData = [
     "incident_type": "Document/Certificate Forgery",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0084",
@@ -2013,7 +2179,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0085",
@@ -2037,7 +2205,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Odisha",
     "state_ruling_party": "BJD",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0086",
@@ -2061,7 +2231,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Maharashtra",
     "state_ruling_party": "BJP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0087",
@@ -2085,7 +2257,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0088",
@@ -2109,7 +2283,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Jharkhand",
     "state_ruling_party": "JMM",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0089",
@@ -2133,7 +2309,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0090",
@@ -2157,7 +2335,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Police & Defense"
+    "exam_category": "Police & Defense",
+    "mechanism": "Printing Press Breach",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0091",
@@ -2181,7 +2361,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0092",
@@ -2205,7 +2387,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Jharkhand",
     "state_ruling_party": "JMM",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0093",
@@ -2229,7 +2413,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0094",
@@ -2253,7 +2439,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0095",
@@ -2277,7 +2465,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0096",
@@ -2301,7 +2491,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0097",
@@ -2325,7 +2517,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Jharkhand",
     "state_ruling_party": "JMM",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0098",
@@ -2349,7 +2543,9 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Impersonation/Cheating Racket",
+    "incident_mechanism": "Proxy Impersonation"
   },
   {
     "incident_id": "PL-0099",
@@ -2373,7 +2569,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Bihar",
     "state_ruling_party": "JD(U)",
-    "exam_category": "Civil Services / PSC"
+    "exam_category": "Civil Services / PSC",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0100",
@@ -2397,7 +2595,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0101",
@@ -2421,7 +2621,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0102",
@@ -2445,7 +2647,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttarakhand",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0103",
@@ -2469,7 +2673,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Maharashtra",
     "state_ruling_party": "BJP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0104",
@@ -2493,7 +2699,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Punjab",
     "state_ruling_party": "AAP",
-    "exam_category": "School Board Exam"
+    "exam_category": "School Board Exam",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0105",
@@ -2517,7 +2725,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Maharashtra",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0106",
@@ -2541,7 +2751,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Chhattisgarh",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Digital/WhatsApp Pre-Circulation",
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0107",
@@ -2565,7 +2777,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Jharkhand",
     "state_ruling_party": "JMM",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0108",
@@ -2589,7 +2803,9 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "Entrance Tests (Higher Ed)",
+    "mechanism": "Physical Paper Theft / Leak",
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0109",
@@ -2613,7 +2829,9 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Teacher Recruitment / TET"
+    "exam_category": "Teacher Recruitment / TET",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   },
   {
     "incident_id": "PL-0110",
@@ -2637,6 +2855,8 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Punjab",
     "state_ruling_party": "AAP",
-    "exam_category": "Subordinate Recruitment"
+    "exam_category": "Subordinate Recruitment",
+    "mechanism": "Filtered Unconfirmed Claim Noise",
+    "incident_mechanism": "Unconfirmed Noise/Claim"
   }
 ];
