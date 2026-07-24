@@ -45,21 +45,21 @@
     <div class="kpi-grid">
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Annualized Leak Rate</div>
+        <div class="kpi-label">Annualized Incident Rate</div>
         <div id="kpi-annual-rate" class="kpi-value">5.35</div>
-        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Leaks / Yr (vs 2.30 UPA)</div>
+        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Breaches / Yr (vs 2.30 UPA)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Central Govt Leak Rate</div>
+        <div class="kpi-label">Central Govt Incident Rate</div>
         <div id="kpi-central-rate" class="kpi-value">0.90</div>
-        <div id="kpi-central-sub" class="kpi-sub">Central Leaks / Yr (vs 0.70 UPA)</div>
+        <div id="kpi-central-sub" class="kpi-sub">Central Breaches / Yr (vs 0.60 UPA)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Stratified O/E Risk Ratio</div>
-        <div id="kpi-oe-ratio" class="kpi-value">1.05 vs 1.06</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.05) vs INC (1.06) O/E (Poisson RR CI [0.87, 2.60])</div>
+        <div id="kpi-oe-ratio" class="kpi-value">1.09 vs 0.84</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.09) vs INC (0.84) O/E (Poisson RR CI [1.07, 3.67])</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
@@ -507,14 +507,14 @@
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP state governments had twice as many leaks as INC state governments (39 vs 19 cases), proving one party is twice as leak-prone."
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP state governments had more than twice as many raw incidents as INC state governments (44 vs 17 cases), proving one party is twice as leak-prone."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.212 leaks/state-year vs INC at 0.141 leaks/state-year (Poisson Rate Ratio = 1.51, 95% CI [0.87, 2.60], failing to reject rate parity at alpha = 0.05)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.234 breaches/state-year vs INC at 0.118 breaches/state-year (Poisson Rate Ratio = 1.99, 95% CI [1.07, 3.67])."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 184.1 State-Years vs 135.0 for INC). Normalizing by executive tenure eliminates exposure bias, while the 95% confidence interval [0.87, 2.60] fails to reject rate parity.
+          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 158.3 State-Years vs 118.9 for INC). Normalizing by executive tenure adjusts for exposure time, while the Poisson 95% confidence interval [1.07, 3.67] bounds the rate ratio uncertainty.
         </div>
       </div>
 
@@ -528,11 +528,11 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Party governance performance can be judged purely by absolute leak tallies."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for state baseline risk (UP: 0.496/yr, MP: 0.451/yr, Raj: 0.406/yr), BJP (O/E = 1.05) and INC (O/E = 1.06) perform identically relative to state expectations."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for state baseline risk (UP: 0.496/yr, MP: 0.451/yr, Raj: 0.406/yr), BJP (O/E = 1.09) and INC (O/E = 0.84) perform within state expectations under indirect rate standardization."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Leaks ($E$) proves both BJP ($1.05$) and INC ($1.06$) execute within 5-6% of exact state baseline expectations ($1.00$).
+          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents ($E$) shows both BJP ($O/E = 1.09$) and INC ($O/E = 0.84$) execute near state baseline expectations ($1.00$).
         </div>
       </div>
 

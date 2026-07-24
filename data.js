@@ -836,7 +836,7 @@ const paperLeaksData = [
     "confidence": "Medium",
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
-    "state_ruling_party": "SP",
+    "state_ruling_party": "BJP",
     "exam_category": "Police & Defense"
   },
   {
@@ -1580,7 +1580,7 @@ const paperLeaksData = [
     "confidence": "High",
     "incident_type": "Paper Leak",
     "state_name": "Andhra Pradesh",
-    "state_ruling_party": "Other",
+    "state_ruling_party": "YSRCP",
     "exam_category": "Entrance Tests (Higher Ed)"
   },
   {
@@ -1652,7 +1652,7 @@ const paperLeaksData = [
     "confidence": "High",
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Punjab",
-    "state_ruling_party": "INC",
+    "state_ruling_party": "AAP",
     "exam_category": "Civil Services / PSC"
   },
   {
@@ -1820,7 +1820,7 @@ const paperLeaksData = [
     "confidence": "High",
     "incident_type": "Paper Leak",
     "state_name": "Himachal Pradesh",
-    "state_ruling_party": "BJP",
+    "state_ruling_party": "INC",
     "exam_category": "Subordinate Recruitment"
   },
   {

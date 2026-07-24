@@ -4,21 +4,19 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
   let charts = {};
 
-  // Individual Party Data Mappings
+  // Individual Party Data Mappings (Dynamically Verified from data/state_tenures.csv)
   const individualPartyData = {
-    'BJP': { raw: 39, confirmed: 39, stateYears: 184.1, rate: 0.212, oeControlled: 1.05, oeRaw: 2.15 },
-    'INC': { raw: 11, confirmed: 19, stateYears: 135.0, rate: 0.141, oeControlled: 1.06, oeRaw: 0.61 },
-    'JD(U)': { raw: 7, confirmed: 7, stateYears: 20.7, rate: 0.338, oeControlled: 1.07, oeRaw: 1.07 },
-    'SP': { raw: 3, confirmed: 3, stateYears: 8.0, rate: 0.375, oeControlled: 0.69, oeRaw: 0.69 },
-    'BSP': { raw: 2, confirmed: 2, stateYears: 5.0, rate: 0.400, oeControlled: 0.74, oeRaw: 0.74 },
-    'AAP': { raw: 2, confirmed: 2, stateYears: 15.7, rate: 0.127, oeControlled: 1.82, oeRaw: 1.82 },
+    'BJP': { raw: 44, confirmed: 37, stateYears: 158.3, rate: 0.234, oeControlled: 1.09, oeRaw: 1.30 },
+    'INC': { raw: 17, confirmed: 14, stateYears: 118.9, rate: 0.118, oeControlled: 0.84, oeRaw: 1.02 },
+    'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.290, oeControlled: 1.07, oeRaw: 1.07 },
+    'AAP': { raw: 5, confirmed: 1, stateYears: 16.9, rate: 0.059, oeControlled: 0.50, oeRaw: 2.50 },
+    'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 0.90, oeRaw: 3.60 },
+    'SP': { raw: 1, confirmed: 2, stateYears: 8.0, rate: 0.250, oeControlled: 0.69, oeRaw: 0.69 },
     'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeControlled: 2.85, oeRaw: 2.85 },
     'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeControlled: 0.73, oeRaw: 0.73 },
     'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeControlled: 1.10, oeRaw: 1.10 },
     'BRS': { raw: 1, confirmed: 1, stateYears: 9.5, rate: 0.105, oeControlled: 2.33, oeRaw: 2.33 },
-    'JMM': { raw: 1, confirmed: 1, stateYears: 6.5, rate: 0.154, oeControlled: 1.71, oeRaw: 1.71 },
-    'SAD': { raw: 1, confirmed: 1, stateYears: 10.0, rate: 0.100, oeControlled: 0.74, oeRaw: 0.74 },
-    'CPI(M)': { raw: 1, confirmed: 1, stateYears: 36.0, rate: 0.028, oeControlled: 1.58, oeRaw: 1.58 }
+    'BSP': { raw: 1, confirmed: 1, stateYears: 4.8, rate: 0.208, oeControlled: 0.74, oeRaw: 0.74 }
   };
 
   // DOM Elements
@@ -53,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEnriched.classList.add('active');
       btnRaw.classList.remove('active');
       if (modeDesc) {
-        modeDesc.innerHTML = '<strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk fixed-effects controls ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.';
+        modeDesc.innerHTML = '<strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.';
       }
     } else {
       btnRaw.classList.add('active');
@@ -97,14 +95,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subStatePartyPerf) {
       subStatePartyPerf.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states, proving intra-state regime parity (e.g. Rajasthan BJP 1.12 vs INC 0.88).' : 
+        '📌 Scope: All Exam Integrity Breaches. Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states (e.g. Rajasthan BJP 1.12 vs INC 0.88).' : 
         '📌 Scope: All Exam Integrity Breaches. Raw incident distribution by state without controlling for state-specific baseline risk or tenure.';
     }
 
     if (titleEra) {
       titleEra.innerText = isEnriched ? 
-        'Annualized Confirmed Incident Frequency (UPA vs NDA)' : 
-        'Raw Unadjusted Incident Frequency (UPA vs NDA - Unfiltered)';
+        'Annualized Confirmed Incident Frequency (UPA vs NDA-II)' : 
+        'Raw Unadjusted Incident Frequency (UPA vs NDA-II - Unfiltered)';
     }
     if (subEra) {
       subEra.innerText = isEnriched ? 
@@ -125,13 +123,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleFixedEffects) {
       titleFixedEffects.innerText = isEnriched ? 
-        'State Baseline Risk Standardization (Observed vs Expected O/E Parity)' : 
-        'State Baseline Risk Standardization (Raw Truncation Skewed O/E Ratio)';
+        'State Baseline Risk Standardization (Observed vs Expected O/E Ratios)' : 
+        'State Baseline Risk Standardization (Raw Truncation Skewed O/E Ratios)';
     }
     if (subFixedEffects) {
       subFixedEffects.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.05 ≈ INC 1.06).' : 
-        '📌 Scope: All Exam Integrity Breaches. Unadjusted Raw Analysis: Demonstrates the artificial 2.15x BJP distortion caused by truncation skew.';
+        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.09 vs INC 0.84).' : 
+        '📌 Scope: All Exam Integrity Breaches. Unadjusted Raw Analysis: Demonstrates the artificial BJP distortion caused by truncation skew.';
     }
 
     if (titleCategory) {
@@ -141,24 +139,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subCategory) {
       subCategory.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Groups 110 incidents by exam level, showing structural shift from Entrance Tests (6 UPA vs 10 NDA) to Subordinate Recruitment (8 UPA vs 18 NDA).' : 
-        '📌 Scope: All Exam Integrity Breaches. Unadjusted distribution comparing 23 UPA incidents against 86 NDA incidents across exam categories.';
+        '📌 Scope: All Exam Integrity Breaches. Groups 110 incidents by exam level, showing structural shift from Entrance Tests (6 UPA vs 10 NDA-II) to Subordinate Recruitment (8 UPA vs 18 NDA-II).' : 
+        '📌 Scope: All Exam Integrity Breaches. Unadjusted distribution comparing 23 UPA incidents against 86 NDA-II incidents across exam categories.';
     }
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
-        'Construct Disaggregation & Mechanism Taxonomy (Confirmed Leaks vs Claims Noise)' : 
+        'Construct Disaggregation & Mechanism Taxonomy (57 Confirmed Paper Leaks)' : 
         'Construct Disaggregation & Mechanism Taxonomy (Raw Breakdown by Era)';
     }
     if (subMechanism) {
       subMechanism.innerText = isEnriched ? 
-        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 54 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 18 Filtered Social Media Claims Noise.' : 
-        '📌 Scope: Construct Disaggregation Engine. Unfiltered breakdown of all 110 incidents comparing 23 UPA Raw Incidents vs 86 NDA Raw Incidents.';
+        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 57 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 18 Filtered Social Media Claims Noise.' : 
+        '📌 Scope: Construct Disaggregation Engine. Unfiltered breakdown of all 110 incidents comparing 23 UPA Raw Incidents vs 86 NDA-II Raw Incidents.';
     }
 
     if (titleDataExplorer) {
       titleDataExplorer.innerText = isEnriched ? 
-        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 23 UPA vs 86 NDA)' : 
+        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 23 UPA vs 86 NDA-II)' : 
         'Layer 5: 110-Incident Authenticated Data Explorer (Raw Unadjusted View)';
     }
   }
@@ -168,25 +166,25 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isEnriched) {
       document.getElementById('kpi-annual-rate').innerText = '5.35';
-      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Leaks / Yr (vs 2.30 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Breaches / Yr (vs 2.30 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '0.90';
-      document.getElementById('kpi-central-sub').innerText = 'Central Leaks / Yr (vs 0.70 UPA)';
+      document.getElementById('kpi-central-sub').innerText = 'Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.05 vs 1.06';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.05) vs INC (1.06) O/E (Poisson RR CI [0.87, 2.60])';
+      document.getElementById('kpi-oe-ratio').innerText = '1.09 vs 0.84';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.09) vs INC (0.84) O/E (Poisson RR CI [1.07, 3.67])';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
     } else {
       document.getElementById('kpi-annual-rate').innerText = '7.07';
-      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Leaks / Yr (vs 2.30 UPA)';
+      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Breaches / Yr (vs 2.30 UPA)';
 
       document.getElementById('kpi-central-rate').innerText = '1.23';
-      document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Leaks / Yr (vs 0.70 UPA)';
+      document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '2.15 vs 0.61';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (2.15) vs INC (0.61) Raw Distortion';
+      document.getElementById('kpi-oe-ratio').innerText = '1.30 vs 1.02';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.30) vs INC (1.02) Raw Distortion';
 
       document.getElementById('kpi-unconfirmed').innerText = '0%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Raw Noise Included (vs 24.4% Filtered)';
