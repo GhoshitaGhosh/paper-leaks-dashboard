@@ -28,7 +28,7 @@ Our project audits Nadkarni's baseline by:
 3. **Descriptive Party State-Year Normalization**: Disaggregating strictly by individual political parties via dynamic date-range interval lookup across all 31 States & UTs:
    - *Broad Construct*: BJP experienced 0.183 incidents/state-year vs INC at 0.075 incidents/state-year (Poisson Rate Ratio = 2.45, 95% CI [1.33, 4.53]).
    - *Narrow Question-Paper Leak Subtype*: BJP experienced 0.135 leaks/state-year vs INC at 0.064 leaks/state-year (Poisson Rate Ratio = 1.88, **95% CI [0.95, 3.75]** — spans 1.00, meaning the difference is **not statistically significant**).
-4. **Stratified Baseline Risk Indirect Standardization (O / E = 1.10 vs 0.83)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.496/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), both BJP (O/E = 1.10) and INC (O/E = 0.83) perform near state baseline expectations.
+4. **Stratified Baseline Risk Indirect Standardization (O / E = 1.10 vs 0.82)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.496/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), both BJP (O/E = 1.10) and INC (O/E = 0.82) perform near state baseline expectations.
 5. **Consolidated Triple-Controlled Risk Model (O / E<sub>full</sub> = 1.02 vs 0.89)**: Simultaneously controlling for time in office, geographic baseline risk, and exam conduct volume yields a Consolidated Risk Ratio of **1.14 (95% CI [0.62 – 2.11])** — proving no statistically significant partisan difference exists.
 
 ---

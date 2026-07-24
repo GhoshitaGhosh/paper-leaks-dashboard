@@ -207,9 +207,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (tenureSub) tenureSub.innerText = 'BJP (0.183) vs INC (0.075) Incidents/State-Yr (Tenure Ratio = 2.45)';
 
       const oeEl = document.getElementById('kpi-oe-ratio');
-      if (oeEl) oeEl.innerText = '1.10 vs 0.83';
+      if (oeEl) oeEl.innerText = '1.10 vs 0.82';
       const oeSub = document.getElementById('kpi-oe-sub');
-      if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)';
+      if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.33)';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = '11.02 vs 6.61';
@@ -725,7 +725,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const idx = context[0].dataIndex;
                 if (idx === 0) return 'Raw Incidents: BJP 38 vs INC 14 (Ratio = 2.71)';
                 if (idx === 1) return 'Tenure Rate: 0.183 vs 0.075 incidents/state-yr (Ratio = 2.45)';
-                if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.83 (Ratio = 1.32)';
+                if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.82 (Ratio = 1.33)';
                 if (idx === 3) return 'Sourced Notifications: 11.02 vs 6.61 / 1k notifs (Ratio = 1.67)';
                 if (idx === 4) return 'Consolidated Triple-Control: 1.02 vs 0.89 (Ratio = 1.14)';
                 return '';

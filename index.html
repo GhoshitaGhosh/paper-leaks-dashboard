@@ -64,8 +64,8 @@
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Level 3: Baseline Risk (O/E)</span>
         <div class="kpi-label">Stratified O/E Risk Ratio</div>
-        <div id="kpi-oe-ratio" class="kpi-value">1.10 vs 0.83</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)</div>
+        <div id="kpi-oe-ratio" class="kpi-value">1.10 vs 0.82</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.33)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Level 4: Sourced Notifications</span>
@@ -157,7 +157,7 @@
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">State Baseline Risk Standardization (O/E Model)</div>
-              <div class="item-desc">Calculates Indirect Standardization risk ratios: **BJP (O/E = 1.10) and INC (O/E = 0.83)** perform near state baseline expectations (Risk Ratio = 1.32 [95% CI: 0.72, 2.44]).</div>
+              <div class="item-desc">Calculates Indirect Standardization risk ratios: **BJP (O/E = 1.10) and INC (O/E = 0.82)** perform near state baseline expectations (Risk Ratio = 1.33 [95% CI: 0.72, 2.44]).</div>
             </div>
           </div>
           <div class="control-item">
@@ -218,7 +218,7 @@
           <span class="stage-badge level-3">Level 3: Baseline Risk (O / E)</span>
           <div class="progression-title">Observed vs Expected Ratios</div>
           <div class="progression-desc">
-            Controls for state geographic risk proclivity (BJP O/E = 1.10 vs INC O/E = 0.83).
+            Controls for state geographic risk proclivity (BJP O/E = 1.10 vs INC O/E = 0.82).
           </div>
         </div>
         <div class="progression-card">
@@ -256,7 +256,7 @@
         <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #3b82f6; border-radius: 8px;">
           <div style="font-size: 11px; font-weight: 700; color: #3b82f6; text-transform: uppercase;">Step 3: Geographic Risk (O/E)</div>
           <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1.32 Baseline Risk Ratio</div>
-          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> BJP O/E = 1.10 vs INC O/E = 0.83.<br><strong>Adjustment:</strong> Controls for state risk baselines (UP 0.50/yr, MP 0.45/yr, Raj 0.41/yr). Both perform near expected baseline (1.00).</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> BJP O/E = 1.10 vs INC O/E = 0.82.<br><strong>Adjustment:</strong> Controls for state risk baselines (UP 0.50/yr, MP 0.45/yr, Raj 0.41/yr). Both perform near expected baseline (1.00).</div>
         </div>
 
         <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #8b5cf6; border-radius: 8px;">
@@ -708,7 +708,7 @@
           📊 Statistical Significance Guide: How to Read Confidence Intervals (CIs)
         </div>
         <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
-          <strong>Why do Confidence Intervals Matter?</strong> Point estimates (like O/E = 1.10 vs 0.83) carry random sampling variation due to small event counts (38 vs 14 leaks). The 95% Poisson Confidence Interval for the Stratified Risk Ratio is <strong>[0.72, 2.44]</strong> and for Consolidated Risk is <strong>[0.62, 2.11]</strong>.
+          <strong>Why do Confidence Intervals Matter?</strong> Point estimates (like O/E = 1.10 vs 0.82) carry random sampling variation due to small event counts (38 vs 14 leaks). The 95% Poisson Confidence Interval for the Stratified Risk Ratio is <strong>[0.72, 2.46]</strong> and for Consolidated Risk is <strong>[0.62, 2.11]</strong>.
           <ul style="margin: 8px 0 0 18px; padding: 0;">
             <li><strong>The Core Statistical Rule:</strong> Whenever a 95% Confidence Interval spans across <strong>1.00</strong> (e.g. 0.72 ≤ 1.00 ≤ 2.44), the observed difference is <strong>NOT statistically significant</strong> at conventional levels (p > 0.05).</li>
             <li><strong>Plain-English Reader Takeaway:</strong> The controlled dataset does <em>NOT</em> prove one political party is more leak-prone than another. Both parties execute near expected state baseline risk, and remaining differences sit within expected random variation.</li>
@@ -780,11 +780,11 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Party governance performance can be judged purely by absolute leak tallies without geographic adjustment."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Indirect rate standardization (SMR Model) controlling for state baseline risk (UP: 0.406/yr, MP: 0.451/yr, Raj: 0.406/yr) yields BJP O/E = 1.10 vs INC O/E = 0.83 (Baseline Risk Ratio = 1.32 [95% CI: 0.72, 2.44] — spans 1.00, NOT statistically significant!)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Indirect rate standardization (SMR Model) controlling for state baseline risk (UP: 0.406/yr, MP: 0.451/yr, Raj: 0.406/yr) yields BJP O/E = 1.10 vs INC O/E = 0.82 (Baseline Risk Ratio = 1.33 [95% CI: 0.72, 2.46] — spans 1.00, NOT statistically significant!)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents (E) shows both BJP (O/E = 1.10) and INC (O/E = 0.83) execute near expected state baseline risk (1.00), with the 95% confidence interval [0.72, 2.44] establishing no statistically significant difference.
+          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents (E) shows both BJP (O/E = 1.10) and INC (O/E = 0.82) execute near expected state baseline risk (1.00), with the 95% confidence interval [0.72, 2.46] establishing no statistically significant difference.
         </div>
       </div>
 
