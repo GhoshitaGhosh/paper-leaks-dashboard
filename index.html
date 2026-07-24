@@ -103,15 +103,15 @@
           <div class="flaw-item">
             <div class="flaw-icon">1</div>
             <div>
-              <div class="item-title">Pre-2014 Media Truncation</div>
-              <div class="item-desc">Scrapers miss regional print media (*Dainik Jagran*, *Amar Ujala*, *Eenadu*) prior to 2012, recording only 23 pre-2014 leaks vs 86 post-2014.</div>
+              <div class="item-title">Pre-2014 Media Left-Truncation</div>
+              <div class="item-desc">Scrapers miss regional print media (*Dainik Jagran*, *Amar Ujala*, *Eenadu*) prior to 2012, recording only 23 pre-2014 baseline leaks vs 86 post-2014 entries.</div>
             </div>
           </div>
           <div class="flaw-item">
             <div class="flaw-icon">2</div>
             <div>
               <div class="item-title">Post-2014 Reporting Drift & Noise</div>
-              <div class="item-desc">Post-2014 entries include social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims out of 110 records), whereas pre-2014 includes 100% court/CBI cases.</div>
+              <div class="item-desc">Post-2014 entries capture social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims out of 110 records), whereas pre-2014 includes 100% court/CBI cases.</div>
             </div>
           </div>
           <div class="flaw-item">
@@ -130,34 +130,41 @@
           <span>Econometric Controls Implemented</span>
           <span style="font-size: 12px; color: var(--accent-emerald); font-weight: 600;">Regime Parity Baseline</span>
         </div>
-        <div class="card-subtext">Four empirical controls applied to eliminate sampling bias, exposure bias, and geographic risk skew.</div>
+        <div class="card-subtext">Five empirical controls applied to eliminate sampling bias, exposure bias, and geographic risk skew.</div>
         <div class="control-list">
           <div class="control-item">
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Level-1 Confirmed Severity Filter</div>
-              <div class="item-desc">Filters out Level-2 claims/hoaxes to evaluate UPA vs NDA strictly on confirmed administrative cancellations and FIRs.</div>
+              <div class="item-desc">Filters out Level-2 claims/hoaxes (21 noise claims removed) to evaluate UPA vs NDA strictly on confirmed administrative cancellations and FIRs.</div>
             </div>
           </div>
           <div class="control-item">
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Pre-2014 Digital Left-Truncation Audit</div>
-              <div class="item-desc">Audits the pre-2012 regional print media dark age where digital web scrapers under-indexed older print media reports, evaluating the 23 authenticated pre-2014 baseline incidents against post-2014 reporting.</div>
+              <div class="item-desc">Audits the pre-2012 regional print media dark age, evaluating the 23 authenticated pre-2014 baseline incidents against post-2014 media indexing.</div>
             </div>
           </div>
           <div class="control-item">
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Party Executive Tenure Normalization</div>
-              <div class="item-desc">Normalizes party leaks per **State-Year in Power** (2004–2026), accounting for BJP holding state power across more states post-2014.</div>
+              <div class="item-desc">Normalizes party incidents per **State-Year in Power** (2004–2026), accounting for BJP holding executive state power across more states post-2014 (169.6 vs 125.8 state-years).</div>
             </div>
           </div>
           <div class="control-item">
             <div class="control-icon">✓</div>
             <div>
-              <div class="item-title">State Baseline Risk Standardization Model</div>
-              <div class="item-desc">Calculates Observed vs Expected (O/E) risk ratios: **BJP (1.05) and INC (1.06)** perform identically relative to state risk profiles.</div>
+              <div class="item-title">State Baseline Risk Standardization (O/E Model)</div>
+              <div class="item-desc">Calculates Indirect Standardization risk ratios: **BJP (O/E = 1.10) and INC (O/E = 0.83)** perform near state baseline expectations (Risk Ratio = 1.32 [95% CI: 0.72, 2.44]).</div>
+            </div>
+          </div>
+          <div class="control-item">
+            <div class="control-icon">✓</div>
+            <div>
+              <div class="item-title">Construct Subtyping & Central Parity Audit</div>
+              <div class="item-desc">Isolates true Question-Paper Leaks from cheating/tampering, revealing central paper leak parity: **NDA-II 0.49 vs UPA 0.50 leaks/year** (Parity Ratio = 0.98).</div>
             </div>
           </div>
         </div>
