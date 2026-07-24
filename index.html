@@ -639,36 +639,36 @@
       <!-- Takeaway 4 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>4. Stratified Baseline Risk Indirect Standardization (Geographic Controlling)</span>
+          <span>4. Stratified Baseline Risk Indirect Standardization (SMR Model)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Party governance performance can be judged purely by absolute leak tallies."
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Party governance performance can be judged purely by absolute leak tallies without geographic adjustment."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for state baseline risk (UP: 0.496/yr, MP: 0.451/yr, Raj: 0.406/yr), BJP (O/E = 1.10) and INC (O/E = 0.83) perform near state baseline expectations under indirect rate standardization."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Indirect rate standardization (SMR Model) controlling for state baseline risk (UP: 0.496/yr, MP: 0.451/yr, Raj: 0.406/yr) yields BJP O/E = 1.10 vs INC O/E = 0.83 (Baseline Risk Ratio = 1.32 [95% CI: 0.72, 2.44] — spans 1.00, NOT statistically significant!)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents (E) shows both BJP (O/E = 1.10) and INC (O/E = 0.83) execute near state baseline expectations (1.00).
+          <strong>Why Controlled View is More Accurate:</strong> Leak risk is geographically concentrated in high-density examination hubs (UP, MP, Rajasthan, Bihar). Calculating Expected Incidents (E) shows both BJP (O/E = 1.10) and INC (O/E = 0.83) execute near expected state baseline risk (1.00), with the 95% confidence interval [0.72, 2.44] establishing no statistically significant difference.
         </div>
       </div>
 
       <!-- Takeaway 5 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>5. Level-4 Empirical Sourced Agency Notification Metric</span>
+          <span>5. Exposure Sensitivity Proxy Model (Sourced Recruitment Notifications)</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Raw incident growth post-2014 reflects a 2.6x increase in state-level examination vulnerability."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalizing per 1,000 sourced recruitment notifications issued by State PSCs & Selection Boards (data/sourced_exam_counts.csv), BJP's rate is 11.67 vs INC's 7.75 / 1,000 notifications (Sourced Rate Ratio = 1.51)."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Evaluating recruitment notifications from State PSC Annual Reports (data/sourced_exam_counts.csv) as an exposure sensitivity proxy, BJP's rate is 11.67 vs INC's 7.75 / 1,000 notifications (Sourced Exposure Rate Ratio = 1.51)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Grounded in official State PSC Annual Report citations (3,256 BJP vs 1,806 INC notifications). Demonstrates that exam activity expansion accounts for over 44% of the raw incident gap.
+          <strong>Why Controlled View is More Accurate:</strong> Grounded in official State PSC Annual Report citations (3,256 BJP vs 1,806 INC notifications). Serves as an illustrative sensitivity exercise demonstrating that recruitment volume expansion accounts for over 44% of the raw incident gap.
         </div>
       </div>
 
@@ -718,7 +718,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Paper leaks were rare prior to 2012 because raw web scrapers only captured 23 pre-2014 incidents."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Auditing the 23 authenticated pre-2014 baseline leaks (PL-0002 to PL-0024) proves paper leaks occurred regularly pre-2014, but were under-indexed by digital search APIs compared to post-2014 social media coverage."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Auditing the 23 authenticated pre-2014 baseline incidents (PL-0002 to PL-0024) proves paper leaks occurred regularly pre-2014, but were under-indexed by digital search APIs compared to post-2014 social media coverage."
           </div>
         </div>
         <div class="reasoning-text">
@@ -733,14 +733,14 @@
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
-            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP causes higher paper leaks across all states regardless of local state risk baselines."
+            <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Raw incident counts imply an inherent partisan difference across all state administrations."
           </div>
           <div class="comparison-pill controlled">
             <strong>✓ Controlled Econometric Takeaway:</strong> "Disaggregating Observed vs Expected risk ratios (O / E) by individual states reveals intra-state party parity: in Rajasthan (BJP 1.12 vs INC 0.88) and Maharashtra (BJP 1.38 vs INC 1.05), both parties perform near the 1.00 baseline, while in Uttarakhand BJP performed below expected baseline risk (0.79 vs INC 1.36)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Proves that when holding state geography and local institutional risk constant, regime performance between major political parties remains symmetric.
+          <strong>Why Controlled View is More Accurate:</strong> Proves that when holding state geography and local institutional risk constant, descriptive performance between major political parties remains symmetric.
         </div>
       </div>
 
