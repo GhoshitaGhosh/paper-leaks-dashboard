@@ -165,6 +165,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     if (isEnriched) {
+      const centEl = document.getElementById('kpi-central-rate');
+      if (centEl) centEl.innerText = '0.49 vs 0.50';
+      const centSub = document.getElementById('kpi-central-sub');
+      if (centSub) centSub.innerText = 'NDA-II (0.49) vs UPA (0.50) Paper Leaks/Yr (Parity Ratio = 0.98)';
+
       const rawEl = document.getElementById('kpi-raw-ratio');
       if (rawEl) rawEl.innerText = '2.71';
       const rawSub = document.getElementById('kpi-raw-sub');
@@ -175,8 +180,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const tenureSub = document.getElementById('kpi-tenure-sub');
       if (tenureSub) tenureSub.innerText = 'BJP (0.224) vs INC (0.111) Leaks/State-Yr (Tenure Ratio = 2.01)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.10 vs 0.83';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)';
+      const oeEl = document.getElementById('kpi-oe-ratio');
+      if (oeEl) oeEl.innerText = '1.10 vs 0.83';
+      const oeSub = document.getElementById('kpi-oe-sub');
+      if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = '11.67 vs 7.75';
@@ -188,6 +195,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const consSub = document.getElementById('kpi-cons-sub');
       if (consSub) consSub.innerText = 'BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.11)';
     } else {
+      const centEl = document.getElementById('kpi-central-rate');
+      if (centEl) centEl.innerText = '1.23 vs 0.60';
+      const centSub = document.getElementById('kpi-central-sub');
+      if (centSub) centSub.innerText = 'NDA-II (15 claims/12.2yr) vs UPA (6 claims/10yr) Unadjusted Raw Central';
+
       const rawEl = document.getElementById('kpi-raw-ratio');
       if (rawEl) rawEl.innerText = '2.65';
       const rawSub = document.getElementById('kpi-raw-sub');
@@ -198,8 +210,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const tenureSub = document.getElementById('kpi-tenure-sub');
       if (tenureSub) tenureSub.innerText = 'Unadjusted Tenure Rate (No Noise Filtering)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.30 vs 1.05';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.30) vs INC (1.05) Raw Distortion';
+      const oeEl = document.getElementById('kpi-oe-ratio');
+      if (oeEl) oeEl.innerText = '1.30 vs 1.05';
+      const oeSub = document.getElementById('kpi-oe-sub');
+      if (oeSub) oeSub.innerText = 'BJP (1.30) vs INC (1.05) Raw Distortion';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = 'Unadjusted';

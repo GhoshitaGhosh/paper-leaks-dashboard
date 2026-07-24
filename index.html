@@ -41,8 +41,14 @@
       <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization (O/E), and severity noise filtering across the 110 authenticated dataset incidents.</span>
     </div>
 
-    <!-- Top KPI Summary Cards Grid (5-Level Controlled Risk Matrix) -->
-    <div class="kpi-grid">
+    <!-- Top KPI Summary Cards Grid (6-Card Controlled Risk Matrix) -->
+    <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+      <div class="kpi-card" style="border: 1px solid var(--accent-cyan); background: rgba(6, 182, 212, 0.08);">
+        <span class="indicator-tag" style="background: rgba(6, 182, 212, 0.25); color: var(--accent-cyan); border-color: var(--accent-cyan);">⚡ Central Domain Parity</span>
+        <div class="kpi-label" style="color: var(--accent-cyan);">Central Govt Leak Rate</div>
+        <div id="kpi-central-rate" class="kpi-value" style="color: var(--accent-cyan);">0.49 vs 0.50</div>
+        <div id="kpi-central-sub" class="kpi-sub">NDA-II (0.49) vs UPA (0.50) Paper Leaks/Yr (Parity Ratio = 0.98)</div>
+      </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Level 1: Naïve Raw Ratio</span>
         <div class="kpi-label">Raw Incidents Ratio</div>
