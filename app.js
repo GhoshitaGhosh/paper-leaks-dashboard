@@ -51,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
       btnEnriched.classList.add('active');
       btnRaw.classList.remove('active');
       if (modeDesc) {
-        modeDesc.innerHTML = '<strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.';
+        modeDesc.innerHTML = '<strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 documented incident reports (89 confirmed).';
       }
     } else {
       btnRaw.classList.add('active');
@@ -63,15 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDashboard();
   }
 
-  function updateDashboard() {
-    updateKPICards();
-    updateCardHeadings();
-    renderCharts();
-    filterTable();
-    populateDropdowns();
-  }
-
-  function updateCardHeadings() {
+  function updateDynamicCardTitles() {
     const isEnriched = currentMode === 'enriched';
 
     const titleEra = document.getElementById('title-chart-era');
@@ -82,60 +74,86 @@ document.addEventListener('DOMContentLoaded', () => {
     const subFixedEffects = document.getElementById('sub-chart-fixed-effects');
     const titleStatePartyPerf = document.getElementById('title-chart-state-party-perf');
     const subStatePartyPerf = document.getElementById('sub-chart-state-party-perf');
+    const titleExamVolume = document.getElementById('title-chart-exam-volume');
+    const subExamVolume = document.getElementById('sub-chart-exam-volume');
+    const titleProgressiveConvergence = document.getElementById('title-chart-progressive-convergence');
+    const subProgressiveConvergence = document.getElementById('sub-chart-progressive-convergence');
     const titleCategory = document.getElementById('title-chart-category');
     const subCategory = document.getElementById('sub-chart-category');
     const titleMechanism = document.getElementById('title-chart-mechanism');
     const subMechanism = document.getElementById('sub-chart-mechanism');
-    const titleDataExplorer = document.getElementById('title-data-explorer');
-
-    if (titleStatePartyPerf) {
-      titleStatePartyPerf.innerText = isEnriched ? 
-        'State-Level Party Performance (Intra-State O/E Risk Disaggregation)' : 
-        'State-Level Party Performance (Raw Incident Distribution by State)';
-    }
-    if (subStatePartyPerf) {
-      subStatePartyPerf.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Disaggregates Observed vs Expected risk ratios (O/E) for BJP and INC within individual states (e.g. Rajasthan BJP 1.12 vs INC 0.88).' : 
-        '📌 Scope: All Exam Integrity Breaches. Raw incident distribution by state without controlling for state-specific baseline risk or tenure.';
-    }
+    const titleDataExplorer = document.getElementById('title-chart-data-explorer');
 
     if (titleEra) {
       titleEra.innerText = isEnriched ? 
-        'Annualized Confirmed Incident Frequency (UPA vs NDA-II)' : 
-        'Raw Unadjusted Incident Frequency (UPA vs NDA-II - Unfiltered)';
+        'Annualized Confirmed Leak Frequency (UPA vs NDA)' : 
+        'Raw Unadjusted Incident Totals (UPA vs NDA)';
     }
     if (subEra) {
       subEra.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Overall national annualized incident rate comparison across political eras (5.35 vs 2.30 breaches/yr).' : 
-        '📌 Scope: All Exam Integrity Breaches. Raw unadjusted incident frequency across political eras (7.07 vs 2.30 breaches/yr - unfiltered).';
+        '📌 Scope: Confirmed Incidents. Annualizes rate over exact era durations (2.30 leaks/yr UPA vs 5.35 NDA-II).' : 
+        '📌 Scope: All Reported Claims. Unadjusted totals (23 UPA vs 86 NDA-II claims).';
     }
 
     if (titlePartyTenure) {
       titlePartyTenure.innerText = isEnriched ? 
-        'Individual State Parties (Tenure-Normalized Rate)' : 
-        'Individual State Parties (Raw Absolute Incident Counts)';
+        'Individual Party State-Year Tenure Normalization' : 
+        'Raw Party Incident Counts (Unadjusted Tally)';
     }
     if (subPartyTenure) {
       subPartyTenure.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Controls for Time in Office (State-Years), showing breaches per state-year in power.' : 
-        '📌 Scope: All Exam Integrity Breaches. Simple raw incident tallies under party state rule without controlling for time in office.';
+        '📌 Scope: Confirmed State Incidents. Normalizes party incidents per State-Year in Power (2004–2026).' : 
+        '📌 Scope: Unadjusted Raw Data. Absolute incident totals per party without controlling for years in power.';
     }
 
     if (titleFixedEffects) {
       titleFixedEffects.innerText = isEnriched ? 
-        'State Baseline Risk Standardization (Observed vs Expected O/E Ratios)' : 
-        'State Baseline Risk Standardization (Raw Truncation Skewed O/E Ratios)';
+        'State Baseline Risk Standardization (Observed vs Expected O/E Model)' : 
+        'Raw Geographic Data (Unadjusted O/E Model)';
     }
     if (subFixedEffects) {
       subFixedEffects.innerText = isEnriched ? 
-        '📌 Scope: All Exam Integrity Breaches. Controls for BOTH Time in Office AND Geographic Risk Proclivity (BJP 1.10 vs INC 0.83).' : 
-        '📌 Scope: All Exam Integrity Breaches. Unadjusted Raw Analysis: Demonstrates the artificial BJP distortion caused by truncation skew.';
+        '📌 Scope: Confirmed State Incidents. Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.10 vs INC 0.83).' : 
+        '📌 Scope: Raw Data. Unadjusted O/E model without controlling for state baseline risk.';
+    }
+
+    if (titleStatePartyPerf) {
+      titleStatePartyPerf.innerText = isEnriched ? 
+        'State-Level Party Performance (Intra-State O/E Risk Disaggregation)' : 
+        'State-Level Party Performance (Raw Unadjusted View)';
+    }
+    if (subStatePartyPerf) {
+      subStatePartyPerf.innerText = isEnriched ? 
+        '📌 Scope: Confirmed Incidents in Key States. Disaggregates O/E ratios for BJP and INC within individual states.' : 
+        '📌 Scope: Raw Incidents. Unadjusted intra-state O/E comparisons.';
+    }
+
+    if (titleExamVolume) {
+      titleExamVolume.innerText = isEnriched ? 
+        'Level-4 Analysis: Sourced Agency Recruitment Notification Exposure Rate (Leaks / 1,000 Notifications)' : 
+        'Level-4 Analysis: Unadjusted Recruitment Exposure Rate';
+    }
+    if (subExamVolume) {
+      subExamVolume.innerText = isEnriched ? 
+        '📌 Scope: Empirical Sourced Agency Notification Metric (data/sourced_exam_counts.csv). Controls for official recruitment notifications issued by State PSCs & Selection Boards (3,447 BJP vs 2,117 INC notifications), producing 11.02 vs 6.61 incidents / 1,000 notifications (Sourced Exposure Rate Ratio = 1.67).' : 
+        '📌 Scope: Unadjusted View. Displays unadjusted recruitment notification exposure without exposure controls.';
+    }
+
+    if (titleProgressiveConvergence) {
+      titleProgressiveConvergence.innerText = isEnriched ? 
+        'Party Risk Ratio Convergence Across Control Levels (BJP / INC)' : 
+        'Party Risk Ratio Convergence (Raw View)';
+    }
+    if (subProgressiveConvergence) {
+      subProgressiveConvergence.innerText = isEnriched ? 
+        '📌 Progressive Trajectory: Visualizes how applying executive tenure, geographic baseline risk, and sourced exam notifications systematically dampens the raw party disparity from 2.71 (Raw) down to 1.14 (Consolidated Triple-Control).' : 
+        '📌 Progressive Trajectory: Unadjusted trajectory across control levels.';
     }
 
     if (titleCategory) {
       titleCategory.innerText = isEnriched ? 
-        'Exam Category Shift Across Eras (Controlled Confirmed Distribution)' : 
-        'Exam Category Shift Across Eras (Raw Unadjusted Distribution)';
+        'Exam Category Structural Transition (UPA vs NDA)' : 
+        'Raw Exam Category Totals (UPA vs NDA)';
     }
     if (subCategory) {
       subCategory.innerText = isEnriched ? 
@@ -145,20 +163,28 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (titleMechanism) {
       titleMechanism.innerText = isEnriched ? 
-        'Construct Disaggregation & Mechanism Taxonomy (58 Confirmed Paper Leaks)' : 
+        'Construct Disaggregation & Mechanism Taxonomy (61 Confirmed Question-Paper Leaks)' : 
         'Construct Disaggregation & Mechanism Taxonomy (Raw Breakdown by Era)';
     }
     if (subMechanism) {
       subMechanism.innerText = isEnriched ? 
-        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 58 Confirmed Paper Leaks from 14 OMR Tampering, 15 Cheating Rackets, and 21 Filtered Claims Noise.' : 
+        '📌 Scope: Construct Disaggregation Engine. Explicitly isolates 61 Confirmed Question-Paper Leaks (60 in UPA–NDA-II Comparison) from 11 OMR Tampering, 15 Cheating Rackets, and 21 Filtered Claims Noise.' : 
         '📌 Scope: Construct Disaggregation Engine. Unfiltered breakdown of all 110 incidents comparing 23 UPA Raw Incidents vs 86 NDA-II Raw Incidents.';
     }
 
     if (titleDataExplorer) {
       titleDataExplorer.innerText = isEnriched ? 
-        'Layer 5: 110-Incident Authenticated Data Explorer (Controlled View - 23 UPA vs 86 NDA-II)' : 
-        'Layer 5: 110-Incident Authenticated Data Explorer (Raw Unadjusted View)';
+        'Layer 5: 110-Incident Documented Data Explorer (Controlled View - 23 UPA vs 86 NDA-II)' : 
+        'Layer 5: 110-Incident Documented Data Explorer (Raw Unadjusted View)';
     }
+  }
+
+  function updateDashboard() {
+    updateKPICards();
+    updateDynamicCardTitles();
+    renderCharts();
+    filterTable();
+    populateDropdowns();
   }
 
   function updateKPICards() {
