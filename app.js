@@ -166,9 +166,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (isEnriched) {
       const centEl = document.getElementById('kpi-central-rate');
-      if (centEl) centEl.innerText = '0.49 vs 0.50';
+      if (centEl) centEl.innerText = '0.58 vs 0.50';
       const centSub = document.getElementById('kpi-central-sub');
-      if (centSub) centSub.innerText = 'NDA-II (0.49) vs UPA (0.50) Paper Leaks/Yr (Parity Ratio = 0.98)';
+      if (centSub) centSub.innerText = 'NDA-II (0.58) vs UPA (0.50) Paper Leaks/Yr (Parity Ratio = 1.15)';
 
       const rawEl = document.getElementById('kpi-raw-ratio');
       if (rawEl) rawEl.innerText = '2.71';
@@ -186,9 +186,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)';
 
       const volEl = document.getElementById('kpi-vol-rate');
-      if (volEl) volEl.innerText = '11.67 vs 7.75';
+      if (volEl) volEl.innerText = '11.02 vs 6.61';
       const volSub = document.getElementById('kpi-vol-sub');
-      if (volSub) volSub.innerText = 'BJP (11.67) vs INC (7.75) / 1k Notifs (Sourced Rate Ratio = 1.51)';
+      if (volSub) volSub.innerText = 'BJP (11.02) vs INC (6.61) / 1k Notifs (Sourced Rate Ratio = 1.67)';
 
       const consEl = document.getElementById('kpi-cons-ratio');
       if (consEl) consEl.innerText = '1.01 vs 0.91';
@@ -417,8 +417,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     const parties = ['BJP', 'INC', 'JD(U)', 'SP', 'JMM', 'AAP', 'AITC', 'BJD'];
-    const notifRates = [11.670, 7.751, 10.870, 6.250, 4.762, 9.091, 2.994, 2.262];
-    const tenureRates = [0.224, 0.111, 0.290, 0.125, 0.095, 0.182, 0.066, 0.050];
+    const notifRates = [11.015, 6.613, 10.870, 6.250, 4.762, 9.091, 2.994, 2.262];
+    const tenureRates = [0.183, 0.075, 0.290, 0.125, 0.095, 0.138, 0.066, 0.050];
 
     charts.examVolume = new Chart(ctx, {
       type: 'bar',
@@ -452,8 +452,8 @@ document.addEventListener('DOMContentLoaded', () => {
             callbacks: {
               afterBody: (context) => {
                 const idx = context[0].dataIndex;
-                if (parties[idx] === 'BJP') return 'BJP Total Sourced Notifications: 3,256 | Confirmed Leaks: 38 | Sourced RR: 1.51';
-                if (parties[idx] === 'INC') return 'INC Total Sourced Notifications: 1,806 | Confirmed Leaks: 14 | Sourced RR: 1.51';
+                if (parties[idx] === 'BJP') return 'BJP Total Sourced Notifications: 3,447 | Confirmed Leaks: 38 | Sourced RR: 1.67';
+                if (parties[idx] === 'INC') return 'INC Total Sourced Notifications: 2,117 | Confirmed Leaks: 14 | Sourced RR: 1.67';
                 return '';
               }
             }
@@ -668,7 +668,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'Level 4: Sourced Notifs',
       'Consolidated (O/E_full)'
     ];
-    const ratios = [2.71, 2.01, 1.32, 1.51, 1.11];
+    const ratios = [2.71, 2.45, 1.32, 1.67, 1.11];
 
     charts.progressiveConvergence = new Chart(ctx, {
       type: 'line',
@@ -696,9 +696,9 @@ document.addEventListener('DOMContentLoaded', () => {
               afterBody: (context) => {
                 const idx = context[0].dataIndex;
                 if (idx === 0) return 'Raw Incidents: BJP 38 vs INC 14 (Ratio = 2.71)';
-                if (idx === 1) return 'Tenure Rate: 0.224 vs 0.111 leaks/state-yr (Ratio = 2.01)';
+                if (idx === 1) return 'Tenure Rate: 0.183 vs 0.075 incidents/state-yr (Ratio = 2.45)';
                 if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.83 (Ratio = 1.32)';
-                if (idx === 3) return 'Sourced Notifications: 11.67 vs 7.75 / 1k notifs (Ratio = 1.51)';
+                if (idx === 3) return 'Sourced Notifications: 11.02 vs 6.61 / 1k notifs (Ratio = 1.67)';
                 if (idx === 4) return 'Consolidated Triple-Control: 1.01 vs 0.91 (Ratio = 1.11)';
                 return '';
               }
