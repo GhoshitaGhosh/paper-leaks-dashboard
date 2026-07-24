@@ -165,28 +165,38 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     if (isEnriched) {
-      document.getElementById('kpi-annual-rate').innerText = '5.35';
-      document.getElementById('kpi-annual-sub').innerText = 'Level-1 Confirmed Breaches / Yr (vs 2.30 UPA)';
+      const rawEl = document.getElementById('kpi-raw-ratio');
+      if (rawEl) rawEl.innerText = '2.71';
+      const rawSub = document.getElementById('kpi-raw-sub');
+      if (rawSub) rawSub.innerText = 'BJP (38) vs INC (14) Confirmed Incidents (Unadjusted Raw)';
 
-      document.getElementById('kpi-central-rate').innerText = '0.90';
-      document.getElementById('kpi-central-sub').innerText = 'Central Breaches / Yr (vs 0.60 UPA)';
+      const tenureEl = document.getElementById('kpi-tenure-rate');
+      if (tenureEl) tenureEl.innerText = '0.224 vs 0.111';
+      const tenureSub = document.getElementById('kpi-tenure-sub');
+      if (tenureSub) tenureSub.innerText = 'BJP (0.224) vs INC (0.111) Leaks/State-Yr (Tenure Ratio = 2.01)';
 
       document.getElementById('kpi-oe-ratio').innerText = '1.10 vs 0.83';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.10) vs INC (0.83) O/E (Poisson RR CI [1.09, 3.72])';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = '11.67 vs 7.75';
       const volSub = document.getElementById('kpi-vol-sub');
       if (volSub) volSub.innerText = 'BJP (11.67) vs INC (7.75) / 1k Notifs (Sourced Rate Ratio = 1.51)';
 
-      document.getElementById('kpi-unconfirmed').innerText = '24.4%';
-      document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
+      const consEl = document.getElementById('kpi-cons-ratio');
+      if (consEl) consEl.innerText = '1.01 vs 0.91';
+      const consSub = document.getElementById('kpi-cons-sub');
+      if (consSub) consSub.innerText = 'BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.11)';
     } else {
-      document.getElementById('kpi-annual-rate').innerText = '7.07';
-      document.getElementById('kpi-annual-sub').innerText = 'Raw Unadjusted Breaches / Yr (vs 2.30 UPA)';
+      const rawEl = document.getElementById('kpi-raw-ratio');
+      if (rawEl) rawEl.innerText = '2.65';
+      const rawSub = document.getElementById('kpi-raw-sub');
+      if (rawSub) rawSub.innerText = 'BJP (45) vs INC (17) Unadjusted Raw Incidents';
 
-      document.getElementById('kpi-central-rate').innerText = '1.23';
-      document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Breaches / Yr (vs 0.60 UPA)';
+      const tenureEl = document.getElementById('kpi-tenure-rate');
+      if (tenureEl) tenureEl.innerText = '0.265 vs 0.135';
+      const tenureSub = document.getElementById('kpi-tenure-sub');
+      if (tenureSub) tenureSub.innerText = 'Unadjusted Tenure Rate (No Noise Filtering)';
 
       document.getElementById('kpi-oe-ratio').innerText = '1.30 vs 1.05';
       document.getElementById('kpi-oe-sub').innerText = 'BJP (1.30) vs INC (1.05) Raw Distortion';
@@ -194,10 +204,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = 'Unadjusted';
       const volSub = document.getElementById('kpi-vol-sub');
-      if (volSub) volSub.innerText = 'Unadjusted Raw Exam Volume View (No Exposure Controls)';
+      if (volSub) volSub.innerText = 'Unadjusted Raw View (No Exposure Controls)';
 
-      document.getElementById('kpi-unconfirmed').innerText = '0%';
-      document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Raw Noise Included (vs 24.4% Filtered)';
+      const consEl = document.getElementById('kpi-cons-ratio');
+      if (consEl) consEl.innerText = 'Unadjusted';
+      const consSub = document.getElementById('kpi-cons-sub');
+      if (consSub) consSub.innerText = 'Unadjusted Raw Mode Active';
     }
   }
 

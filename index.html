@@ -41,37 +41,37 @@
       <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization ($O/E$), and severity noise filtering across the 110 authenticated dataset incidents.</span>
     </div>
 
-    <!-- KPI Cards Grid with Visual Indicator Badges -->
-    <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+    <!-- Top KPI Summary Cards Grid (5-Level Controlled Risk Matrix) -->
+    <div class="kpi-grid">
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Annualized Incident Rate</div>
-        <div id="kpi-annual-rate" class="kpi-value">5.35</div>
-        <div id="kpi-annual-sub" class="kpi-sub">Level-1 Confirmed Breaches / Yr (vs 2.30 UPA)</div>
+        <span class="indicator-tag variable">⚡ Level 1: Naïve Raw Ratio</span>
+        <div class="kpi-label">Raw Incidents Ratio</div>
+        <div id="kpi-raw-ratio" class="kpi-value">2.71</div>
+        <div id="kpi-raw-sub" class="kpi-sub">BJP (38) vs INC (14) Confirmed Incidents (Unadjusted Raw)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Central Govt Incident Rate</div>
-        <div id="kpi-central-rate" class="kpi-value">0.90</div>
-        <div id="kpi-central-sub" class="kpi-sub">Central Breaches / Yr (vs 0.60 UPA)</div>
+        <span class="indicator-tag variable">⚡ Level 2: Executive Tenure Rate</span>
+        <div class="kpi-label">Tenure-Adjusted Rate</div>
+        <div id="kpi-tenure-rate" class="kpi-value">0.224 vs 0.111</div>
+        <div id="kpi-tenure-sub" class="kpi-sub">BJP (0.224) vs INC (0.111) Leaks/State-Yr (Tenure Ratio = 2.01)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <span class="indicator-tag variable">⚡ Level 3: Baseline Risk (O/E)</span>
         <div class="kpi-label">Stratified O/E Risk Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.10 vs 0.83</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Poisson RR CI [1.09, 3.72])</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.32)</div>
       </div>
       <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Exam Conduct Volume Rate</div>
-        <div id="kpi-vol-rate" class="kpi-value">1.25 vs 0.97</div>
-        <div id="kpi-vol-sub" class="kpi-sub">BJP (1.25) vs INC (0.97) / 1k Exams (Volume RR = 1.28 Sensitivity)</div>
+        <span class="indicator-tag variable">⚡ Level 4: Sourced Notifications</span>
+        <div class="kpi-label">Sourced Notification Rate</div>
+        <div id="kpi-vol-rate" class="kpi-value">11.67 vs 7.75</div>
+        <div id="kpi-vol-sub" class="kpi-sub">BJP (11.67) vs INC (7.75) / 1k Notifs (Sourced Rate Ratio = 1.51)</div>
       </div>
-      <div class="kpi-card">
-        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Filtered Claim Noise</div>
-        <div id="kpi-unconfirmed" class="kpi-value">24.4%</div>
-        <div id="kpi-unconfirmed-sub" class="kpi-sub warning">Filtered Out Post-2014 Claims Noise</div>
+      <div class="kpi-card" style="border: 1px solid var(--accent-emerald); background: rgba(16, 185, 129, 0.08);">
+        <span class="indicator-tag" style="background: rgba(16, 185, 129, 0.25); color: #10b981; border-color: #10b981;">⚡ Consolidated Triple-Control</span>
+        <div class="kpi-label" style="color: var(--accent-emerald);">Consolidated Risk (O/E_full)</div>
+        <div id="kpi-cons-ratio" class="kpi-value" style="color: var(--accent-emerald);">1.01 vs 0.91</div>
+        <div id="kpi-cons-sub" class="kpi-sub">BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.11)</div>
       </div>
     </div>
   </section>
