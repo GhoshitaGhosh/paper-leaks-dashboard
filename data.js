@@ -165,7 +165,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Andaman & Nicobar Islands",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0008",
@@ -1002,10 +1002,10 @@ const paperLeaksData = [
     "source_name": "The Federal",
     "source_url": "https://thefederal.com/states/west/gujarat/after-13-govt-exam-paper-leaks-in-nine-years-gujarat-proposes-new-law",
     "confidence": "Medium",
-    "incident_type": "Document/Certificate Forgery",
+    "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0043",
@@ -1437,7 +1437,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0061",
@@ -1485,7 +1485,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Tamil Nadu (Tiruvannamalai)",
     "state_ruling_party": "Other",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0063",
@@ -1581,7 +1581,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Andhra Pradesh",
     "state_ruling_party": "YSRCP",
-    "exam_category": "Entrance Tests (Higher Ed)"
+    "exam_category": "School Board Exam"
   },
   {
     "incident_id": "PL-0067",
@@ -1749,7 +1749,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0074",
@@ -1869,7 +1869,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Gujarat",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0079",
@@ -1989,7 +1989,7 @@ const paperLeaksData = [
     "incident_type": "Document/Certificate Forgery",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam"
+    "exam_category": "Subordinate Recruitment"
   },
   {
     "incident_id": "PL-0084",
@@ -2641,7 +2641,7 @@ const paperLeaksData = [
   }
 ];
 
-if (typeof window !== "undefined") {
+if (typeof window !== 'undefined') {
   window.paperLeaksData = paperLeaksData;
   window.PAPER_LEAKS_DATA = paperLeaksData;
 }

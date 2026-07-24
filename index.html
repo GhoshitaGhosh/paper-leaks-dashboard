@@ -57,15 +57,15 @@
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
-        <div class="kpi-label">Consolidated Controlled Risk Ratio</div>
-        <div id="kpi-oe-ratio" class="kpi-value">1.00 vs 0.93</div>
-        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.00) vs INC (0.93) Consolidated (Time + Risk + Volume Controlled)</div>
+        <div class="kpi-label">Stratified O/E Risk Ratio</div>
+        <div id="kpi-oe-ratio" class="kpi-value">1.10 vs 0.83</div>
+        <div id="kpi-oe-sub" class="kpi-sub">BJP (1.10) vs INC (0.83) O/E (Poisson RR CI [1.09, 3.72])</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Exam Conduct Volume Rate</div>
-        <div id="kpi-vol-rate" class="kpi-value">1.29 vs 1.07</div>
-        <div id="kpi-vol-sub" class="kpi-sub">BJP (1.29) vs INC (1.07) / 1,000 Exams (Rate Ratio = 1.20)</div>
+        <div id="kpi-vol-rate" class="kpi-value">1.25 vs 0.97</div>
+        <div id="kpi-vol-sub" class="kpi-sub">BJP (1.25) vs INC (0.97) / 1k Exams (Volume RR = 1.28 Sensitivity)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
@@ -187,28 +187,28 @@
           <span class="stage-badge level-1">Level 1: Naïve Raw Counts</span>
           <div class="progression-title">Unadjusted Total Incidents</div>
           <div class="progression-desc">
-            Simple tally of breaches (BJP = 37, INC = 14 Confirmed). <strong>Flawed:</strong> Ignores time in office and exam volume.
+            Simple tally of breaches (BJP = 38, INC = 14 Confirmed). <strong>Flawed:</strong> Ignores time in office and exam volume.
           </div>
         </div>
         <div class="progression-card">
           <span class="stage-badge level-2">Level 2: Executive Tenure Rate</span>
           <div class="progression-title">Breaches per State-Year in Power</div>
           <div class="progression-desc">
-            Adjusts for time in office (BJP = 0.234/state-yr, INC = 0.128/state-yr; Poisson RR CI [0.99, 3.38]).
+            Adjusts for time in office (BJP = 0.224/state-yr, INC = 0.111/state-yr; Poisson RR CI [1.09, 3.72]).
           </div>
         </div>
         <div class="progression-card">
           <span class="stage-badge level-3">Level 3: Baseline Risk ($O / E$)</span>
           <div class="progression-title">Observed vs Expected Ratios</div>
           <div class="progression-desc">
-            Controls for state geographic risk proclivity (BJP O/E = 1.09 vs INC O/E = 0.86).
+            Controls for state geographic risk proclivity (BJP O/E = 1.10 vs INC O/E = 0.83).
           </div>
         </div>
         <div class="progression-card">
-          <span class="stage-badge level-3" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: #10b981;">Level 4: Exam Conduct Volume</span>
+          <span class="stage-badge level-3" style="background: rgba(16, 185, 129, 0.2); color: #10b981; border-color: #10b981;">Level 4: Exam Volume Sensitivity</span>
           <div class="progression-title">Leaks per 1,000 Exams Conducted</div>
           <div class="progression-desc">
-            Controls for post-2014 exam conduct volume expansion (BJP = 1.287 vs INC = 1.069 leaks / 1,000 exams; <strong>RR = 1.20</strong>).
+            Sensitivity scenario for post-2014 exam conduct expansion (BJP = 1.25 vs INC = 0.97 leaks / 1,000 exams; <strong>Sensitivity RR = 1.28</strong>).
           </div>
         </div>
       </div>

@@ -20,20 +20,20 @@ Our project audits Nadkarni's baseline by:
 
 1. **Equal-Baseline Regime Parity**: Evaluating Level-1 confirmed leaks, central government leak rates under NDA-II (**0.90 leaks/year**) remain closely comparable to UPA (**0.60 leaks/year**), with severity noise filtering reducing raw NDA-II central claims from 1.23 down to 0.90 leaks/year. Total confirmed leak rates (5.35 vs 2.30 leaks/year) achieve complete mathematical parity with a missing historical offset of just 1.4 regional leaks/year.
 2. **Federal Governance Misattribution**: **79.8% of all confirmed paper leaks (71/89)** occurred in state-administered examinations under autonomous State PSCs and Boards, misattributing state executive failures to the Central Union Government.
-3. **Individual Party State-Year Normalization**: Disaggregating strictly by individual political parties, BJP experienced **0.234 breaches/state-year** vs INC at **0.128 breaches/state-year**. The Poisson rate ratio is **1.83 with a 95% Confidence Interval of [0.99, 3.38]**, failing to reject rate parity at $\alpha = 0.05$.
-4. **Stratified Risk Standardization ($O / E = 1.09 \text{ vs } 0.86$)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.496/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), **BJP ($O/E = 1.09$) and INC ($O/E = 0.86$) perform near state baseline expectations**.
-5. **Level-4 Exam Conduct Volume Normalization**: Controlling for the **2.2× expansion in state recruitment exam conduct volume post-2014**, BJP's rate is **1.287 incidents / 1,000 exams** vs INC's **1.069 incidents / 1,000 exams** ($\text{Volume Rate Ratio} = \mathbf{1.20}$), demonstrating that incident growth is driven primarily by exam volume expansion.
+3. **Individual Party State-Year Normalization**: Disaggregating strictly by individual political parties via dynamic date-range interval lookup, BJP experienced **0.224 breaches/state-year** vs INC at **0.111 breaches/state-year**. The Poisson rate ratio is **2.01 with a 95% Confidence Interval of [1.09, 3.72]**.
+4. **Stratified Baseline Risk Indirect Standardization ($O / E = 1.10 \text{ vs } 0.83$)**: Controlling for BOTH executive time in office AND geographic state risk proclivity (UP: 0.496/yr, MP: 0.451/yr, Rajasthan: 0.406/yr), **BJP ($O/E = 1.10$) and INC ($O/E = 0.83$) perform near state baseline expectations**.
+5. **Level-4 Exam Conduct Volume Sensitivity Model**: Illustrative sensitivity scenario evaluating the **2.2× expansion in state recruitment exam conduct volume post-2014**, producing **1.248 leaks / 1,000 exams for BJP** vs **0.972 / 1,000 exams for INC** ($\text{Sensitivity Rate Ratio} = \mathbf{1.28}$).
 
 ---
 
 ## 6-Layer Readability Architecture
 
 - **Layer 1: Dataset Audit & Kaggle Provenance**: Deconstructs the 3 raw dataset flaws, cites Sujay Nadkarni's Kaggle baseline, and details the 4 econometric controls implemented.
-- **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **4-Level Reader Progression Framework** and 6 interactive charts (including State-Level Party Performance $O/E$ Disaggregation).
+- **Layer 2: Visual Analytics & Party Disaggregation**: Interactive Chart.js visual engine featuring a **4-Level Reader Progression Framework** and 7 interactive charts (including State-Level Party Performance $O/E$ Disaggregation).
   - *Level 1*: Naïve Raw Counts (Unadjusted total leaks).
   - *Level 2*: Executive Tenure Normalization (Breaches per State-Year in Power).
-  - *Level 3*: Stratified Risk Standardization Model ($O / E$ Risk Ratios: BJP 1.09 vs INC 0.86).
-  - *Level 4*: Exam Conduct Volume Normalization (Leaks per 1,000 Major Recruitment Exams Conducted: BJP 1.29 vs INC 1.07; Rate Ratio = 1.20).
+  - *Level 3*: Stratified Baseline Risk Indirect Standardization Model ($O / E$ Risk Ratios: BJP 1.10 vs INC 0.83).
+  - *Level 4*: Exam Conduct Volume Sensitivity Model (Leaks per 1,000 Major Recruitment Exams Conducted: BJP 1.25 vs INC 0.97; Sensitivity Rate Ratio = 1.28).
 - **Layer 3: Methodology & State Risk Proclivity Table**: Step-by-step mathematical definitions exposing the state baseline risk rate formula $R_s = \text{State Leaks} / 22.16\text{ yrs}$ and an interactive 28-state risk table.
 - **Layer 4: 8 Compiled Takeaways & Lingering Data Limitations**: Side-by-side comparison pills (`❌ Flawed Raw Takeaway` vs `✓ Controlled Econometric Takeaway`) with Poisson Rate Ratio 95% CIs and an infobox detailing structural limitations.
 - **Layer 5: 110-Incident Primary Data Explorer**: Filterable table with incident modal popup inspector and primary news/court links.

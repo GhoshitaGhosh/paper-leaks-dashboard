@@ -4,14 +4,14 @@ document.addEventListener('DOMContentLoaded', () => {
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
   let charts = {};
 
-  // Individual Party Data Mappings (Dynamically Verified from data/state_tenures.csv)
+  // Individual Party Data Mappings (Dynamically Verified via Interval Lookup)
   const individualPartyData = {
-    'BJP': { raw: 44, confirmed: 37, stateYears: 158.3, rate: 0.234, oeControlled: 1.09, oeRaw: 1.30 },
-    'INC': { raw: 17, confirmed: 14, stateYears: 109.4, rate: 0.128, oeControlled: 0.86, oeRaw: 1.05 },
+    'BJP': { raw: 45, confirmed: 38, stateYears: 169.6, rate: 0.224, oeControlled: 1.10, oeRaw: 1.30 },
+    'INC': { raw: 17, confirmed: 14, stateYears: 125.8, rate: 0.111, oeControlled: 0.83, oeRaw: 1.01 },
     'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.290, oeControlled: 1.07, oeRaw: 1.07 },
-    'AAP': { raw: 5, confirmed: 1, stateYears: 16.9, rate: 0.059, oeControlled: 0.50, oeRaw: 2.50 },
+    'AAP': { raw: 4, confirmed: 2, stateYears: 11.0, rate: 0.182, oeControlled: 0.90, oeRaw: 1.80 },
     'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 0.90, oeRaw: 3.60 },
-    'SP': { raw: 1, confirmed: 2, stateYears: 8.0, rate: 0.250, oeControlled: 0.69, oeRaw: 0.69 },
+    'SP': { raw: 1, confirmed: 1, stateYears: 8.0, rate: 0.125, oeControlled: 0.69, oeRaw: 0.69 },
     'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeControlled: 2.85, oeRaw: 2.85 },
     'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeControlled: 0.73, oeRaw: 0.73 },
     'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeControlled: 1.10, oeRaw: 1.10 },
@@ -171,13 +171,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-rate').innerText = '0.90';
       document.getElementById('kpi-central-sub').innerText = 'Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.00 vs 0.93';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.00) vs INC (0.93) Consolidated (Time + Risk + Volume Controlled)';
+      document.getElementById('kpi-oe-ratio').innerText = '1.10 vs 0.83';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.10) vs INC (0.83) O/E (Poisson RR CI [1.09, 3.72])';
 
       const volEl = document.getElementById('kpi-vol-rate');
-      if (volEl) volEl.innerText = '1.29 vs 1.07';
+      if (volEl) volEl.innerText = '1.25 vs 0.97';
       const volSub = document.getElementById('kpi-vol-sub');
-      if (volSub) volSub.innerText = 'BJP (1.29) vs INC (1.07) / 1,000 Exams (Rate Ratio = 1.20)';
+      if (volSub) volSub.innerText = 'BJP (1.25) vs INC (0.97) / 1k Exams (Volume RR = 1.28 Sensitivity)';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
