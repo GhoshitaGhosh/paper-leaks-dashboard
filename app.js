@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (subFixedEffects) {
       subFixedEffects.innerText = isEnriched ? 
-        '📌 Scope: Confirmed State Incidents. Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.10 vs INC 0.83).' : 
+        '📌 Scope: Confirmed State Incidents. Controls for BOTH Time in Office AND Geographic Baseline Risk (BJP 1.10 vs INC 0.82).' : 
         '📌 Scope: Raw Data. Unadjusted O/E model without controlling for state baseline risk.';
     }
 
@@ -209,7 +209,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const oeEl = document.getElementById('kpi-oe-ratio');
       if (oeEl) oeEl.innerText = '1.10 vs 0.82';
       const oeSub = document.getElementById('kpi-oe-sub');
-      if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.83) O/E (Baseline Risk Ratio = 1.33)';
+      if (oeSub) oeSub.innerText = 'BJP (1.10) vs INC (0.82) O/E (Baseline Risk Ratio = 1.33)';
 
       const volEl = document.getElementById('kpi-vol-rate');
       if (volEl) volEl.innerText = '11.02 vs 6.61';
