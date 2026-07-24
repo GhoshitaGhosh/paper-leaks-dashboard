@@ -42,7 +42,7 @@
     </div>
 
     <!-- KPI Cards Grid with Visual Indicator Badges -->
-    <div class="kpi-grid">
+    <div class="kpi-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
         <div class="kpi-label">Annualized Incident Rate</div>
@@ -60,6 +60,12 @@
         <div class="kpi-label">Stratified O/E Risk Ratio</div>
         <div id="kpi-oe-ratio" class="kpi-value">1.09 vs 0.86</div>
         <div id="kpi-oe-sub" class="kpi-sub">BJP (1.09) vs INC (0.86) O/E (Poisson RR CI [0.99, 3.38])</div>
+      </div>
+      <div class="kpi-card">
+        <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>
+        <div class="kpi-label">Exam Conduct Volume Rate</div>
+        <div id="kpi-vol-rate" class="kpi-value">1.29 vs 1.07</div>
+        <div id="kpi-vol-sub" class="kpi-sub">BJP (1.29) vs INC (1.07) / 1,000 Exams (Rate Ratio = 1.20)</div>
       </div>
       <div class="kpi-card">
         <span class="indicator-tag variable">⚡ Variable Metric (Adjusts on Toggle)</span>

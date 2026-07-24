@@ -174,6 +174,11 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-oe-ratio').innerText = '1.09 vs 0.86';
       document.getElementById('kpi-oe-sub').innerText = 'BJP (1.09) vs INC (0.86) O/E (Poisson RR CI [0.99, 3.38])';
 
+      const volEl = document.getElementById('kpi-vol-rate');
+      if (volEl) volEl.innerText = '1.29 vs 1.07';
+      const volSub = document.getElementById('kpi-vol-sub');
+      if (volSub) volSub.innerText = 'BJP (1.29) vs INC (1.07) / 1,000 Exams (Rate Ratio = 1.20)';
+
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
     } else {
@@ -183,8 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-rate').innerText = '1.23';
       document.getElementById('kpi-central-sub').innerText = 'Unadjusted Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.30 vs 1.02';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.30) vs INC (1.02) Raw Distortion';
+      document.getElementById('kpi-oe-ratio').innerText = '1.30 vs 1.05';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.30) vs INC (1.05) Raw Distortion';
+
+      const volEl = document.getElementById('kpi-vol-rate');
+      if (volEl) volEl.innerText = 'Unadjusted';
+      const volSub = document.getElementById('kpi-vol-sub');
+      if (volSub) volSub.innerText = 'Unadjusted Raw Exam Volume View (No Exposure Controls)';
 
       document.getElementById('kpi-unconfirmed').innerText = '0%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Unfiltered Raw Noise Included (vs 24.4% Filtered)';
