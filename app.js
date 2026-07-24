@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Individual Party Data Mappings (Dynamically Verified from data/state_tenures.csv)
   const individualPartyData = {
     'BJP': { raw: 44, confirmed: 37, stateYears: 158.3, rate: 0.234, oeControlled: 1.09, oeRaw: 1.30 },
-    'INC': { raw: 17, confirmed: 14, stateYears: 118.9, rate: 0.118, oeControlled: 0.84, oeRaw: 1.02 },
+    'INC': { raw: 17, confirmed: 14, stateYears: 109.4, rate: 0.128, oeControlled: 0.86, oeRaw: 1.05 },
     'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.290, oeControlled: 1.07, oeRaw: 1.07 },
     'AAP': { raw: 5, confirmed: 1, stateYears: 16.9, rate: 0.059, oeControlled: 0.50, oeRaw: 2.50 },
     'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 0.90, oeRaw: 3.60 },
@@ -171,8 +171,8 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-central-rate').innerText = '0.90';
       document.getElementById('kpi-central-sub').innerText = 'Central Breaches / Yr (vs 0.60 UPA)';
 
-      document.getElementById('kpi-oe-ratio').innerText = '1.09 vs 0.84';
-      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.09) vs INC (0.84) O/E (Poisson RR CI [1.07, 3.67])';
+      document.getElementById('kpi-oe-ratio').innerText = '1.09 vs 0.86';
+      document.getElementById('kpi-oe-sub').innerText = 'BJP (1.09) vs INC (0.86) O/E (Poisson RR CI [0.99, 3.38])';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
