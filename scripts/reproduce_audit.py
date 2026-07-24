@@ -115,7 +115,20 @@ def run_audit():
     print(f"INC Observed = {inc_leaks} | Expected = {e_inc:.2f} | O/E Ratio = {oe_inc:.2f}")
     print(f"Geographic Risk Standardized O/E Ratios: BJP ({oe_bjp:.2f}) vs INC ({oe_inc:.2f})")
     
-    # 5. SENSITIVITY SCENARIO: EXAM CONDUCT VOLUME NORMALIZATION INDEX
+    # 5. EMPIRICAL SOURCED AGENCY RECRUITMENT NOTIFICATION METRIC (data/sourced_exam_counts.csv)
+    bjp_notifs = df_tenures[df_tenures['party'] == 'BJP']['sourced_total_notifications'].sum()
+    inc_notifs = df_tenures[df_tenures['party'] == 'INC']['sourced_total_notifications'].sum()
+    
+    bjp_notif_rate = (bjp_leaks / bjp_notifs) * 1000 if bjp_notifs > 0 else 0
+    inc_notif_rate = (inc_leaks / inc_notifs) * 1000 if inc_notifs > 0 else 0
+    notif_rr = bjp_notif_rate / inc_notif_rate if inc_notif_rate > 0 else 0
+    
+    print("\n--- 5. EMPIRICAL SOURCED AGENCY RECRUITMENT NOTIFICATION METRIC ---")
+    print(f"BJP Total Sourced Notifications: {bjp_notifs:.0f} | Rate = {bjp_notif_rate:.3f} incidents / 1,000 notifications")
+    print(f"INC Total Sourced Notifications: {inc_notifs:.0f} | Rate = {inc_notif_rate:.3f} incidents / 1,000 notifications")
+    print(f"Sourced Notification Exposure Rate Ratio (BJP / INC): {notif_rr:.2f}")
+
+    # 6. SENSITIVITY SCENARIO: MULTI-SHIFT EXAM CONDUCT EXPANSION MODEL
     bjp_total_exams = df_tenures[df_tenures['party'] == 'BJP']['total_exams_conducted'].sum()
     inc_total_exams = df_tenures[df_tenures['party'] == 'INC']['total_exams_conducted'].sum()
     
@@ -123,12 +136,12 @@ def run_audit():
     inc_exam_rate = (inc_leaks / inc_total_exams) * 1000 if inc_total_exams > 0 else 0
     vol_rr = bjp_exam_rate / inc_exam_rate if inc_exam_rate > 0 else 0
     
-    print("\n--- 5. SENSITIVITY SCENARIO: EXAM CONDUCT VOLUME EXPANSION MODEL ---")
-    print(f"BJP Total Est. Major Exams Conducted: {bjp_total_exams:.0f} | Rate = {bjp_exam_rate:.3f} incidents / 1,000 exams")
-    print(f"INC Total Est. Major Exams Conducted: {inc_total_exams:.0f} | Rate = {inc_exam_rate:.3f} incidents / 1,000 exams")
-    print(f"Volume-Normalized Sensitivity Rate Ratio (BJP / INC): {vol_rr:.2f}")
+    print("\n--- 6. SENSITIVITY SCENARIO: MULTI-SHIFT EXAM CONDUCT EXPANSION MODEL ---")
+    print(f"BJP Total Est. Multi-Shift Exams: {bjp_total_exams:.0f} | Rate = {bjp_exam_rate:.3f} incidents / 1,000 exams")
+    print(f"INC Total Est. Multi-Shift Exams: {inc_total_exams:.0f} | Rate = {inc_exam_rate:.3f} incidents / 1,000 exams")
+    print(f"Multi-Shift Volume Sensitivity Rate Ratio (BJP / INC): {vol_rr:.2f}")
 
-    # 6. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (TIME + GEOGRAPHIC RISK + EXAM VOLUME)
+    # 7. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (TIME + GEOGRAPHIC RISK + EXAM VOLUME)
     state_total_exams = df_tenures.groupby('state_name')['total_exams_conducted'].sum()
     state_vs = {}
     for st in df_tenures['state_name'].unique():
@@ -143,7 +156,7 @@ def run_audit():
     oe_full_inc = inc_leaks / e_full_inc if e_full_inc > 0 else 0
     cons_rr = oe_full_bjp / oe_full_inc if oe_full_inc > 0 else 0
 
-    print("\n--- 6. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (ALL CONTROLS COMBINED) ---")
+    print("\n--- 7. CONSOLIDATED TRIPLE-STANDARDIZED RISK MODEL (ALL CONTROLS COMBINED) ---")
     print(f"BJP Observed = {bjp_leaks} | Consolidated Expected (E_full) = {e_full_bjp:.2f} | O/E_full Ratio = {oe_full_bjp:.2f}")
     print(f"INC Observed = {inc_leaks} | Consolidated Expected (E_full) = {e_full_inc:.2f} | O/E_full Ratio = {oe_full_inc:.2f}")
     print(f"Consolidated Triple-Controlled Party Risk Ratio (BJP / INC): {cons_rr:.2f}")
