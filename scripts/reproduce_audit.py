@@ -21,7 +21,7 @@ def run_audit():
     
     # 1. ERA BREAKDOWN & CONFIRMED LEAK RATES
     upa_df = df[df['era'].str.contains('UPA', case=False, na=False)]
-    nda_df = df[df['era'].str.contains('NDA', case=False, na=False) & ~df['era'].str.contains('NDA-I', case=False, na=False)]
+    nda_df = df[df['era'].str.contains('NDA-II', case=False, na=False)]
     nda_confirmed = nda_df[nda_df['leak_status'].str.contains('Confirmed', case=False, na=False)]
     
     upa_yrs = 10.0

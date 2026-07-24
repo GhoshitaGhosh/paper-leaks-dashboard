@@ -2,7 +2,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0001",
     "date": "2004-04-11",
-    "era": "NDA-I",
+    "era": "NDA-I (1999-2004)",
     "exam_name": "All India Pre-Medical Test (AIPMT/CBSE-PMT) 2004",
     "conducting_body": "Central Board of Secondary Education (CBSE)",
     "body_type": "Central",
@@ -26,7 +26,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0002",
     "date": "2006-06-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Himachal Pradesh Combined Pre-Medical Test (HP-CPMT) 2006",
     "conducting_body": "Himachal Pradesh University",
     "body_type": "State",
@@ -50,7 +50,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0003",
     "date": "2008-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Vyapam Patwari Recruitment Examination 2008",
     "conducting_body": "Madhya Pradesh Professional Examination Board (Vyapam)",
     "body_type": "State",
@@ -74,7 +74,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0004",
     "date": "2009-07-08",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Pre-Medical Test (PMT) 2009",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -98,7 +98,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0005",
     "date": "2010-06-06",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "RRB Mumbai 2010 recruitment exam (Assistant Loco Pilot / Assistant Station Master)",
     "conducting_body": "Railway Recruitment Board (RRB), Mumbai",
     "body_type": "Central",
@@ -122,7 +122,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0006",
     "date": "2011-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Vyapam Contract Teacher Eligibility Test (Samvida Shala Shikshak Patrata Pariksha Varg-3) 2011",
     "conducting_body": "Madhya Pradesh Professional Examination Board (Vyapam)",
     "body_type": "State",
@@ -146,7 +146,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0007",
     "date": "2011-02-17",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "CBSE Class 10 & Class 12 Board Examinations 2011",
     "conducting_body": "Central Board of Secondary Education (CBSE)",
     "body_type": "Central",
@@ -170,7 +170,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0008",
     "date": "2011-05-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "AIEEE (All India Engineering Entrance Examination) 2011",
     "conducting_body": "Central Board of Secondary Education (CBSE)",
     "body_type": "Central",
@@ -194,7 +194,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0009",
     "date": "2011-06-19",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Chhattisgarh Pre-Medical Test (CG-PMT) 2011",
     "conducting_body": "Chhattisgarh Professional Examination Board (CG Vyapam/CGPEB)",
     "body_type": "State",
@@ -218,7 +218,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0010",
     "date": "2011-11-13",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Uttar Pradesh Teacher Eligibility Test (UPTET) 2011",
     "conducting_body": "UP Secondary Education Board / Directorate of Education",
     "body_type": "State",
@@ -242,7 +242,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0011",
     "date": "2012-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Food Inspector Selection Test 2012",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -266,7 +266,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0012",
     "date": "2012-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Pre-PG (Post-Graduate Medical) Test 2012",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -290,7 +290,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0013",
     "date": "2012-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Transport Constable Recruitment Test 2012",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -314,7 +314,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0014",
     "date": "2012-01-08",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "AIIMS Post-Graduate (MD/MS) Entrance Examination 2012",
     "conducting_body": "All India Institute of Medical Sciences (AIIMS)",
     "body_type": "Central",
@@ -338,7 +338,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0015",
     "date": "2012-03-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Karnataka Second PU (Class 12) Board Examination 2012",
     "conducting_body": "Dept. of Pre-University Education, Karnataka",
     "body_type": "State",
@@ -362,7 +362,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0016",
     "date": "2012-06-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Jammu & Kashmir Common Entrance Test (JKCET) 2012 - medical (MBBS/BDS)",
     "conducting_body": "J&K Board of Professional Entrance Examinations (BOPEE)",
     "body_type": "State",
@@ -386,7 +386,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0017",
     "date": "2012-06-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Pre-Medical Test (PMT) 2012",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -410,7 +410,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0018",
     "date": "2012-09-30",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Vyapam Police Constable Recruitment Examination 2012",
     "conducting_body": "Madhya Pradesh Professional Examination Board (Vyapam/MPESB)",
     "body_type": "State",
@@ -434,7 +434,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0019",
     "date": "2013-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Agricultural Development Officer & combined competitive recruitment (2013\u20132014)",
     "conducting_body": "Assam Public Service Commission (APSC)",
     "body_type": "State",
@@ -458,7 +458,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0020",
     "date": "2013-01-01",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "Vyapam Police Constable Recruitment Examination 2013",
     "conducting_body": "Madhya Pradesh Professional Examination Board (Vyapam/MPPEB)",
     "body_type": "State",
@@ -482,7 +482,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0021",
     "date": "2013-04-21",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "SSC Combined Graduate Level (CGL) Examination 2013",
     "conducting_body": "Staff Selection Commission (SSC)",
     "body_type": "Central",
@@ -506,7 +506,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0022",
     "date": "2013-07-07",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "MP Pre-Medical Test (PMT) 2013",
     "conducting_body": "Vyapam (MPPEB)",
     "body_type": "State",
@@ -530,7 +530,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0023",
     "date": "2013-10-26",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "RAS (Rajasthan Administrative Service) Preliminary Examination 2013",
     "conducting_body": "Rajasthan Public Service Commission (RPSC)",
     "body_type": "State",
@@ -554,7 +554,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0024",
     "date": "2014-03-05",
-    "era": "UPA (2004-May2014)",
+    "era": "UPA (2004-2014)",
     "exam_name": "CBSE Class 12 Physics Board Examination 2014",
     "conducting_body": "Central Board of Secondary Education (CBSE)",
     "body_type": "Central",
@@ -578,7 +578,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0025",
     "date": "2014-06-29",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "DSSSB Head Clerk (Grade II DASS, Post Code 90/09) Recruitment, Tier-I",
     "conducting_body": "Delhi Subordinate Services Selection Board (DSSSB)",
     "body_type": "State",
@@ -602,7 +602,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0026",
     "date": "2015-03-29",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPPCS Preliminary Examination 2015",
     "conducting_body": "Uttar Pradesh Public Service Commission (UPPSC)",
     "body_type": "State",
@@ -626,7 +626,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0027",
     "date": "2015-05-03",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "AIPMT 2015 (All India Pre-Medical Test)",
     "conducting_body": "CBSE",
     "body_type": "Central",
@@ -650,7 +650,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0028",
     "date": "2015-11-14",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "HTET Level-3 (Haryana Teacher Eligibility Test)",
     "conducting_body": "Haryana Board of School Education (HBSE)",
     "body_type": "State",
@@ -674,7 +674,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0029",
     "date": "2016-01-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "State Level Selection Test (SLST) 2016 teacher & Group C/D recruitment",
     "conducting_body": "West Bengal School Service Commission (WBSSC)",
     "body_type": "State",
@@ -698,7 +698,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0030",
     "date": "2016-03-06",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Village Panchayat Development Officer (VPDO/VDO) recruitment exam",
     "conducting_body": "Uttarakhand Subordinate Service Selection Commission (UKSSSC)",
     "body_type": "State",
@@ -722,7 +722,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0031",
     "date": "2016-05-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-UG 2016 (Phase II)",
     "conducting_body": "CBSE",
     "body_type": "Central",
@@ -746,7 +746,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0032",
     "date": "2017-02-05",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "BSSC 1st Inter-Level Combined (Clerical-grade) Competitive Exam",
     "conducting_body": "Bihar Staff Selection Commission (BSSC)",
     "body_type": "State",
@@ -770,7 +770,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0033",
     "date": "2017-05-07",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-UG 2017",
     "conducting_body": "CBSE",
     "body_type": "Central",
@@ -794,7 +794,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0034",
     "date": "2017-07-16",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "HCS (Judicial Branch) Preliminary Examination 2017",
     "conducting_body": "Punjab & Haryana High Court",
     "body_type": "State",
@@ -818,7 +818,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0035",
     "date": "2017-07-24",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UP Police Inspector (Sub-Inspector/Inspector) Online Recruitment Test 2017",
     "conducting_body": "UP Police Recruitment and Promotion Board (UPPRPB)",
     "body_type": "State",
@@ -842,7 +842,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0036",
     "date": "2017-10-29",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "DSSSB Primary Teacher (PRT) Recruitment Exam for MCD/municipal schools",
     "conducting_body": "Delhi Subordinate Services Selection Board (DSSSB)",
     "body_type": "State",
@@ -866,7 +866,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0037",
     "date": "2018-02-21",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "SSC CGL 2017 Tier-II",
     "conducting_body": "SSC",
     "body_type": "Central",
@@ -890,7 +890,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0038",
     "date": "2018-03-26",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "CBSE Class 12 Economics board exam 2018",
     "conducting_body": "CBSE",
     "body_type": "Central",
@@ -914,7 +914,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0039",
     "date": "2018-03-28",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "CBSE Class 10 Mathematics board exam 2018",
     "conducting_body": "CBSE",
     "body_type": "Central",
@@ -938,7 +938,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0040",
     "date": "2018-03-31",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPPCL Junior Engineer / Technician online recruitment exams 2018",
     "conducting_body": "Uttar Pradesh Power Corporation Ltd (UPPCL)",
     "body_type": "State",
@@ -962,7 +962,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0041",
     "date": "2018-09-02",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPSSSC Tubewell Operator (Nalkoop Chalak) Recruitment Exam",
     "conducting_body": "Uttar Pradesh Subordinate Services Selection Commission (UPSSSC)",
     "body_type": "State",
@@ -986,7 +986,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0042",
     "date": "2019-11-17",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Non-Secretariat Clerk recruitment exam",
     "conducting_body": "Gujarat Subordinate Services Selection Board (GSSSB)",
     "body_type": "State",
@@ -1010,7 +1010,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0043",
     "date": "2019-12-29",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Librarian Grade III recruitment exam",
     "conducting_body": "Rajasthan Staff Selection Board (RSMSSB)",
     "body_type": "State",
@@ -1034,7 +1034,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0044",
     "date": "2020-01-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Teacher Eligibility Test (TET) 2020",
     "conducting_body": "Maharashtra State Council of Examination (MSCE)",
     "body_type": "State",
@@ -1058,7 +1058,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0045",
     "date": "2020-09-20",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Sub-Inspector (unarmed branch) written exam",
     "conducting_body": "State Level Police Recruitment Board (SLPRB), Assam",
     "body_type": "State",
@@ -1082,7 +1082,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0046",
     "date": "2020-10-11",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Medical Officer (Dental) recruitment test",
     "conducting_body": "Baba Farid University of Health Sciences (BFUHS)",
     "body_type": "State",
@@ -1106,7 +1106,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0047",
     "date": "2020-12-06",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Junior Engineer (JEN) recruitment exam",
     "conducting_body": "Rajasthan Staff Selection Board (RSMSSB)",
     "body_type": "State",
@@ -1130,7 +1130,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0048",
     "date": "2021-01-03",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Railway GDCE 2021 (General Departmental Competitive Exam, RRC Mumbai)",
     "conducting_body": "Railway Recruitment Cell (Western Railway)",
     "body_type": "Central",
@@ -1154,7 +1154,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0049",
     "date": "2021-01-09",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "HSSC Gram Sachiv (Panchayat Secretary) exam",
     "conducting_body": "Haryana Staff Selection Commission (HSSC)",
     "body_type": "State",
@@ -1178,7 +1178,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0050",
     "date": "2021-02-28",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Army Soldier General Duty Common Entrance Exam 2021",
     "conducting_body": "Indian Army",
     "body_type": "Central",
@@ -1202,7 +1202,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0051",
     "date": "2021-07-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Forest Guard, Secretariat Security Guard and an earlier graduate-level exam (2021)",
     "conducting_body": "Uttarakhand Subordinate Service Selection Commission (UKSSSC)",
     "body_type": "State",
@@ -1226,7 +1226,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0052",
     "date": "2021-08-07",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "HSSC Police Constable (Male) recruitment exam",
     "conducting_body": "Haryana Staff Selection Commission (HSSC)",
     "body_type": "State",
@@ -1250,7 +1250,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0053",
     "date": "2021-09-12",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-UG 2021",
     "conducting_body": "NTA",
     "body_type": "Central",
@@ -1274,7 +1274,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0054",
     "date": "2021-09-13",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Sub-Inspector (SI) recruitment exam 2021",
     "conducting_body": "Rajasthan Public Service Commission (RPSC)",
     "body_type": "State",
@@ -1298,7 +1298,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0055",
     "date": "2021-09-26",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "REET 2021 (Rajasthan Eligibility Exam for Teachers) Level 2",
     "conducting_body": "Board of Secondary Education Rajasthan (BSER/RBSE)",
     "body_type": "State",
@@ -1322,7 +1322,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0056",
     "date": "2021-10-03",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Police Sub-Inspector (PSI) recruitment exam",
     "conducting_body": "Karnataka State Police / Recruitment Wing",
     "body_type": "State",
@@ -1346,7 +1346,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0057",
     "date": "2021-10-23",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Patwari (village revenue officer) recruitment exam",
     "conducting_body": "Rajasthan Staff Selection Board (RSMSSB)",
     "body_type": "State",
@@ -1370,7 +1370,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0058",
     "date": "2021-11-28",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Uttar Pradesh Teacher Eligibility Test (UPTET) 2021",
     "conducting_body": "UP Examination Regulatory Authority / Basic Education Board (UPBEB)",
     "body_type": "State",
@@ -1394,7 +1394,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0059",
     "date": "2021-12-04",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Graduate-level (Snatak) recruitment exam",
     "conducting_body": "Uttarakhand Subordinate Service Selection Commission (UKSSSC)",
     "body_type": "State",
@@ -1418,7 +1418,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0060",
     "date": "2021-12-12",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Head Clerk recruitment exam",
     "conducting_body": "Gujarat Subordinate Services Selection Board (GSSSB)",
     "body_type": "State",
@@ -1442,7 +1442,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0061",
     "date": "2021-12-12",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "MHADA staff recruitment exam",
     "conducting_body": "Maharashtra Housing and Area Development Authority (MHADA)",
     "body_type": "State",
@@ -1466,7 +1466,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0062",
     "date": "2022-02-13",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Class 10 Science & Class 12 Maths revision exams",
     "conducting_body": "Tamil Nadu School Education Department",
     "body_type": "State",
@@ -1490,7 +1490,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0063",
     "date": "2022-03-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Lower Division Clerk (LDC) recruitment exam",
     "conducting_body": "Rajasthan High Court",
     "body_type": "State",
@@ -1514,7 +1514,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0064",
     "date": "2022-03-27",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Forest Guard recruitment exam",
     "conducting_body": "Gujarat University / State Forest Department",
     "body_type": "State",
@@ -1538,7 +1538,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0065",
     "date": "2022-03-27",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Himachal Pradesh Police Constable Recruitment Written Test 2022 (1,334 posts)",
     "conducting_body": "Himachal Pradesh Police (state government recruitment)",
     "body_type": "State",
@@ -1562,7 +1562,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0066",
     "date": "2022-04-27",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "SSC (Class 10) board examination",
     "conducting_body": "Andhra Pradesh Board of Secondary Education / School Education Dept",
     "body_type": "State",
@@ -1586,7 +1586,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0067",
     "date": "2022-05-08",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "BPSC 67th Combined Competitive Exam (Prelims)",
     "conducting_body": "Bihar Public Service Commission (BPSC)",
     "body_type": "State",
@@ -1610,7 +1610,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0068",
     "date": "2022-05-14",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Rajasthan Police Constable recruitment exam",
     "conducting_body": "Rajasthan Police Recruitment & Promotion Board",
     "body_type": "State",
@@ -1634,7 +1634,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0069",
     "date": "2022-05-22",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Naib Tehsildar recruitment test (78 posts)",
     "conducting_body": "Punjab Public Service Commission (PPSC)",
     "body_type": "State",
@@ -1658,7 +1658,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0070",
     "date": "2022-06-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Assistant Engineer / Junior Engineer (AE/JE) recruitment exam",
     "conducting_body": "Uttarakhand Public Service Commission (UKPSC)",
     "body_type": "State",
@@ -1682,7 +1682,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0071",
     "date": "2022-07-31",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPSSSC Lekhpal (Mains) Recruitment Exam 2022",
     "conducting_body": "Uttar Pradesh Subordinate Services Selection Commission (UPSSSC)",
     "body_type": "State",
@@ -1706,7 +1706,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0072",
     "date": "2022-08-26",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Assistant Engineer (Civil) exam",
     "conducting_body": "Arunachal Pradesh Public Service Commission (APPSC)",
     "body_type": "State",
@@ -1730,7 +1730,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0073",
     "date": "2022-11-12",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Forest Guard recruitment exam",
     "conducting_body": "Rajasthan Staff Selection Board (RSMSSB)",
     "body_type": "State",
@@ -1754,7 +1754,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0074",
     "date": "2022-12-23",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "BSSC 3rd Graduate Level (CGL) Combined Competitive Prelims 2022",
     "conducting_body": "Bihar Staff Selection Commission (BSSC)",
     "body_type": "State",
@@ -1778,7 +1778,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0075",
     "date": "2022-12-24",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Senior Teacher Grade II (2nd Grade Teacher) General Knowledge exam",
     "conducting_body": "Rajasthan Public Service Commission (RPSC)",
     "body_type": "State",
@@ -1802,7 +1802,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0076",
     "date": "2022-12-25",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Junior Office Assistant (IT) / JOA (IT) Recruitment Exam",
     "conducting_body": "Himachal Pradesh Staff Selection Commission (HPSSC), Hamirpur",
     "body_type": "State",
@@ -1826,7 +1826,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0077",
     "date": "2023-01-08",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Patwari / Lekhpal recruitment exam",
     "conducting_body": "Uttarakhand Public Service Commission (UKPSC)",
     "body_type": "State",
@@ -1850,7 +1850,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0078",
     "date": "2023-01-29",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "GPSSB Junior Clerk recruitment exam",
     "conducting_body": "Gujarat Panchayat Service Selection Board (GPSSB)",
     "body_type": "State",
@@ -1874,7 +1874,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0079",
     "date": "2023-02-25",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "REET 2023 (teacher eligibility test)",
     "conducting_body": "Board of Secondary Education Rajasthan (BSER/RBSE)",
     "body_type": "State",
@@ -1898,7 +1898,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0080",
     "date": "2023-03-05",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Assistant Engineer (Civil) recruitment exam (also voided Group-I Prelims, AEE, DAO)",
     "conducting_body": "Telangana State Public Service Commission (TSPSC)",
     "body_type": "State",
@@ -1922,7 +1922,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0081",
     "date": "2023-03-15",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "MP Patwari Recruitment Exam 2023 (Group-2 Sub-Group-4)",
     "conducting_body": "Madhya Pradesh Employees Selection Board (ESB, formerly PEB)",
     "body_type": "State",
@@ -1946,7 +1946,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0082",
     "date": "2023-05-11",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "CGPSC State Service Examination 2021 (recruitment cycle 2020-2022)",
     "conducting_body": "Chhattisgarh Public Service Commission (CGPSC)",
     "body_type": "State",
@@ -1970,7 +1970,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0083",
     "date": "2023-05-25",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "MP Forest Guard (Vanrakshak) Recruitment Exam 2023",
     "conducting_body": "Madhya Pradesh Employees Selection Board (ESB)",
     "body_type": "State",
@@ -1994,7 +1994,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0084",
     "date": "2023-06-03",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "AIIMS NORCET-4 (Nursing Officer Recruitment)",
     "conducting_body": "AIIMS New Delhi",
     "body_type": "Central",
@@ -2018,7 +2018,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0085",
     "date": "2023-07-16",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Junior Engineer (Civil) main written exam (Combined Technical Services 2022)",
     "conducting_body": "Odisha Staff Selection Commission (OSSC)",
     "body_type": "State",
@@ -2042,7 +2042,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0086",
     "date": "2023-08-17",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Talathi (village accountant) recruitment exam",
     "conducting_body": "Maharashtra Revenue Dept / TCS-ION (conducting agency)",
     "body_type": "State",
@@ -2066,7 +2066,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0087",
     "date": "2023-10-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Bihar Police Constable Recruitment Written Exam",
     "conducting_body": "Central Selection Board of Constable (CSBC)",
     "body_type": "State",
@@ -2090,7 +2090,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0088",
     "date": "2024-01-28",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "JSSC CGL (Combined Graduate Level / JGGLCCE)",
     "conducting_body": "Jharkhand Staff Selection Commission (JSSC)",
     "body_type": "State",
@@ -2114,7 +2114,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0089",
     "date": "2024-02-11",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPPSC Review Officer/Assistant Review Officer (RO/ARO) Preliminary Exam 2023",
     "conducting_body": "Uttar Pradesh Public Service Commission (UPPSC)",
     "body_type": "State",
@@ -2138,7 +2138,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0090",
     "date": "2024-02-17",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UP Police Constable Recruitment Exam 2024",
     "conducting_body": "UP Police Recruitment and Promotion Board (UPPRPB)",
     "body_type": "State",
@@ -2162,7 +2162,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0091",
     "date": "2024-03-15",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "BPSC TRE 3.0 School Teacher Recruitment Exam",
     "conducting_body": "Bihar Public Service Commission (BPSC)",
     "body_type": "State",
@@ -2186,7 +2186,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0092",
     "date": "2024-03-17",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "JPSC Combined Civil Services Preliminary Exam (11th-13th CSE)",
     "conducting_body": "Jharkhand Public Service Commission (JPSC)",
     "body_type": "State",
@@ -2210,7 +2210,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0093",
     "date": "2024-05-05",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-UG 2024",
     "conducting_body": "NTA",
     "body_type": "Central",
@@ -2234,7 +2234,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0094",
     "date": "2024-06-18",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UGC-NET June 2024",
     "conducting_body": "NTA",
     "body_type": "Central",
@@ -2258,7 +2258,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0095",
     "date": "2024-06-23",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "MPPSC State Service & State Forest Service Prelims 2024",
     "conducting_body": "Madhya Pradesh Public Service Commission (MPPSC)",
     "body_type": "State",
@@ -2282,7 +2282,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0096",
     "date": "2024-06-23",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-PG 2024",
     "conducting_body": "NBEMS",
     "body_type": "Central",
@@ -2306,7 +2306,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0097",
     "date": "2024-09-21",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "JSSC CGL / JGGLCCE (re-conducted exam)",
     "conducting_body": "Jharkhand Staff Selection Commission (JSSC)",
     "body_type": "State",
@@ -2330,7 +2330,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0098",
     "date": "2024-12-01",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NHM Bihar Community Health Officer (CHO) Recruitment Exam",
     "conducting_body": "State Health Society (SHS)/NHM Bihar",
     "body_type": "State",
@@ -2354,7 +2354,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0099",
     "date": "2024-12-13",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "BPSC 70th Combined Competitive Exam (Prelims)",
     "conducting_body": "Bihar Public Service Commission (BPSC)",
     "body_type": "State",
@@ -2378,7 +2378,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0100",
     "date": "2025-03-04",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "East Central Railway departmental promotion exam 2025 (Chief Loco Pilot)",
     "conducting_body": "East Central Railway / Railway Board",
     "body_type": "Central",
@@ -2402,7 +2402,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0101",
     "date": "2025-04-16",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "UPESSC Assistant Professor Recruitment Exam 2025",
     "conducting_body": "Uttar Pradesh Education Service Selection Commission (UPESSC)",
     "body_type": "State",
@@ -2426,7 +2426,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0102",
     "date": "2025-09-21",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Graduate-level recruitment exam",
     "conducting_body": "Uttarakhand Subordinate Service Selection Commission (UKSSSC)",
     "body_type": "State",
@@ -2450,7 +2450,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0103",
     "date": "2025-11-23",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Teacher Eligibility Test (TET)",
     "conducting_body": "Maharashtra State Council of Examination (MSCE)",
     "body_type": "State",
@@ -2474,7 +2474,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0104",
     "date": "2025-12-21",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Group-B recruitment exam (408 posts incl Naib Tehsildar, Treasury Officers, Senior Assistant)",
     "conducting_body": "Punjab Subordinate Services Selection Board (PSSSB)",
     "body_type": "State",
@@ -2498,7 +2498,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0105",
     "date": "2026-02-26",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Class 12 Chemistry board examination",
     "conducting_body": "Maharashtra State Board of Secondary & Higher Secondary Education",
     "body_type": "State",
@@ -2522,7 +2522,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0106",
     "date": "2026-03-14",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "CGBSE Class 12 Hindi Board Examination 2026",
     "conducting_body": "Chhattisgarh Board of Secondary Education (CGBSE)",
     "body_type": "State",
@@ -2546,7 +2546,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0107",
     "date": "2026-04-12",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Jharkhand Excise Constable Competitive Exam (JECCE)",
     "conducting_body": "Jharkhand Staff Selection Commission (JSSC)",
     "body_type": "State",
@@ -2570,7 +2570,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0108",
     "date": "2026-05-03",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "NEET-UG 2026",
     "conducting_body": "NTA",
     "body_type": "Central",
@@ -2594,7 +2594,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0109",
     "date": "2026-07-04",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "HTET Level-3 / PGT (Haryana Teacher Eligibility Test)",
     "conducting_body": "Haryana Board of School Education (HBSE)",
     "body_type": "State",
@@ -2618,7 +2618,7 @@ const paperLeaksData = [
   {
     "incident_id": "PL-0110",
     "date": "2026-07-19",
-    "era": "NDA (May2014-now)",
+    "era": "NDA-II (2014-2026)",
     "exam_name": "Pharmacist Officer recruitment exam",
     "conducting_body": "Baba Farid University of Health Sciences (BFUHS)",
     "body_type": "State",
@@ -2640,7 +2640,8 @@ const paperLeaksData = [
     "exam_category": "Subordinate Recruitment"
   }
 ];
-if (typeof window !== 'undefined') {
+
+if (typeof window !== "undefined") {
   window.paperLeaksData = paperLeaksData;
   window.PAPER_LEAKS_DATA = paperLeaksData;
 }
