@@ -38,7 +38,7 @@
 
     <!-- Interactive Active Mode Banner -->
     <div style="margin: 20px auto 30px; max-width: 800px; padding: 12px 20px; background: rgba(15, 23, 42, 0.7); border: 1px solid var(--border-glass); border-radius: 12px; font-size: 13px; color: var(--text-subtle); text-align: center;">
-      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization (O/E), and severity noise filtering across the 110 authenticated dataset incidents.</span>
+      <span id="mode-desc"><strong>Active Mode: Controlled Econometric View.</strong> Applies era annualization, state executive tenure normalization, state baseline risk standardization (O/E), and severity noise filtering across the 110 documented incident reports (89 confirmed).</span>
     </div>
 
     <!-- Top KPI Summary Cards Grid (6-Card Controlled Risk Matrix) -->
@@ -76,8 +76,8 @@
       <div class="kpi-card" style="border: 1px solid var(--accent-emerald); background: rgba(16, 185, 129, 0.08);">
         <span class="indicator-tag" style="background: rgba(16, 185, 129, 0.25); color: #10b981; border-color: #10b981;">⚡ Consolidated Triple-Control</span>
         <div class="kpi-label" style="color: var(--accent-emerald);">Consolidated Risk (O/E_full)</div>
-        <div id="kpi-cons-ratio" class="kpi-value" style="color: var(--accent-emerald);">1.01 vs 0.91</div>
-        <div id="kpi-cons-sub" class="kpi-sub">BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.11)</div>
+        <div id="kpi-cons-ratio" class="kpi-value" style="color: var(--accent-emerald);">1.02 vs 0.89</div>
+        <div id="kpi-cons-sub" class="kpi-sub">BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.14)</div>
       </div>
     </div>
   </section>
@@ -111,7 +111,7 @@
             <div class="flaw-icon">2</div>
             <div>
               <div class="item-title">Post-2014 Reporting Drift & Noise</div>
-              <div class="item-desc">Post-2014 entries capture social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims out of 110 records), whereas pre-2014 includes 100% court/CBI cases.</div>
+              <div class="item-desc">Post-2014 entries capture social media claims, Telegram hoaxes, and disproven allegations (19.1% noise: 21 claims out of 110 records), whereas pre-2014 includes higher-severity incidents with formal police/court documentation.</div>
             </div>
           </div>
           <div class="flaw-item">
@@ -136,7 +136,7 @@
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Level-1 Confirmed Severity Filter</div>
-              <div class="item-desc">Filters out Level-2 claims/hoaxes (21 noise claims removed) to evaluate UPA vs NDA strictly on confirmed administrative cancellations and FIRs.</div>
+              <div class="item-desc">Filters out Level-2 claims/hoaxes (21 unconfirmed records (alleged, denied, or suspected) removed) to evaluate UPA vs NDA strictly on confirmed administrative cancellations and FIRs.</div>
             </div>
           </div>
           <div class="control-item">
@@ -164,7 +164,7 @@
             <div class="control-icon">✓</div>
             <div>
               <div class="item-title">Construct Subtyping & Central Parity Audit</div>
-              <div class="item-desc">Isolates true Question-Paper Leaks from cheating/tampering, revealing central paper leak parity: **NDA-II 0.49 vs UPA 0.50 leaks/year** (Parity Ratio = 0.98).</div>
+              <div class="item-desc">Isolates true Question-Paper Leaks from cheating/tampering, revealing central paper leak parity: **NDA-II 0.49 vs UPA 0.50 leaks/year** (Parity Ratio = 1.15).</div>
             </div>
           </div>
         </div>
@@ -369,7 +369,7 @@
 
       <!-- Explanatory Note on Chart 4 & 5 Toggle Logic -->
       <div style="margin-top: 15px; padding: 12px 16px; background: rgba(15, 23, 42, 0.6); border: 1px dashed var(--border-glass); border-radius: 8px; font-size: 12px; color: var(--text-subtle);">
-        💡 <strong>Analytical Explainer (How Charts 4 & 5 Transform on Toggle):</strong> Both views analyze the exact same 110 authenticated dataset incidents. In <strong>Raw View</strong>, Chart 5 plots incidents by <em>Political Era</em> (23 UPA vs 86 NDA-II) to show unadjusted scraper counts. In <strong>Controlled View</strong>, Chart 5 transforms to plot incidents by <em>Verification Severity</em> (89 Confirmed Leaks vs 21 Filtered Noise Claims), proving that 14 out of 14 fake paper hoaxes occurred exclusively in the post-2014 social media era.
+        💡 <strong>Analytical Explainer (How Charts 4 & 5 Transform on Toggle):</strong> Both views analyze the exact same 110 documented incident reports (89 confirmed). In <strong>Raw View</strong>, Chart 5 plots incidents by <em>Political Era</em> (23 UPA vs 86 NDA-II) to show unadjusted scraper counts. In <strong>Controlled View</strong>, Chart 5 transforms to plot incidents by <em>Verification Severity</em> (89 Confirmed Leaks vs 21 Filtered Noise Claims), proving that 21 unconfirmed records (13 alleged, 5 denied, 3 suspected) occurred exclusively in the post-2014 social media era.
       </div>
   </section>
 
@@ -708,7 +708,7 @@
           📊 Statistical Significance Guide: How to Read Confidence Intervals (CIs)
         </div>
         <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
-          <strong>Why do Confidence Intervals Matter?</strong> Point estimates (like O/E = 1.10 vs 0.83) carry random sampling variation due to small event counts (38 vs 14 leaks). The 95% Poisson Confidence Interval for the Stratified Risk Ratio is <strong>[0.72, 2.44]</strong> and for Consolidated Risk is <strong>[0.60, 2.05]</strong>.
+          <strong>Why do Confidence Intervals Matter?</strong> Point estimates (like O/E = 1.10 vs 0.83) carry random sampling variation due to small event counts (38 vs 14 leaks). The 95% Poisson Confidence Interval for the Stratified Risk Ratio is <strong>[0.72, 2.44]</strong> and for Consolidated Risk is <strong>[0.62, 2.11]</strong>.
           <ul style="margin: 8px 0 0 18px; padding: 0;">
             <li><strong>The Core Statistical Rule:</strong> Whenever a 95% Confidence Interval spans across <strong>1.00</strong> (e.g. 0.72 ≤ 1.00 ≤ 2.44), the observed difference is <strong>NOT statistically significant</strong> at conventional levels (p > 0.05).</li>
             <li><strong>Plain-English Reader Takeaway:</strong> The controlled dataset does <em>NOT</em> prove one political party is more leak-prone than another. Both parties execute near expected state baseline risk, and remaining differences sit within expected random variation.</li>
@@ -888,11 +888,11 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Unadjusted raw leak tallies demonstrate a structural governance collapse under BJP state administrations."
           </div>
           <div class="comparison-pill controlled" style="background: rgba(16, 185, 129, 0.12); border-color: #10b981;">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for Time in Office + Geographic State Risk + Exam Conduct Volume simultaneously yields BJP O / E<sub>full</sub> = 1.01 vs INC O / E<sub>full</sub> = 0.91 (<strong>Consolidated Party Risk Ratio = 1.11</strong> (95% CI: <strong>0.60 – 2.05</strong>))."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Controlling for Time in Office + Geographic State Risk + Exam Conduct Volume simultaneously yields BJP O / E<sub>full</sub> = 1.01 vs INC O / E<sub>full</sub> = 0.91 (<strong>Consolidated Party Risk Ratio = 1.14</strong> (95% CI: <strong>0.62 – 2.11</strong>))."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Exposes that when all 3 controls are applied simultaneously, both BJP (1.01 ≈ 1.00) and INC (0.91 ≈ 1.00) perform near expected neutral state baselines. Because the 95% Poisson confidence interval [0.60, 2.05] includes 1.00, there is no statistically significant partisan difference between the two major parties.
+          <strong>Why Controlled View is More Accurate:</strong> Exposes that when all 3 controls are applied simultaneously, both BJP (1.01 ≈ 1.00) and INC (0.91 ≈ 1.00) perform near expected neutral state baselines. Because the 95% Poisson confidence interval [0.62, 2.11] includes 1.00, there is no statistically significant partisan difference between the two major parties.
         </div>
       </div>
     </div>

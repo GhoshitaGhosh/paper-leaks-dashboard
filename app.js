@@ -1,4 +1,4 @@
-// Global Dashboard Application Controller - 110 Authenticated Records
+// Global Dashboard Application Controller - 110 Documented Incident Reports (89 Confirmed)
 document.addEventListener('DOMContentLoaded', () => {
   const data = (typeof paperLeaksData !== 'undefined' ? paperLeaksData : window.PAPER_LEAKS_DATA) || [];
   let currentMode = 'enriched'; // 'enriched' (controlled) vs 'raw' (unadjusted)
@@ -191,9 +191,9 @@ document.addEventListener('DOMContentLoaded', () => {
       if (volSub) volSub.innerText = 'BJP (11.02) vs INC (6.61) / 1k Notifs (Sourced Rate Ratio = 1.67)';
 
       const consEl = document.getElementById('kpi-cons-ratio');
-      if (consEl) consEl.innerText = '1.01 vs 0.91';
+      if (consEl) consEl.innerText = '1.02 vs 0.89';
       const consSub = document.getElementById('kpi-cons-sub');
-      if (consSub) consSub.innerText = 'BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.11)';
+      if (consSub) consSub.innerText = 'BJP (1.01) vs INC (0.91) Consolidated (All Controls = 1.14)';
     } else {
       const centEl = document.getElementById('kpi-central-rate');
       if (centEl) centEl.innerText = '1.23 vs 0.60';
@@ -526,10 +526,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const mechanisms = [
       'Digital/Messaging Pre-circulation',
       'Physical Theft/Local Leak',
+      'Printing Press Breach',
       'OMR/Result Tampering',
       'Proxy Impersonation',
       'In-Exam Tech Cheating',
-      'Certificate Forgery'
+      'Certificate Forgery',
+      'Unconfirmed Noise/Claim'
     ];
 
     let dataset1, dataset2, label1, label2;
@@ -598,7 +600,7 @@ document.addEventListener('DOMContentLoaded', () => {
       tbody.appendChild(tr);
     });
 
-    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed (110 Authenticated Records)`;
+    document.getElementById('record-count').innerText = `${records.length} Incidents Displayed (110 Documented Incident Reports (89 Confirmed))`;
   }
 
   function getStatusBadge(status) {
@@ -668,7 +670,7 @@ document.addEventListener('DOMContentLoaded', () => {
       'Level 4: Sourced Notifs',
       'Consolidated (O/E_full)'
     ];
-    const ratios = [2.71, 2.45, 1.32, 1.67, 1.11];
+    const ratios = [2.71, 2.45, 1.32, 1.67, 1.14];
 
     charts.progressiveConvergence = new Chart(ctx, {
       type: 'line',
@@ -699,7 +701,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (idx === 1) return 'Tenure Rate: 0.183 vs 0.075 incidents/state-yr (Ratio = 2.45)';
                 if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.83 (Ratio = 1.32)';
                 if (idx === 3) return 'Sourced Notifications: 11.02 vs 6.61 / 1k notifs (Ratio = 1.67)';
-                if (idx === 4) return 'Consolidated Triple-Control: 1.01 vs 0.91 (Ratio = 1.11)';
+                if (idx === 4) return 'Consolidated Triple-Control: 1.01 vs 0.91 (Ratio = 1.14)';
                 return '';
               }
             }
