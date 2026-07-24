@@ -6,17 +6,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Individual Party Data Mappings (Dynamically Verified via Interval Lookup)
   const individualPartyData = {
-    'BJP': { raw: 45, confirmed: 38, stateYears: 207.8, rate: 0.183, oeControlled: 1.10, oeRaw: 1.30 },
-    'INC': { raw: 17, confirmed: 14, stateYears: 187.9, rate: 0.075, oeControlled: 0.83, oeRaw: 1.01 },
-    'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.290, oeControlled: 1.07, oeRaw: 1.07 },
-    'AAP': { raw: 4, confirmed: 2, stateYears: 14.5, rate: 0.138, oeControlled: 0.90, oeRaw: 1.80 },
-    'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 0.90, oeRaw: 3.60 },
-    'SP': { raw: 1, confirmed: 1, stateYears: 8.0, rate: 0.125, oeControlled: 0.69, oeRaw: 0.69 },
-    'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.769, oeControlled: 2.85, oeRaw: 2.85 },
-    'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeControlled: 0.73, oeRaw: 0.73 },
-    'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.050, oeControlled: 1.10, oeRaw: 1.10 },
+    'BJP': { raw: 45, confirmed: 38, stateYears: 207.8, rate: 0.183, oeControlled: 1.04, oeRaw: 1.0 },
+    'INC': { raw: 17, confirmed: 14, stateYears: 187.9, rate: 0.075, oeControlled: 0.8, oeRaw: 0.82 },
+    'JD(U)': { raw: 7, confirmed: 6, stateYears: 20.7, rate: 0.29, oeControlled: 1.07, oeRaw: 1.07 },
+    'AAP': { raw: 4, confirmed: 2, stateYears: 14.5, rate: 0.138, oeControlled: 1.53, oeRaw: 1.85 },
+    'JMM': { raw: 4, confirmed: 1, stateYears: 10.5, rate: 0.095, oeControlled: 2.1, oeRaw: 2.1 },
+    'SP': { raw: 1, confirmed: 1, stateYears: 8.0, rate: 0.125, oeControlled: 0.25, oeRaw: 0.23 },
+    'Shiv Sena': { raw: 2, confirmed: 2, stateYears: 2.6, rate: 0.761, oeControlled: 4.22, oeRaw: 3.37 },
+    'AITC': { raw: 1, confirmed: 1, stateYears: 15.2, rate: 0.066, oeControlled: 1.46, oeRaw: 1.46 },
+    'BJD': { raw: 1, confirmed: 1, stateYears: 20.1, rate: 0.05, oeControlled: 1.1, oeRaw: 1.1 },
     'BRS': { raw: 1, confirmed: 1, stateYears: 9.5, rate: 0.105, oeControlled: 2.33, oeRaw: 2.33 },
-    'BSP': { raw: 1, confirmed: 1, stateYears: 4.8, rate: 0.208, oeControlled: 0.74, oeRaw: 0.74 }
+    'BSP': { raw: 1, confirmed: 1, stateYears: 4.8, rate: 0.207, oeControlled: 0.42, oeRaw: 0.38 }
   };
 
   // DOM Elements
@@ -398,8 +398,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const states = ['Rajasthan', 'Uttarakhand', 'Maharashtra', 'Haryana', 'Madhya Pradesh', 'Uttar Pradesh'];
     
     // Controlled O/E Ratios vs Raw O/E Ratios
-    const bjpOE = isEnriched ? [1.12, 0.79, 1.38, 1.41, 1.10, 1.74] : [1.12, 0.79, 1.38, 1.41, 1.10, 2.15];
-    const incOE = isEnriched ? [0.88, 1.36, 1.05, 0.58, 0.00, 0.00] : [0.88, 1.36, 1.05, 0.58, 0.00, 0.00];
+    const bjpOE = isEnriched ? [0.00, 1.32, 1.88, 1.89, 1.10, 1.84] : [0.00, 1.32, 1.88, 1.89, 1.10, 2.15];
+    const incOE = isEnriched ? [2.22, 0.46, 0.00, 0.00, 0.00, 0.00] : [2.22, 0.46, 0.00, 0.00, 0.00, 0.00];
 
     charts.statePartyPerformance = new Chart(ctx, {
       type: 'bar',
@@ -409,9 +409,9 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             label: isEnriched ? 'BJP Observed / Expected (O/E Ratio)' : 'BJP Raw O/E Ratio',
             data: bjpOE,
-            backgroundColor: 'rgba(6, 182, 212, 0.75)',
-            borderColor: '#06b6d4',
-            borderWidth: 1,
+            backgroundColor: isEnriched ? 'rgba(6, 182, 212, 0.75)' : 'rgba(244, 63, 94, 0.75)',
+            borderColor: isEnriched ? '#06b6d4' : '#f43f5e',
+            borderWidth: 1.5,
             borderRadius: 6
           },
           {
@@ -419,7 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
             data: incOE,
             backgroundColor: 'rgba(99, 102, 241, 0.75)',
             borderColor: '#6366f1',
-            borderWidth: 1,
+            borderWidth: 1.5,
             borderRadius: 6
           }
         ]
@@ -430,7 +430,7 @@ document.addEventListener('DOMContentLoaded', () => {
         plugins: { legend: { labels: { color: '#94a3b8' } } },
         scales: {
           x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
-          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true, max: 2.5 }
+          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, beginAtZero: true, max: 3.0 }
         }
       }
     });

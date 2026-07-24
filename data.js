@@ -23,7 +23,7 @@ const paperLeaksData = [
     "state_ruling_party": "Central",
     "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Physical Paper Theft / Leak",
-    "incident_mechanism": "Digital/Messaging Pre-circulation"
+    "incident_mechanism": "Physical Theft/Local Leak"
   },
   {
     "incident_id": "PL-0002",
@@ -47,7 +47,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Himachal Pradesh",
     "state_ruling_party": "INC",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Printing Press Breach",
     "incident_mechanism": "Printing Press Breach"
   },
@@ -99,7 +99,7 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Impersonation/Cheating Racket",
     "incident_mechanism": "Proxy Impersonation"
   },
@@ -229,7 +229,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Chhattisgarh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
@@ -307,7 +307,7 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "OMR/Result Tampering",
     "incident_mechanism": "OMR/Result Tampering"
   },
@@ -385,7 +385,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Karnataka",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "School Board Exam",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Physical Theft/Local Leak"
   },
@@ -409,7 +409,7 @@ const paperLeaksData = [
     "source_url": "https://www.greaterkashmir.com/kashmir/bopee-scam-convicted-students-had-made-astronomical-jump-in-ranking/",
     "confidence": "High",
     "incident_type": "Paper Leak",
-    "state_name": "Jammu & Kashmir",
+    "state_name": "Jammu and Kashmir",
     "state_ruling_party": "Other",
     "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Physical Paper Theft / Leak",
@@ -437,7 +437,7 @@ const paperLeaksData = [
     "incident_type": "OMR/Result Tampering",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "OMR/Result Tampering",
     "incident_mechanism": "OMR/Result Tampering"
   },
@@ -486,12 +486,12 @@ const paperLeaksData = [
     "source_name": "The Assam Tribune",
     "source_url": "https://assamtribune.com/assam/rakesh-paul-33-others-convicted-in-apsc-cash-for-job-scam-1544892",
     "confidence": "High",
-    "incident_type": "Paper Leak",
+    "incident_type": "OMR/Result Tampering",
     "state_name": "Assam",
     "state_ruling_party": "INC",
-    "exam_category": "Civil Services / PSC",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Physical Paper Theft / Leak",
-    "incident_mechanism": "Physical Theft/Local Leak"
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0020",
@@ -567,7 +567,7 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Impersonation/Cheating Racket",
     "incident_mechanism": "Proxy Impersonation"
   },
@@ -619,7 +619,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Manipur (Imphal)",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "School Board Exam",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
@@ -645,7 +645,7 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Delhi",
     "state_ruling_party": "Other",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Filtered Unconfirmed Claim Noise",
     "incident_mechanism": "Unconfirmed Noise/Claim"
   },
@@ -879,7 +879,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Haryana",
     "state_ruling_party": "BJP",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Civil Services / PSC",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
@@ -1217,7 +1217,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
@@ -1477,7 +1477,7 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Filtered Unconfirmed Claim Noise",
     "incident_mechanism": "Unconfirmed Noise/Claim"
   },
@@ -1605,7 +1605,7 @@ const paperLeaksData = [
     "source_url": "https://www.thenewsminute.com/article/tn-revision-exam-papers-class-10-and-12-leaked-official-suspended-160999",
     "confidence": "Medium",
     "incident_type": "Paper Leak",
-    "state_name": "Tamil Nadu (Tiruvannamalai)",
+    "state_name": "Tamil Nadu",
     "state_ruling_party": "Other",
     "exam_category": "School Board Exam",
     "mechanism": "Digital/WhatsApp Pre-Circulation",
@@ -1630,12 +1630,12 @@ const paperLeaksData = [
     "source_name": "Daijiworld",
     "source_url": "https://daijiworld.com/news/newsDisplay?newsID=1054403",
     "confidence": "Medium",
-    "incident_type": "Document/Certificate Forgery",
+    "incident_type": "Paper Leak",
     "state_name": "Rajasthan",
     "state_ruling_party": "INC",
     "exam_category": "Subordinate Recruitment",
     "mechanism": "Document/Certificate Forgery",
-    "incident_mechanism": "Certificate Forgery"
+    "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
   {
     "incident_id": "PL-0064",
@@ -2101,7 +2101,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Madhya Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Filtered Unconfirmed Claim Noise",
     "incident_mechanism": "Unconfirmed Noise/Claim"
   },
@@ -2179,7 +2179,7 @@ const paperLeaksData = [
     "incident_type": "Impersonation/Cheating Racket",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "Civil Services / PSC",
     "mechanism": "Impersonation/Cheating Racket",
     "incident_mechanism": "Proxy Impersonation"
   },
@@ -2439,7 +2439,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Central",
     "state_ruling_party": "Central",
-    "exam_category": "Subordinate Recruitment",
+    "exam_category": "Entrance Tests (Higher Ed)",
     "mechanism": "Filtered Unconfirmed Claim Noise",
     "incident_mechanism": "Unconfirmed Noise/Claim"
   },
@@ -2595,7 +2595,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "Central",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Physical Theft/Local Leak"
   },
@@ -2621,7 +2621,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Uttar Pradesh",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "Civil Services / PSC",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Physical Theft/Local Leak"
   },
@@ -2696,12 +2696,12 @@ const paperLeaksData = [
     "source_name": "The Tribune",
     "source_url": "https://www.tribuneindia.com/news/bathinda/six-months-on-probe-into-punjab-group-b-paper-leak-still-pending/",
     "confidence": "Medium",
-    "incident_type": "Paper Leak",
+    "incident_type": "OMR/Result Tampering",
     "state_name": "Punjab",
     "state_ruling_party": "AAP",
-    "exam_category": "School Board Exam",
+    "exam_category": "Subordinate Recruitment",
     "mechanism": "Filtered Unconfirmed Claim Noise",
-    "incident_mechanism": "Unconfirmed Noise/Claim"
+    "incident_mechanism": "OMR/Result Tampering"
   },
   {
     "incident_id": "PL-0105",
@@ -2725,7 +2725,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Maharashtra",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "School Board Exam",
     "mechanism": "Physical Paper Theft / Leak",
     "incident_mechanism": "Physical Theft/Local Leak"
   },
@@ -2751,7 +2751,7 @@ const paperLeaksData = [
     "incident_type": "Paper Leak",
     "state_name": "Chhattisgarh",
     "state_ruling_party": "BJP",
-    "exam_category": "Entrance Tests (Higher Ed)",
+    "exam_category": "School Board Exam",
     "mechanism": "Digital/WhatsApp Pre-Circulation",
     "incident_mechanism": "Digital/Messaging Pre-circulation"
   },
