@@ -550,7 +550,19 @@
   <section class="container" style="margin-bottom: 40px;">
     <div class="takeaways-box">
       <div class="section-title" style="font-size: 24px; color: var(--accent-emerald);">Layer 4: Compiled Statistical Takeaways & Accuracy Comparison</div>
-      <p class="section-desc" style="margin-bottom: 24px;">Comparing the conclusions drawn from the raw Kaggle dataset vs. the controlled econometric dataset, and why the controlled takeaways are methodologically more accurate.</p>
+      <!-- Statistical Significance & 95% Confidence Interval Explainer Box -->
+      <div style="margin-bottom: 24px; padding: 18px 22px; background: rgba(16, 185, 129, 0.08); border: 1px solid var(--accent-emerald); border-radius: 12px;">
+        <div style="font-size: 16px; font-weight: 700; color: var(--accent-emerald); font-family: 'Outfit', sans-serif; margin-bottom: 6px;">
+          📊 Statistical Significance Guide: How to Read Confidence Intervals (CIs)
+        </div>
+        <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6;">
+          <strong>Why do Confidence Intervals Matter?</strong> Point estimates (like O/E = 1.10 vs 0.83) carry random sampling variation due to small event counts (38 vs 14 leaks). The 95% Poisson Confidence Interval for the Stratified Risk Ratio is <strong>[0.72, 2.44]</strong> and for Consolidated Risk is <strong>[0.60, 2.05]</strong>.
+          <ul style="margin: 8px 0 0 18px; padding: 0;">
+            <li><strong>The Core Statistical Rule:</strong> Whenever a 95% Confidence Interval spans across <strong>1.00</strong> (e.g. 0.72 ≤ 1.00 ≤ 2.44), the observed difference is <strong>NOT statistically significant</strong> at conventional levels (p > 0.05).</li>
+            <li><strong>Plain-English Reader Takeaway:</strong> The controlled dataset does <em>NOT</em> prove one political party is more leak-prone than another. Both parties execute near expected state baseline risk, and remaining differences sit within expected random variation.</li>
+          </ul>
+        </div>
+      </div>
 
       <!-- Takeaway 1 -->
       <div class="takeaway-card">
