@@ -175,9 +175,9 @@ document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('kpi-oe-sub').innerText = 'BJP (1.10) vs INC (0.83) O/E (Poisson RR CI [1.09, 3.72])';
 
       const volEl = document.getElementById('kpi-vol-rate');
-      if (volEl) volEl.innerText = '1.25 vs 0.97';
+      if (volEl) volEl.innerText = '11.67 vs 7.75';
       const volSub = document.getElementById('kpi-vol-sub');
-      if (volSub) volSub.innerText = 'BJP (1.25) vs INC (0.97) / 1k Exams (Volume RR = 1.28 Sensitivity)';
+      if (volSub) volSub.innerText = 'BJP (11.67) vs INC (7.75) / 1k Notifs (Sourced Rate Ratio = 1.51)';
 
       document.getElementById('kpi-unconfirmed').innerText = '24.4%';
       document.getElementById('kpi-unconfirmed-sub').innerText = 'Filtered Out Post-2014 Claims Noise';
@@ -390,8 +390,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const isEnriched = currentMode === 'enriched';
 
     const parties = ['BJP', 'INC', 'JD(U)', 'SP', 'JMM', 'AAP', 'AITC', 'BJD'];
-    const volumeRates = [1.287, 1.069, 1.158, 1.250, 0.635, 0.394, 0.439, 0.332];
-    const tenureRates = [0.234, 0.128, 0.290, 0.250, 0.095, 0.059, 0.066, 0.050];
+    const notifRates = [11.670, 7.751, 10.870, 6.250, 4.762, 9.091, 2.994, 2.262];
+    const tenureRates = [0.224, 0.111, 0.290, 0.125, 0.095, 0.182, 0.066, 0.050];
 
     charts.examVolume = new Chart(ctx, {
       type: 'bar',
@@ -399,8 +399,8 @@ document.addEventListener('DOMContentLoaded', () => {
         labels: parties,
         datasets: [
           {
-            label: 'Level-4: Exam Volume Rate (Leaks / 1,000 Major Exams)',
-            data: volumeRates,
+            label: 'Level-4: Sourced Notification Exposure Rate (Leaks / 1,000 Notifications)',
+            data: notifRates,
             backgroundColor: 'rgba(16, 185, 129, 0.75)',
             borderColor: '#10b981',
             borderWidth: 1.5,
@@ -425,8 +425,8 @@ document.addEventListener('DOMContentLoaded', () => {
             callbacks: {
               afterBody: (context) => {
                 const idx = context[0].dataIndex;
-                if (parties[idx] === 'BJP') return 'BJP Total Exams: 28,751 | Confirmed Leaks: 37 | Rate Ratio: 1.20';
-                if (parties[idx] === 'INC') return 'INC Total Exams: 13,094 | Confirmed Leaks: 14 | Rate Ratio: 1.20';
+                if (parties[idx] === 'BJP') return 'BJP Total Sourced Notifications: 3,256 | Confirmed Leaks: 38 | Sourced RR: 1.51';
+                if (parties[idx] === 'INC') return 'INC Total Sourced Notifications: 1,806 | Confirmed Leaks: 14 | Sourced RR: 1.51';
                 return '';
               }
             }
