@@ -211,6 +211,45 @@
             Controls for agency recruitment notifications from State PSC Annual Reports (BJP = 11.67 vs INC = 7.75 leaks / 1,000 notifications; <strong>Sourced RR = 1.51</strong>).
           </div>
         </div>
+    <!-- Dedicated Step-by-Step Econometric Convergence Flow Section -->
+    <div style="margin: 0 auto 24px; padding: 20px 24px; background: rgba(15, 23, 42, 0.95); border: 1px solid var(--accent-emerald); border-radius: 14px;">
+      <div style="font-size: 18px; font-weight: 700; color: var(--accent-emerald); font-family: 'Outfit', sans-serif; margin-bottom: 8px;">
+        🔍 Step-by-Step Econometric Convergence Flow: How Each Control Level Refines Party Risk
+      </div>
+      <div style="font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 16px;">
+        Progressive breakdown showing how each methodological control systematically accounts for exposure biases, state risk baselines, and examination conduct volume expansion:
+      </div>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px;">
+        <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #ef4444; border-radius: 8px;">
+          <div style="font-size: 11px; font-weight: 700; color: #ef4444; text-transform: uppercase;">Step 1: Naïve Raw Ratio (No Controls)</div>
+          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">2.71 Gap Ratio</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> 38 BJP vs 14 INC Confirmed State Breaches.<br><strong>Flaw:</strong> Ignores time in office, geographic baseline risk, and exam expansion.</div>
+        </div>
+
+        <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #f59e0b; border-radius: 8px;">
+          <div style="font-size: 11px; font-weight: 700; color: #f59e0b; text-transform: uppercase;">Step 2: Executive Tenure Control</div>
+          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">2.01 Tenure Rate Ratio</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> 0.224 BJP vs 0.111 INC leaks/state-yr.<br><strong>Adjustment:</strong> Accounted for BJP holding executive power across 169.6 state-years vs INC's 125.8 state-years.</div>
+        </div>
+
+        <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #3b82f6; border-radius: 8px;">
+          <div style="font-size: 11px; font-weight: 700; color: #3b82f6; text-transform: uppercase;">Step 3: Geographic Risk (O/E)</div>
+          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1.32 Baseline Risk Ratio</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> BJP O/E = 1.10 vs INC O/E = 0.83.<br><strong>Adjustment:</strong> Controls for state risk baselines (UP 0.50/yr, MP 0.45/yr, Raj 0.41/yr). Both perform near expected baseline (1.00).</div>
+        </div>
+
+        <div style="padding: 14px; background: rgba(255,255,255,0.03); border-left: 3px solid #8b5cf6; border-radius: 8px;">
+          <div style="font-size: 11px; font-weight: 700; color: #8b5cf6; text-transform: uppercase;">Step 4: Sourced Notifications</div>
+          <div style="font-size: 20px; font-weight: 800; color: #fff; margin: 4px 0;">1.51 Notification Rate Ratio</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> 11.67 BJP vs 7.75 INC leaks / 1k notifications.<br><strong>Adjustment:</strong> Grounded in State PSC Annual Reports (3,256 BJP vs 1,806 INC notifications issued).</div>
+        </div>
+
+        <div style="padding: 14px; background: rgba(16, 185, 129, 0.1); border-left: 3px solid #10b981; border-radius: 8px;">
+          <div style="font-size: 11px; font-weight: 700; color: #10b981; text-transform: uppercase;">Step 5: Consolidated Triple-Control</div>
+          <div style="font-size: 20px; font-weight: 800; color: #10b981; margin: 4px 0;">1.11 Consolidated Ratio</div>
+          <div style="font-size: 12px; color: var(--text-subtle);"><strong>Calculation:</strong> BJP O/E_full = 1.01 vs INC O/E_full = 0.91.<br><strong>Verdict:</strong> Controlling for Time + Geographic Risk + Exam Volume simultaneously brings party performance to near-parity.</div>
+        </div>
       </div>
     </div>
 
@@ -271,6 +310,18 @@
         <div id="sub-chart-exam-volume" class="card-subtext">📌 Scope: Empirical Sourced Agency Notification Metric (`data/sourced_exam_counts.csv`). Controls for official recruitment notifications issued by State PSCs & Selection Boards (3,256 BJP vs 1,806 INC notifications), producing 11.67 vs 7.75 leaks / 1,000 notifications (Sourced Rate Ratio = 1.51).</div>
         <div class="chart-container" style="height: 320px;">
           <canvas id="chart-exam-volume"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <!-- Charts Row 4 (Progressive Risk Ratio Convergence Chart) -->
+    <div class="grid-1" style="margin-top: 24px;">
+      <div class="card" style="border: 1px solid var(--accent-emerald);">
+        <span class="indicator-tag" style="background: rgba(16, 185, 129, 0.25); color: #10b981; border-color: #10b981;">⚡ Controlled Convergence Engine</span>
+        <div id="title-chart-progressive-convergence" class="card-title">Party Risk Ratio Convergence Across Control Levels (BJP / INC)</div>
+        <div id="sub-chart-progressive-convergence" class="card-subtext">📌 Progressive Trajectory: Visualizes how applying executive tenure, geographic baseline risk, and sourced exam notifications systematically dampens the raw party disparity from <strong>2.71 (Raw) down to 1.11 (Consolidated Triple-Control)</strong>.</div>
+        <div class="chart-container" style="height: 320px;">
+          <canvas id="chart-progressive-ratio-convergence"></canvas>
         </div>
       </div>
     </div>

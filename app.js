@@ -223,6 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderFixedEffectsChart();
     renderStatePartyPerformanceChart();
     renderExamVolumeChart();
+    renderProgressiveConvergenceChart();
     renderCategoryChart();
     renderMechanismChart();
   }
@@ -618,6 +619,63 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     populateTable(filtered);
+  }
+
+  function renderProgressiveConvergenceChart() {
+    const el = document.getElementById('chart-progressive-ratio-convergence');
+    if (!el) return;
+    const ctx = el.getContext('2d');
+
+    const stages = [
+      'Level 1: Raw Ratio',
+      'Level 2: Tenure Rate',
+      'Level 3: Baseline Risk',
+      'Level 4: Sourced Notifs',
+      'Consolidated (O/E_full)'
+    ];
+    const ratios = [2.71, 2.01, 1.32, 1.51, 1.11];
+
+    charts.progressiveConvergence = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: stages,
+        datasets: [{
+          label: 'Party Risk Ratio (BJP / INC)',
+          data: ratios,
+          borderColor: '#10b981',
+          backgroundColor: 'rgba(16, 185, 129, 0.15)',
+          borderWidth: 3,
+          pointBackgroundColor: '#10b981',
+          pointRadius: 6,
+          fill: true,
+          tension: 0.35
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { labels: { color: '#94a3b8' } },
+          tooltip: {
+            callbacks: {
+              afterBody: (context) => {
+                const idx = context[0].dataIndex;
+                if (idx === 0) return 'Raw Incidents: BJP 38 vs INC 14 (Ratio = 2.71)';
+                if (idx === 1) return 'Tenure Rate: 0.224 vs 0.111 leaks/state-yr (Ratio = 2.01)';
+                if (idx === 2) return 'Geographic Risk O/E: 1.10 vs 0.83 (Ratio = 1.32)';
+                if (idx === 3) return 'Sourced Notifications: 11.67 vs 7.75 / 1k notifs (Ratio = 1.51)';
+                if (idx === 4) return 'Consolidated Triple-Control: 1.01 vs 0.91 (Ratio = 1.11)';
+                return '';
+              }
+            }
+          }
+        },
+        scales: {
+          x: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' } },
+          y: { ticks: { color: '#94a3b8' }, grid: { color: 'rgba(255,255,255,0.05)' }, min: 0.8, max: 3.0 }
+        }
+      }
+    });
   }
 
   function openModal(row) {
