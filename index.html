@@ -597,14 +597,14 @@
       <!-- Takeaway 2 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>2. Federal Governance & Constitutional Misattribution</span>
+          <span>2. Federal Governance & Sample Attribution Scope</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "The Central Union Government is solely responsible for the nationwide epidemic of paper leaks."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "79.8% of all confirmed paper leaks (71 out of 89) occurred in state-administered examinations under autonomous State PSCs and Boards."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "79.8% of confirmed incidents included in this dataset (71 out of 89) were assigned to state-level institutions under autonomous State PSCs and Boards."
           </div>
         </div>
         <div class="reasoning-text">
@@ -615,18 +615,18 @@
       <!-- Takeaway 3 -->
       <div class="takeaway-card">
         <div class="takeaway-header">
-          <span>3. Political Party Exposure Bias & Tenure Normalization</span>
+          <span>3. Political Party Exposure Bias & Subtype Sensitivity</span>
         </div>
         <div class="comparison-pills">
           <div class="comparison-pill raw">
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "BJP state governments had more than twice as many raw incidents as INC state governments (45 vs 17 cases), proving one party is twice as leak-prone."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power via dynamic date interval lookup (2004–2026), BJP experienced 0.224 breaches/state-year vs INC at 0.111 breaches/state-year (Poisson Rate Ratio = 2.01, 95% CI [1.09, 3.72])."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Normalized per State-Year in power (2004–2026), BJP experienced 0.224 incidents/state-yr vs INC at 0.111 (Broad Rate Ratio = 2.01 [95% CI: 1.09, 3.72]). Isolating true Question-Paper Leaks yields 0.165 vs 0.094 leaks/state-yr (Narrow Rate Ratio = 1.75 [95% CI: 0.87, 3.55] — spans 1.00, NOT statistically significant!)."
           </div>
         </div>
         <div class="reasoning-text">
-          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 169.6 State-Years vs 125.8 for INC). Normalizing by executive tenure adjusts for exposure time, while the Poisson 95% confidence interval [1.09, 3.72] bounds the rate ratio uncertainty.
+          <strong>Why Controlled View is More Accurate:</strong> Comparing raw counts ignores exposure time. Post-2014, BJP held state executive power across significantly more states (accumulating 169.6 State-Years vs 125.8 for INC). Subtype disaggregation shows that for true Question-Paper Leaks, the Poisson 95% confidence interval [0.87, 3.55] includes 1.00, establishing no statistically significant partisan difference.
         </div>
       </div>
 
@@ -694,7 +694,7 @@
             <strong>❌ Flawed Raw Dataset Takeaway:</strong> "Physical printing press security collapsed post-2014, causing widespread physical paper theft."
           </div>
           <div class="comparison-pill controlled">
-            <strong>✓ Controlled Econometric Takeaway:</strong> "Physical printing press breaches remained constant (5 confirmed cases across 22 years), while digital instant pre-circulation (WhatsApp/Telegram) and social media fake paper hoaxes (18 cases / 24.4% noise) emerged exclusively post-2014."
+            <strong>✓ Controlled Econometric Takeaway:</strong> "Physical printing press breaches remained constant (5 confirmed cases across 22 years), while digital instant pre-circulation (WhatsApp/Telegram) and social media fake paper hoaxes (21 cases / 19.1% noise) emerged exclusively post-2014."
           </div>
         </div>
         <div class="reasoning-text">
